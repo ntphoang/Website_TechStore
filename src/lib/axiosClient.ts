@@ -11,13 +11,13 @@ const axiosClient = axios.create({
 });
 
 //Trạm kiểm soát lúc đi(Interceptor)
-axios.interceptors.request.use(
+axiosClient.interceptors.request.use(
   (config) => {
     // Lấy token trong local ra
     const token = localStorage.getItem('token');
     // Nếu có token thì tự động gắn vào header để gửi đi
     if (token && config.headers) {
-      config.headers.Authorization = 'Bearer ${token}';
+      config.headers.Authorization = `Bearer ${token}`;
     }
     return config;
   },
