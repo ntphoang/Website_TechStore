@@ -1,9 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import App from './App.tsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RecoilRoot } from 'recoil';
+import { RouterProvider } from 'react-router-dom';
+import router from './routes';
 
 // Khởi tạo React Query(quản lý API)
 const queryClient = new QueryClient({
@@ -21,7 +22,8 @@ createRoot(document.getElementById('root')!).render(
     <RecoilRoot>
       {/* 3. Bọc QueryClientProvider để truyền "trợ lý" xuống cho các component bên dưới xài */}
       <QueryClientProvider client={queryClient}>
-        <App />
+        {/* 4. Cắm router vào đây */}
+        <RouterProvider router={router} />
       </QueryClientProvider>
     </RecoilRoot>
   </StrictMode>
