@@ -1,13 +1,15 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { loginSchema, LoginFormData } from '../schemas/auth.schema.ts';
+import { loginSchema, type LoginFormData } from '../schemas/auth.schema.ts';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import { useAuth } from '../hooks/useAuth'; // của Hoàng
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
-  const { loginMutation } = useAuth();
+  const { login, isLoading } = useAuth();
+  const navigate = useNavigate();
 
   const {
     register,
@@ -17,13 +19,16 @@ export default function Login() {
     resolver: zodResolver(loginSchema),
   });
 
-  const onSubmit = async (data: LoginFormData) => {
-    try {
-      await loginMutation.mutateAsync(data);
-      toast.success('Đăng nhập thành công!');
-    } catch (error) {
-      toast.error('Sai email hoặc mật khẩu!');
-    }
+  const onSubmit = (data: LoginFormData) => {
+    login(data, {
+      onSuccess: () => {
+        toast.success('Đăng nhập thành công!');
+        
+      },
+      onError: () => {
+        toast.error('Sai email hoặc mật khẩu!');
+      },
+    });
   };
 
   return (
@@ -40,7 +45,7 @@ export default function Login() {
           error={errors.password?.message}
         />
 
-        <Button type="submit" isLoading={loginMutation.isPending}>
+        <Button type="submit" isLoading={isLoading}>
           Đăng nhập
         </Button>
       </form>
