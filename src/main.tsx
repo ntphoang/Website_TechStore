@@ -2,9 +2,10 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { RecoilRoot } from 'recoil';
 import { RouterProvider } from 'react-router-dom';
 import router from './routes';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 // Khởi tạo React Query(quản lý API)
 const queryClient = new QueryClient({
@@ -19,12 +20,12 @@ const queryClient = new QueryClient({
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {/* 2. Bọc RecoilRoot để mở kho Global State cho toàn hệ thống */}
-    <RecoilRoot>
+    <Provider store={store}>
       {/* 3. Bọc QueryClientProvider để truyền "trợ lý" xuống cho các component bên dưới xài */}
       <QueryClientProvider client={queryClient}>
         {/* 4. Cắm router vào đây */}
         <RouterProvider router={router} />
       </QueryClientProvider>
-    </RecoilRoot>
+    </Provider>
   </StrictMode>
 );
