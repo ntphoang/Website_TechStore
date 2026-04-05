@@ -4,11 +4,12 @@ import { createBrowserRouter } from 'react-router-dom';
 import Login from '../pages/Login';
 import ProtectedRoute from '../components/ProtectedRoute';
 import AdminLayout from '../layouts/AdminLayout';
+import Home from '../pages/Home';
 
 const router = createBrowserRouter([
   // 1.Các phòng mở cửa tự do(ai vào cũng được)
   {
-    path: '/login',
+    path: '/',
     element: <Login />,
   },
 
@@ -30,8 +31,8 @@ const router = createBrowserRouter([
     element: <ProtectedRoute allowedRoles={['admin', 'user']} />,
     children: [
       {
-        path: '/profile',
-        element: <div>Trang hồ sơ cá nhân</div>,
+        path: '/home',
+        element: <Home />,
       },
     ],
   },
