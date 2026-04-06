@@ -7,7 +7,7 @@ export default function MainLayout() {
       <main className="p-4">
         <Outlet />
       </main>
-      <footer className="p-4 bg-gray-200 text-center">Footer</footer>
+      <footer className="p-4 bg-gray-200 text-center fa">Footer</footer>
     </div>
   );
 }
