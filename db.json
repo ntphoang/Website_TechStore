@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "email": "admin2@gmail.com",
+      "password": "$2a$10$Gd77emcbScddnlEqC8dgw.QEnqTKcj.5MY14d7siXC3UOgm8ITLQ2",
+      "name": "Sếp Hoàng",
+      "role": "admin",
+      "id": 1
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$2ug5JECRwrCUaqd1ZeyWbOdnxZzHF56PC3rTghXJ43PzY2mgQySme",
+      "name": "Sếp Hải",
+      "role": "admin",
+      "id": 2
+    }
+  ]
+}

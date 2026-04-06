@@ -46,6 +46,7 @@ export const useAuth = () => {
     // Khi login thành công
     // ==========================
     onSuccess: (data) => {
+      console.log("LOGIN SUCCESS", data);
       // 1. Lưu vào localStorage (để reload không mất login)
       localStorage.setItem('token', data.accessToken);
       localStorage.setItem('user', JSON.stringify(data.user));
@@ -61,7 +62,7 @@ export const useAuth = () => {
       // 3. Điều hướng về trang ban đầu hoặc theo role
       const originPage = location.state?.from?.pathname;
 
-      const targetPage = originPage || (data.user.role === 'admin' ? '/admin/dashboard' : '/');
+      const targetPage = originPage || (data.user.role === 'admin' ? '/admin/dashboard' : '/home');
 
       navigate(targetPage, { replace: true });
     },
