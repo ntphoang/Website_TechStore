@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "name": "Admin",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "email": "user@gmail.com",
+      "password": "123456",
+      "name": "User",
+      "role": "user"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop Dell XPS 13",
+      "price": 25000000,
+      "image": "https://via.placeholder.com/150",
+      "description": "Laptop cao cấp"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 15",
+      "price": 22000000,
+      "image": "https://via.placeholder.com/150",
+      "description": "Điện thoại Apple"
+    },
+    {
+      "id": 3,
+      "name": "Samsung Galaxy S24",
+      "price": 20000000,
+      "image": "https://via.placeholder.com/150",
+      "description": "Android flagship"
+    },
+    {
+      "id": 4,
+      "name": "Tai nghe Sony",
+      "price": 3000000,
+      "image": "https://via.placeholder.com/150",
+      "description": "Âm thanh chất lượng"
+    },
+    {
+      "id": 5,
+      "name": "Chuột Logitech",
+      "price": 800000,
+      "image": "https://via.placeholder.com/150",
+      "description": "Chuột không dây"
+    }
+  ]
+}
