@@ -30,7 +30,11 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[1, 2, 3].map((item) => (
             <div key={item} className="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
-              <img src="https://via.placeholder.com/300" alt="" className="mb-4 rounded" />
+              <img
+                src="https://media.vov.vn/sites/default/files/styles/large/public/2023-03/cach-chup-man-hinh-may-tinh-win-10-1-01462986.png"
+                alt=""
+                className="mb-4 rounded"
+              />
               <h4 className="font-semibold">Laptop {item}</h4>
               <p className="text-gray-500">Giá: 20.000.000đ</p>
               <button className="mt-3 bg-blue-500 text-white px-4 py-2 rounded">
