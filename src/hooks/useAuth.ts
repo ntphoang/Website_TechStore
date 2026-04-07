@@ -1,7 +1,7 @@
 // Đây là custom hook dùng để xử lý đăng nhập, đăng xuất,
 // lưu thông tin user vào Redux Toolkit và điều hướng
 
-import { useLocation, useNavigate } from 'react-router-dom';
+import { data, useLocation, useNavigate } from 'react-router-dom';
 import { useMutation } from '@tanstack/react-query';
 import { useDispatch } from 'react-redux';
 
@@ -46,7 +46,7 @@ export const useAuth = () => {
     // Khi login thành công
     // ==========================
     onSuccess: (data) => {
-      console.log("LOGIN SUCCESS", data);
+      console.log('LOGIN SUCCESS', data);
       // 1. Lưu vào localStorage (để reload không mất login)
       localStorage.setItem('token', data.accessToken);
       localStorage.setItem('user', JSON.stringify(data.user));
