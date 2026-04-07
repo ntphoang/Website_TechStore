@@ -10,6 +10,10 @@
     "preview": "vite preview",
     "server": "json-server-auth db.json -p 8000"
   },
+  "overrides": {
+    "path-to-regexp": "0.1.12"
+  }
+  ,
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@reduxjs/toolkit": "^2.11.2",
