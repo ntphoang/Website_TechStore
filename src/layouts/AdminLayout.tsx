@@ -1,17 +1,50 @@
 import { Outlet } from 'react-router-dom';
+import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import type { RootState } from '../store/store';
+import { updateQuantity, removeFromCart } from '../store/cartSlice';
+
+import SlideBar from '../components/SlideBar';
+import Header from '../components/Header';
+import CartDrawer from '../components/CartDrawer';
 
 export default function AdminLayout() {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const dispatch = useDispatch();
+
+  // Chỉ lấy items từ cartSlice, không cần productSlice nữa
+  const items = useSelector((state: typeof RootState) => state.cart.items);
+
+  const handleOpenCart = () => {
+    setIsCartOpen(true);
+  };
+
   return (
-    <div className="flex min-h-screen">
-      <aside className="w-64 bg-gray-900 text-white p-4">Sidebar Admin</aside>
+    <div className="flex flex-col h-screen bg-gray-50">
+      {/* Header */}
+      <Header onOpenCart={handleOpenCart} />
 
-      <div className="flex-1">
-        <header className="p-4 bg-gray-800 text-white">Topbar Admin</header>
+      <div className="flex flex-1 overflow-hidden">
+        <SlideBar />
 
-        <main className="p-4">
+        <main className="flex-1 overflow-x-hidden overflow-y-auto p-6">
           <Outlet />
         </main>
       </div>
+
+      <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        items={items} // Truyền trực tiếp items vào
+        onUpdateQuantity={(id, delta) => {
+          // Gọi action cập nhật số lượng lên Redux
+          dispatch(updateQuantity({ productId: id, delta }));
+        }}
+        onRemove={(id) => {
+          // Gọi action xóa sản phẩm khỏi giỏ hàng
+          dispatch(removeFromCart(id));
+        }}
+      />
     </div>
   );
 }

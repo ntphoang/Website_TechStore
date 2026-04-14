@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // Tạo 1 anh shipper
 const axiosClient = axios.create({
-  baseURL: 'http://localhost:8000', // Địa chỉ của json server
+  baseURL: 'http://localhost:8002', // Địa chỉ của json server
   headers: {
     'Content-Type': 'application/json', // Báo cho server biết mình gửi data chuẩn Json
   },

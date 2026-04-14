@@ -1,0 +1,142 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "email": "user@gmail.com",
+      "password": "123456",
+      "name": "Nguyen Van A",
+      "role": "user",
+      "phone": "0987654321",
+      "address": "Hanoi"
+    },
+    {
+      "email": "admin2@gmail.com",
+      "password": "$2a$10$exYppPVLOIowsYXzst1I1.XBxORdAgtOxXg5HFQj9KQznHKkjZRUG",
+      "name": "Sếp Hoàng",
+      "role": "admin",
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Laptop"
+    },
+    {
+      "id": 2,
+      "name": "Điện thoại"
+    },
+    {
+      "id": 3,
+      "name": "Phụ kiện"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop Dell XPS 13",
+      "price": 25000000,
+      "description": "Laptop cao cấp, mỏng nhẹ",
+      "imageUrl": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7",
+      "categoryId": 1,
+      "stock": 10
+    },
+    {
+      "id": 2,
+      "name": "MacBook Air M2",
+      "price": 30000000,
+      "description": "Chip Apple M2 mạnh mẽ",
+      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "categoryId": 1,
+      "stock": 5
+    },
+    {
+      "id": 3,
+      "name": "HP Pavilion",
+      "price": 17000000,
+      "description": "Laptop phổ thông",
+      "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+      "categoryId": 1,
+      "stock": 12
+    },
+    {
+      "id": 4,
+      "name": "iPhone 14 Pro",
+      "price": 28000000,
+      "description": "Camera xịn",
+      "imageUrl": "https://images.unsplash.com/photo-1663499482550-4f3fda5d2f89",
+      "categoryId": 2,
+      "stock": 8
+    },
+    {
+      "id": 5,
+      "name": "Samsung Galaxy S23",
+      "price": 22000000,
+      "description": "Android flagship",
+      "imageUrl": "https://images.unsplash.com/photo-1580894894513-541e068a3e2b",
+      "categoryId": 2,
+      "stock": 12
+    },
+    {
+      "id": 6,
+      "name": "Xiaomi 13",
+      "price": 14000000,
+      "description": "Giá tốt, cấu hình cao",
+      "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97",
+      "categoryId": 2,
+      "stock": 18
+    },
+    {
+      "id": 7,
+      "name": "Tai nghe Sony",
+      "price": 2000000,
+      "description": "Chống ồn tốt",
+      "imageUrl": "https://images.unsplash.com/photo-1518444065439-e933c06ce9cd",
+      "categoryId": 3,
+      "stock": 30
+    },
+    {
+      "id": 8,
+      "name": "Chuột Logitech",
+      "price": 500000,
+      "description": "Chuột không dây",
+      "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+      "categoryId": 3,
+      "stock": 50
+    },
+    {
+      "id": 9,
+      "name": "Bàn phím cơ",
+      "price": 1500000,
+      "description": "Bàn phím gaming",
+      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
+      "categoryId": 3,
+      "stock": 40
+    },
+    {
+      "id": 10,
+      "name": "Sạc dự phòng",
+      "price": 300000,
+      "description": "Pin 10000mAh",
+      "imageUrl": "https://images.unsplash.com/photo-1583394838336-acd977736f90",
+      "categoryId": 3,
+      "stock": 60
+    }
+  ],
+  "carts": [
+    {
+      "id": 1,
+      "userId": 1,
+      "cartItems": [
+        {
+          "productId": 1,
+          "quantity": 1
+        },
+        {
+          "productId": 7,
+          "quantity": 2
+        }
+      ]
+    }
+  ]
+}

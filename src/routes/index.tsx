@@ -5,6 +5,8 @@ import AuthPage from '../pages/AuthPage';
 import ProtectedRoute from '../components/ProtectedRoute';
 import AdminLayout from '../layouts/AdminLayout';
 import Home from '../pages/Home';
+import ProductList from '../pages/admin/products/ProductList';
+import ProductForm from '../pages/admin/products/ProductForm';
 
 const router = createBrowserRouter([
   // 1. Các phòng mở cửa tự do (ai vào cũng được)
@@ -19,10 +21,24 @@ const router = createBrowserRouter([
     element: <ProtectedRoute allowedRoles={['admin']} />,
     children: [
       {
-        path: 'dashboard',
+        // Layout chung bọc bên ngoài
         element: <AdminLayout />,
+        children: [
+          {
+            path: 'dashboard',
+            element: <div>Trang Dashboard chính thức</div>,
+          },
+          {
+            path: 'products',
+            // Nhóm các trang liên quan đến Product lại với nhau
+            children: [
+              { index: true, element: <ProductList /> }, // Khớp với: /admin/products
+              { path: 'add', element: <ProductForm /> }, // Khớp với: /admin/products/add
+              { path: 'edit/:id', element: <ProductForm /> }, // Khớp với: /admin/products/edit/1
+            ],
+          },
+        ],
       },
-      // Các đường dẫn tới các trang khác của admin thì bỏ vào đây
     ],
   },
 
