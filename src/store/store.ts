@@ -1,14 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
 import authReducer from './authSlice';
+import cartReducer from './cartSlice';
+import productsReducer from './productSlice';
 
 // Khởi tạo Ngân hàng (Store)
 export const store = configureStore({
   reducer: {
     auth: authReducer, // Đăng ký quầy Auth vào ngân hàng
-    // Sau này có thêm giỏ hàng thì viết: cart: cartReducer
+    cart: cartReducer,
+    product: productsReducer,
   },
 });
 
-// Xuất ra 2 cái Type cực kỳ quan trọng cho TypeScript
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+// Export RootState as a const for importing without "type"
+export const RootState = {} as ReturnType<typeof store.getState>;
+export type AppDispatch = ReturnType<typeof store.dispatch>;

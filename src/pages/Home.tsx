@@ -1,49 +1,153 @@
-export default function Home() {
+import React, { useState, useEffect } from 'react';
+import SlideBar from '../components/SlideBar';
+import ProductCard, { type Product } from '../components/ProductCard';
+import LoadingSpinner from '../components/LoadingSpinner';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import axiosClient from '../lib/axiosClient';
+import toast from 'react-hot-toast';
+import CartDrawer from '../components/CartDrawer';
+import { useDispatch, useSelector } from 'react-redux';
+import type { RootState } from '../store/store';
+import { addToCart, removeFromCart, updateQuantity } from '../store/cartSlice';
+import { useNavigate } from 'react-router-dom';
+
+interface Category {
+  id: number;
+  name: string;
+}
+
+const HomeContent: React.FC = () => {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string>('');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setIsLoading(true);
+
+        // Vì axiosClient giờ đã trả thẳng về data, ta nhận trực tiếp mảng dữ liệu luôn
+        const [productsData, categoriesData] = await Promise.all([
+          axiosClient.get('/products'),
+          axiosClient.get('/categories'),
+        ]);
+
+        // Cập nhật state với categoriesData (ép kiểu để TypeScript không báo lỗi)
+        const typedCategories = categoriesData as unknown as Category[];
+        setCategories(typedCategories);
+
+        // Map category name to products
+        const productsWithCategory: Product[] = (productsData as unknown as any[]).map(
+          (product: any) => ({
+            ...product,
+            category:
+              typedCategories.find((cat) => cat.id === product.categoryId)?.name || 'Unknown',
+          })
+        );
+
+        setProducts(productsWithCategory);
+        setError('');
+      } catch (err: any) {
+        setError(err.response?.data?.message || err.message || 'Lỗi khi tải dữ liệu');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const dispatch = useDispatch();
+
+  const handleAddToCart = (product: Product) => {
+    dispatch(
+      addToCart({
+        id: product.id, // Khớp với interface CartItemExtended
+        productId: product.id,
+        name: product.name, // Gửi kèm Tên
+        price: product.price, // Gửi kèm Giá
+        imageUrl: product.imageUrl, // Gửi kèm Ảnh
+        quantity: 1,
+      })
+    );
+
+    toast.success(`${product.name} đã được thêm vào giỏ hàng!`);
+  };
+
+  const navigate = useNavigate();
+
+  const handleViewDetail = (product: Product) => {
+    navigate(`/products/${product.id}`);
+  };
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* HEADER */}
-      <header className="bg-white shadow p-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-blue-600">TechStore</h1>
-        <nav className="space-x-4">
-          <a href="/login" className="text-gray-700 hover:text-blue-500">
-            Login
-          </a>
-          <a href="/profile" className="text-gray-700 hover:text-blue-500">
-            Profile
-          </a>
-        </nav>
-      </header>
+    <div className="flex">
+      {/* Sidebar */}
+      <SlideBar />
 
-      {/* HERO */}
-      <section className="text-center py-16 bg-blue-500 text-white">
-        <h2 className="text-3xl font-bold mb-4">Chào mừng đến với TechStore</h2>
-        <p className="mb-6">Nơi bán đồ công nghệ xịn nhất cho sinh viên 😎</p>
-        <a href="/login" className="bg-white text-blue-500 px-6 py-2 rounded-lg font-semibold">
-          Mua ngay
-        </a>
-      </section>
+      {/* Main Content */}
+      <main className="flex-1 mx-auto max-w-7xl px-2 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
+          Sản phẩm nổi bật
+        </h1>
 
-      {/* PRODUCT LIST */}
-      <section className="p-8">
-        <h3 className="text-2xl font-semibold mb-6">Sản phẩm nổi bật</h3>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[1, 2, 3].map((item) => (
-            <div key={item} className="bg-white p-4 rounded-xl shadow hover:shadow-lg transition">
-              <img
-                src="https://media.vov.vn/sites/default/files/styles/large/public/2023-03/cach-chup-man-hinh-may-tinh-win-10-1-01462986.png"
-                alt=""
-                className="mb-4 rounded"
+        {isLoading ? (
+          <div className="flex justify-center items-center h-32 sm:h-48 md:h-64">
+            <LoadingSpinner />
+          </div>
+        ) : error ? (
+          <div className="text-center text-red-500 text-sm sm:text-base md:text-lg">{error}</div>
+        ) : (
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+            {products.map((product) => (
+              <ProductCard
+                key={product.id}
+                product={product}
+                onAddToCart={handleAddToCart}
+                onViewDetail={handleViewDetail}
               />
-              <h4 className="font-semibold">Laptop {item}</h4>
-              <p className="text-gray-500">Giá: 20.000.000đ</p>
-              <button className="mt-3 bg-blue-500 text-white px-4 py-2 rounded">
-                Xem chi tiết
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        )}
+      </main>
     </div>
   );
-}
+};
+
+const Home: React.FC = () => {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const dispatch = useDispatch();
+
+  // Chỉ lấy items từ cartSlice
+  const items = useSelector((state: typeof RootState) => state.cart.items);
+
+  const handleOpenCart = () => {
+    setIsCartOpen(true);
+  };
+
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-900">
+      <Header onOpenCart={handleOpenCart} />
+
+      {/* Component HomeContent đã được sửa ở bước trước */}
+      <HomeContent />
+
+      <Footer />
+
+      <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        items={items} // Truyền trực tiếp items
+        onUpdateQuantity={(id, delta) => {
+          dispatch(updateQuantity({ productId: id, delta }));
+        }}
+        onRemove={(id) => {
+          dispatch(removeFromCart(id));
+        }}
+      />
+    </div>
+  );
+};
+
+export default Home;
