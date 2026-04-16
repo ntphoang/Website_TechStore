@@ -46,99 +46,937 @@
     },
     {
       "id": 3,
+      "name": "Tablet"
+    },
+    {
+      "id": 4,
+      "name": "Tai nghe"
+    },
+    {
+      "id": 5,
+      "name": "Chuột"
+    },
+    {
+      "id": 6,
+      "name": "Bàn phím"
+    },
+    {
+      "id": 7,
+      "name": "Màn hình"
+    },
+    {
+      "id": 8,
+      "name": "Loa"
+    },
+    {
+      "id": 9,
       "name": "Phụ kiện"
+    },
+    {
+      "id": 10,
+      "name": "Smartwatch"
     }
   ],
   "products": [
     {
-      "id": 2,
-      "name": "MacBook Air M2",
-      "price": 30000000,
-      "description": "Chip Apple M2 mạnh mẽ",
-      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
-      "categoryId": 1,
-      "stock": 5
-    },
-    {
-      "id": 3,
-      "name": "HP Pavilion",
-      "price": 17000000,
-      "description": "Laptop phổ thông",
-      "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+      "id": 1,
+      "name": "MacBook Air M2 13 inch",
+      "price": 28990000,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
       "categoryId": 1,
       "stock": 12
     },
     {
-      "name": "iPhone 14 Pro",
-      "price": 28000000,
-      "description": "Camera xịn",
-      "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQdzZrp2JwW_BLxPHdEn1BKV5OE-iqSh0WF3VT2u_FG9Xj45FQASsjc66Kgxw4NiNEKRW9Jl3HmN89xE9fmQa3VuM32q1GR6jPZfFFv4i9a4IKM44VjpuLXjH8jj0W39UH7QtrRBw&usqp=CAc",
-      "categoryId": 2,
-      "stock": 8,
-      "id": 4
+      "id": 2,
+      "name": "Dell XPS 13 Plus",
+      "price": 34990000,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 8
     },
     {
-      "name": "Samsung Galaxy S23",
-      "price": 22000000,
-      "description": "Android flagship",
-      "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTTTgFZcCjXd092oW2ZfXwb2yj4AI11-ubCdWO-9E3-sjeSFNORtlOXvekddXMylKP7jgTksLKPC6sjrf6Pu1mRQWyFGHXaMBAmDat5TiJgcD9RvF5XjL6pHGGbXhZD6aQWZhCJ7LeU2g&usqp=CAc",
+      "id": 3,
+      "name": "iPhone 15 Pro Max",
+      "price": 32990000,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
       "categoryId": 2,
-      "stock": 12,
-      "id": 5
+      "stock": 20
+    },
+    {
+      "id": 4,
+      "name": "Samsung Galaxy S23 Ultra",
+      "price": 25990000,
+      "description": "Galaxy S23 Ultra sở hữu camera 200MP, zoom xa ấn tượng. Màn hình AMOLED 120Hz mượt mà, bút S-Pen tiện lợi cho công việc và ghi chú.",
+      "imageUrl": "https://cdn.tgdd.vn/Files/2023/02/01/1506480/galaxys23u_0012-020223-020637-800-resize.jpg",
+      "categoryId": 2,
+      "stock": 15
+    },
+    {
+      "id": 5,
+      "name": "iPad Air 5",
+      "price": 16990000,
+      "description": "iPad Air 5 trang bị chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch. Hỗ trợ Apple Pencil, phù hợp cho học tập, thiết kế và giải trí.",
+      "imageUrl": "https://minhtuanmobile.com/uploads/products/240528103456-ipad-air-5-64gb-wifi1.jpg",
+      "categoryId": 3,
+      "stock": 10
     },
     {
       "id": 6,
-      "name": "Xiaomi 13",
-      "price": 14000000,
-      "description": "Giá tốt, cấu hình cao",
-      "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf",
-      "categoryId": 2,
-      "stock": 18
+      "name": "Sony WH-1000XM5",
+      "price": 7990000,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 25
     },
     {
-      "name": "Tai nghe Sony",
-      "price": 2000000,
-      "description": "Chống ồn tốt",
-      "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRXWfeCP3t3_UYmmeAtM3T6VoElVVvIMAeLUK2gjfY7Beb0ezIUvOrCLZ59auImhisuPevbIka_2eYJPFj4SCw8-WsWOWQHy3ELOH5avNnkg9ln_m3f1ydgFss98JAT866oTbTykg&usqp=CAc",
-      "categoryId": 3,
-      "stock": 30,
-      "id": 7
+      "id": 7,
+      "name": "Logitech MX Master 3S",
+      "price": 2490000,
+      "description": "Chuột không dây cao cấp Logitech MX Master 3S, thiết kế ergonomic, cuộn siêu mượt, kết nối đa thiết bị.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZ2OljgmozExZblB01jPL6PclNTo8BXokJw&s",
+      "categoryId": 5,
+      "stock": 30
     },
     {
       "id": 8,
-      "name": "Chuột Logitech",
-      "price": 500000,
-      "description": "Chuột không dây",
-      "imageUrl": "https://images.unsplash.com/photo-1527814050087-3793815479db",
+      "name": "Keychron K6 Wireless",
+      "price": 1890000,
+      "description": "Bàn phím cơ Keychron K6 hỗ trợ Bluetooth và wired, layout 65%, switch mượt, phù hợp coder và game thủ.",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0059/0630/1017/t/5/assets/keychronk6pr0qmkviawirelesscustommechanicalkeyboard-1659094228146.jpg?v=1659094230",
+      "categoryId": 6,
+      "stock": 40
+    },
+    {
+      "id": 9,
+      "name": "LG UltraWide 29 inch",
+      "price": 6990000,
+      "description": "Màn hình LG UltraWide 29 inch, tỷ lệ 21:9, hiển thị rộng rãi, phù hợp làm việc đa nhiệm và giải trí.",
+      "imageUrl": "https://i.rtings.com/assets/products/qVeZ3Vwz/lg-29um69g-b/design-medium.jpg?format=auto",
+      "categoryId": 7,
+      "stock": 12
+    },
+    {
+      "id": 10,
+      "name": "Apple Watch Series 9",
+      "price": 9990000,
+      "description": "Apple Watch Series 9 hỗ trợ theo dõi sức khỏe, đo nhịp tim, GPS chính xác, thiết kế sang trọng, pin dùng cả ngày.",
+      "imageUrl": "https://www.apple.com/newsroom/videos/apple-watch-s9-sip/posters/Apple-Watch-S9-SiP-230912.jpg.large_2x.jpg",
+      "categoryId": 10,
+      "stock": 18
+    },
+    {
+      "id": 11,
+      "name": "iPad Air 5 Ultra",
+      "price": 18751124,
+      "description": "iPad Air 5 trang bị chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch. Hỗ trợ Apple Pencil, phù hợp cho học tập, thiết kế và giải trí.",
+      "imageUrl": "https://minhtuanmobile.com/uploads/products/240528103456-ipad-air-5-64gb-wifi1.jpg",
+      "categoryId": 3,
+      "stock": 35
+    },
+    {
+      "id": 12,
+      "name": "MacBook Air M2 13 inch Plus",
+      "price": 27727095,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+      "categoryId": 1,
+      "stock": 19
+    },
+    {
+      "id": 13,
+      "name": "Apple Watch Series 9 New",
+      "price": 10770860,
+      "description": "Apple Watch Series 9 hỗ trợ theo dõi sức khỏe, đo nhịp tim, GPS chính xác, thiết kế sang trọng, pin dùng cả ngày.",
+      "imageUrl": "https://www.apple.com/newsroom/videos/apple-watch-s9-sip/posters/Apple-Watch-S9-SiP-230912.jpg.large_2x.jpg",
+      "categoryId": 10,
+      "stock": 48
+    },
+    {
+      "id": 14,
+      "name": "iPhone 15 Pro Max Plus",
+      "price": 33854440,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
+      "stock": 12
+    },
+    {
+      "id": 15,
+      "name": "Apple Watch Series 9 New",
+      "price": 10600510,
+      "description": "Apple Watch Series 9 hỗ trợ theo dõi sức khỏe, đo nhịp tim, GPS chính xác, thiết kế sang trọng, pin dùng cả ngày.",
+      "imageUrl": "https://www.apple.com/newsroom/videos/apple-watch-s9-sip/posters/Apple-Watch-S9-SiP-230912.jpg.large_2x.jpg",
+      "categoryId": 10,
+      "stock": 48
+    },
+    {
+      "id": 16,
+      "name": "MacBook Air M2 13 inch Edition",
+      "price": 27096693,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+      "categoryId": 1,
+      "stock": 10
+    },
+    {
+      "id": 17,
+      "name": "Apple Watch Series 9 Max",
+      "price": 12301600,
+      "description": "Apple Watch Series 9 hỗ trợ theo dõi sức khỏe, đo nhịp tim, GPS chính xác, thiết kế sang trọng, pin dùng cả ngày.",
+      "imageUrl": "https://www.apple.com/newsroom/videos/apple-watch-s9-sip/posters/Apple-Watch-S9-SiP-230912.jpg.large_2x.jpg",
+      "categoryId": 10,
+      "stock": 19
+    },
+    {
+      "id": 18,
+      "name": "Dell XPS 13 Plus Plus",
+      "price": 37310709,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 15
+    },
+    {
+      "id": 19,
+      "name": "Dell XPS 13 Plus Ultra",
+      "price": 34442605,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 49
+    },
+    {
+      "id": 20,
+      "name": "iPhone 15 Pro Max Ultra",
+      "price": 31287135,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
+      "stock": 8
+    },
+    {
+      "id": 21,
+      "name": "Sony WH-1000XM5 Gen 3",
+      "price": 8556973,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 39
+    },
+    {
+      "id": 22,
+      "name": "Keychron K6 Wireless Plus",
+      "price": 4660093,
+      "description": "Bàn phím cơ Keychron K6 hỗ trợ Bluetooth và wired, layout 65%, switch mượt, phù hợp coder và game thủ.",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0059/0630/1017/t/5/assets/keychronk6pr0qmkviawirelesscustommechanicalkeyboard-1659094228146.jpg?v=1659094230",
+      "categoryId": 6,
+      "stock": 45
+    },
+    {
+      "id": 23,
+      "name": "Sony WH-1000XM5 2025",
+      "price": 7699815,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 15
+    },
+    {
+      "id": 24,
+      "name": "Dell XPS 13 Plus Max",
+      "price": 34888813,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 7
+    },
+    {
+      "id": 25,
+      "name": "Samsung Galaxy S23 Ultra Gen 2",
+      "price": 26042869,
+      "description": "Galaxy S23 Ultra sở hữu camera 200MP, zoom xa ấn tượng. Màn hình AMOLED 120Hz mượt mà, bút S-Pen tiện lợi cho công việc và ghi chú.",
+      "imageUrl": "https://cdn.tgdd.vn/Files/2023/02/01/1506480/galaxys23u_0012-020223-020637-800-resize.jpg",
+      "categoryId": 2,
+      "stock": 25
+    },
+    {
+      "id": 26,
+      "name": "Sony WH-1000XM5 Gen 2",
+      "price": 7966452,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 9
+    },
+    {
+      "id": 27,
+      "name": "Dell XPS 13 Plus Max",
+      "price": 37468002,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 40
+    },
+    {
+      "id": 28,
+      "name": "MacBook Air M2 13 inch 2024",
+      "price": 27776737,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+      "categoryId": 1,
+      "stock": 29
+    },
+    {
+      "id": 29,
+      "name": "iPhone 15 Pro Max Gen 3",
+      "price": 33555281,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
+      "stock": 24
+    },
+    {
+      "id": 30,
+      "name": "Dell XPS 13 Plus Pro",
+      "price": 35002713,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 44
+    },
+    {
+      "id": 31,
+      "name": "iPhone 15 Pro Max Plus",
+      "price": 32276964,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
+      "stock": 30
+    },
+    {
+      "id": 32,
+      "name": "Dell XPS 13 Plus Gen 3",
+      "price": 33755244,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 33
+    },
+    {
+      "id": 33,
+      "name": "Dell XPS 13 Plus 2025",
+      "price": 37652002,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 18
+    },
+    {
+      "id": 34,
+      "name": "Sony WH-1000XM5 Max",
+      "price": 9900905,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 18
+    },
+    {
+      "id": 35,
+      "name": "iPad Air 5 Pro",
+      "price": 17938174,
+      "description": "iPad Air 5 trang bị chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch. Hỗ trợ Apple Pencil, phù hợp cho học tập, thiết kế và giải trí.",
+      "imageUrl": "https://minhtuanmobile.com/uploads/products/240528103456-ipad-air-5-64gb-wifi1.jpg",
+      "categoryId": 3,
+      "stock": 18
+    },
+    {
+      "id": 36,
+      "name": "Logitech MX Master 3S New",
+      "price": 1222090,
+      "description": "Chuột không dây cao cấp Logitech MX Master 3S, thiết kế ergonomic, cuộn siêu mượt, kết nối đa thiết bị.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZ2OljgmozExZblB01jPL6PclNTo8BXokJw&s",
+      "categoryId": 5,
+      "stock": 10
+    },
+    {
+      "id": 37,
+      "name": "Sony WH-1000XM5 New",
+      "price": 9807907,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 42
+    },
+    {
+      "id": 38,
+      "name": "Samsung Galaxy S23 Ultra New",
+      "price": 28592689,
+      "description": "Galaxy S23 Ultra sở hữu camera 200MP, zoom xa ấn tượng. Màn hình AMOLED 120Hz mượt mà, bút S-Pen tiện lợi cho công việc và ghi chú.",
+      "imageUrl": "https://cdn.tgdd.vn/Files/2023/02/01/1506480/galaxys23u_0012-020223-020637-800-resize.jpg",
+      "categoryId": 2,
+      "stock": 37
+    },
+    {
+      "id": 39,
+      "name": "Samsung Galaxy S23 Ultra 2025",
+      "price": 28754191,
+      "description": "Galaxy S23 Ultra sở hữu camera 200MP, zoom xa ấn tượng. Màn hình AMOLED 120Hz mượt mà, bút S-Pen tiện lợi cho công việc và ghi chú.",
+      "imageUrl": "https://cdn.tgdd.vn/Files/2023/02/01/1506480/galaxys23u_0012-020223-020637-800-resize.jpg",
+      "categoryId": 2,
+      "stock": 33
+    },
+    {
+      "id": 40,
+      "name": "Sony WH-1000XM5 Gen 2",
+      "price": 8599601,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 9
+    },
+    {
+      "id": 41,
+      "name": "Dell XPS 13 Plus Pro",
+      "price": 36895650,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 12
+    },
+    {
+      "id": 42,
+      "name": "Dell XPS 13 Plus Plus",
+      "price": 35295133,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 28
+    },
+    {
+      "id": 43,
+      "name": "Sony WH-1000XM5 2024",
+      "price": 7226581,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 23
+    },
+    {
+      "id": 44,
+      "name": "iPad Air 5 Gen 3",
+      "price": 18242581,
+      "description": "iPad Air 5 trang bị chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch. Hỗ trợ Apple Pencil, phù hợp cho học tập, thiết kế và giải trí.",
+      "imageUrl": "https://minhtuanmobile.com/uploads/products/240528103456-ipad-air-5-64gb-wifi1.jpg",
+      "categoryId": 3,
+      "stock": 27
+    },
+    {
+      "id": 45,
+      "name": "LG UltraWide 29 inch Plus",
+      "price": 6734999,
+      "description": "Màn hình LG UltraWide 29 inch, tỷ lệ 21:9, hiển thị rộng rãi, phù hợp làm việc đa nhiệm và giải trí.",
+      "imageUrl": "https://i.rtings.com/assets/products/qVeZ3Vwz/lg-29um69g-b/design-medium.jpg?format=auto",
+      "categoryId": 7,
+      "stock": 10
+    },
+    {
+      "id": 46,
+      "name": "MacBook Air M2 13 inch 2024",
+      "price": 30533388,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+      "categoryId": 1,
+      "stock": 46
+    },
+    {
+      "id": 47,
+      "name": "Samsung Galaxy S23 Ultra Max",
+      "price": 28588174,
+      "description": "Galaxy S23 Ultra sở hữu camera 200MP, zoom xa ấn tượng. Màn hình AMOLED 120Hz mượt mà, bút S-Pen tiện lợi cho công việc và ghi chú.",
+      "imageUrl": "https://cdn.tgdd.vn/Files/2023/02/01/1506480/galaxys23u_0012-020223-020637-800-resize.jpg",
+      "categoryId": 2,
+      "stock": 26
+    },
+    {
+      "id": 48,
+      "name": "Samsung Galaxy S23 Ultra Gen 2",
+      "price": 28018374,
+      "description": "Galaxy S23 Ultra sở hữu camera 200MP, zoom xa ấn tượng. Màn hình AMOLED 120Hz mượt mà, bút S-Pen tiện lợi cho công việc và ghi chú.",
+      "imageUrl": "https://cdn.tgdd.vn/Files/2023/02/01/1506480/galaxys23u_0012-020223-020637-800-resize.jpg",
+      "categoryId": 2,
+      "stock": 14
+    },
+    {
+      "id": 49,
+      "name": "iPad Air 5 Edition",
+      "price": 18625609,
+      "description": "iPad Air 5 trang bị chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch. Hỗ trợ Apple Pencil, phù hợp cho học tập, thiết kế và giải trí.",
+      "imageUrl": "https://minhtuanmobile.com/uploads/products/240528103456-ipad-air-5-64gb-wifi1.jpg",
+      "categoryId": 3,
+      "stock": 30
+    },
+    {
+      "id": 50,
+      "name": "Logitech MX Master 3S Gen 3",
+      "price": 3118577,
+      "description": "Chuột không dây cao cấp Logitech MX Master 3S, thiết kế ergonomic, cuộn siêu mượt, kết nối đa thiết bị.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZ2OljgmozExZblB01jPL6PclNTo8BXokJw&s",
+      "categoryId": 5,
+      "stock": 29
+    },
+    {
+      "id": 51,
+      "name": "Keychron K6 Wireless Gen 2",
+      "price": 1341583,
+      "description": "Bàn phím cơ Keychron K6 hỗ trợ Bluetooth và wired, layout 65%, switch mượt, phù hợp coder và game thủ.",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0059/0630/1017/t/5/assets/keychronk6pr0qmkviawirelesscustommechanicalkeyboard-1659094228146.jpg?v=1659094230",
+      "categoryId": 6,
+      "stock": 29
+    },
+    {
+      "id": 52,
+      "name": "MacBook Air M2 13 inch Ultra",
+      "price": 27264597,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+      "categoryId": 1,
+      "stock": 10
+    },
+    {
+      "id": 53,
+      "name": "Keychron K6 Wireless Ultra",
+      "price": 2631049,
+      "description": "Bàn phím cơ Keychron K6 hỗ trợ Bluetooth và wired, layout 65%, switch mượt, phù hợp coder và game thủ.",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0059/0630/1017/t/5/assets/keychronk6pr0qmkviawirelesscustommechanicalkeyboard-1659094228146.jpg?v=1659094230",
+      "categoryId": 6,
+      "stock": 47
+    },
+    {
+      "id": 54,
+      "name": "Logitech MX Master 3S Gen 2",
+      "price": 2904290,
+      "description": "Chuột không dây cao cấp Logitech MX Master 3S, thiết kế ergonomic, cuộn siêu mượt, kết nối đa thiết bị.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZ2OljgmozExZblB01jPL6PclNTo8BXokJw&s",
+      "categoryId": 5,
+      "stock": 48
+    },
+    {
+      "id": 55,
+      "name": "Samsung Galaxy S23 Ultra 2024",
+      "price": 27228675,
+      "description": "Galaxy S23 Ultra sở hữu camera 200MP, zoom xa ấn tượng. Màn hình AMOLED 120Hz mượt mà, bút S-Pen tiện lợi cho công việc và ghi chú.",
+      "imageUrl": "https://cdn.tgdd.vn/Files/2023/02/01/1506480/galaxys23u_0012-020223-020637-800-resize.jpg",
+      "categoryId": 2,
+      "stock": 45
+    },
+    {
+      "id": 56,
+      "name": "Dell XPS 13 Plus Ultra",
+      "price": 33609997,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 46
+    },
+    {
+      "id": 57,
+      "name": "iPad Air 5 Edition",
+      "price": 15589504,
+      "description": "iPad Air 5 trang bị chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch. Hỗ trợ Apple Pencil, phù hợp cho học tập, thiết kế và giải trí.",
+      "imageUrl": "https://minhtuanmobile.com/uploads/products/240528103456-ipad-air-5-64gb-wifi1.jpg",
+      "categoryId": 3,
+      "stock": 34
+    },
+    {
+      "id": 58,
+      "name": "iPad Air 5 New",
+      "price": 19703431,
+      "description": "iPad Air 5 trang bị chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch. Hỗ trợ Apple Pencil, phù hợp cho học tập, thiết kế và giải trí.",
+      "imageUrl": "https://minhtuanmobile.com/uploads/products/240528103456-ipad-air-5-64gb-wifi1.jpg",
+      "categoryId": 3,
+      "stock": 12
+    },
+    {
+      "id": 59,
+      "name": "Sony WH-1000XM5 New",
+      "price": 6684717,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 11
+    },
+    {
+      "id": 60,
+      "name": "Logitech MX Master 3S New",
+      "price": 733786,
+      "description": "Chuột không dây cao cấp Logitech MX Master 3S, thiết kế ergonomic, cuộn siêu mượt, kết nối đa thiết bị.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZ2OljgmozExZblB01jPL6PclNTo8BXokJw&s",
+      "categoryId": 5,
+      "stock": 12
+    },
+    {
+      "id": 61,
+      "name": "iPhone 15 Pro Max Max",
+      "price": 35064376,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
+      "stock": 28
+    },
+    {
+      "id": 62,
+      "name": "Sony WH-1000XM5 2024",
+      "price": 10120480,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 11
+    },
+    {
+      "id": 63,
+      "name": "Logitech MX Master 3S Gen 3",
+      "price": 3886393,
+      "description": "Chuột không dây cao cấp Logitech MX Master 3S, thiết kế ergonomic, cuộn siêu mượt, kết nối đa thiết bị.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZ2OljgmozExZblB01jPL6PclNTo8BXokJw&s",
+      "categoryId": 5,
+      "stock": 32
+    },
+    {
+      "id": 64,
+      "name": "Dell XPS 13 Plus Edition",
+      "price": 33222625,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 21
+    },
+    {
+      "id": 65,
+      "name": "LG UltraWide 29 inch New",
+      "price": 8529608,
+      "description": "Màn hình LG UltraWide 29 inch, tỷ lệ 21:9, hiển thị rộng rãi, phù hợp làm việc đa nhiệm và giải trí.",
+      "imageUrl": "https://i.rtings.com/assets/products/qVeZ3Vwz/lg-29um69g-b/design-medium.jpg?format=auto",
+      "categoryId": 7,
+      "stock": 30
+    },
+    {
+      "id": 66,
+      "name": "MacBook Air M2 13 inch 2024",
+      "price": 28858110,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+      "categoryId": 1,
+      "stock": 17
+    },
+    {
+      "id": 67,
+      "name": "Keychron K6 Wireless 2024",
+      "price": 4283161,
+      "description": "Bàn phím cơ Keychron K6 hỗ trợ Bluetooth và wired, layout 65%, switch mượt, phù hợp coder và game thủ.",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0059/0630/1017/t/5/assets/keychronk6pr0qmkviawirelesscustommechanicalkeyboard-1659094228146.jpg?v=1659094230",
+      "categoryId": 6,
+      "stock": 8
+    },
+    {
+      "id": 68,
+      "name": "Logitech MX Master 3S Gen 3",
+      "price": 1889227,
+      "description": "Chuột không dây cao cấp Logitech MX Master 3S, thiết kế ergonomic, cuộn siêu mượt, kết nối đa thiết bị.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZ2OljgmozExZblB01jPL6PclNTo8BXokJw&s",
+      "categoryId": 5,
+      "stock": 48
+    },
+    {
+      "id": 69,
+      "name": "iPhone 15 Pro Max Max",
+      "price": 32249684,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
+      "stock": 44
+    },
+    {
+      "id": 70,
+      "name": "Logitech MX Master 3S Gen 2",
+      "price": 935314,
+      "description": "Chuột không dây cao cấp Logitech MX Master 3S, thiết kế ergonomic, cuộn siêu mượt, kết nối đa thiết bị.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZ2OljgmozExZblB01jPL6PclNTo8BXokJw&s",
+      "categoryId": 5,
+      "stock": 21
+    },
+    {
+      "id": 71,
+      "name": "Apple Watch Series 9 Edition",
+      "price": 10801644,
+      "description": "Apple Watch Series 9 hỗ trợ theo dõi sức khỏe, đo nhịp tim, GPS chính xác, thiết kế sang trọng, pin dùng cả ngày.",
+      "imageUrl": "https://www.apple.com/newsroom/videos/apple-watch-s9-sip/posters/Apple-Watch-S9-SiP-230912.jpg.large_2x.jpg",
+      "categoryId": 10,
+      "stock": 18
+    },
+    {
+      "id": 72,
+      "name": "iPhone 15 Pro Max Max",
+      "price": 31573890,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
+      "stock": 40
+    },
+    {
+      "id": 73,
+      "name": "Logitech MX Master 3S 2025",
+      "price": 5278180,
+      "description": "Chuột không dây cao cấp Logitech MX Master 3S, thiết kế ergonomic, cuộn siêu mượt, kết nối đa thiết bị.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZ2OljgmozExZblB01jPL6PclNTo8BXokJw&s",
+      "categoryId": 5,
+      "stock": 24
+    },
+    {
+      "id": 74,
+      "name": "MacBook Air M2 13 inch Gen 3",
+      "price": 30836295,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+      "categoryId": 1,
+      "stock": 48
+    },
+    {
+      "id": 75,
+      "name": "Sony WH-1000XM5 Ultra",
+      "price": 7823822,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 33
+    },
+    {
+      "id": 76,
+      "name": "Sony WH-1000XM5 New",
+      "price": 7583624,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 24
+    },
+    {
+      "id": 77,
+      "name": "iPhone 15 Pro Max Gen 3",
+      "price": 33888102,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
+      "stock": 48
+    },
+    {
+      "id": 78,
+      "name": "iPhone 15 Pro Max Plus",
+      "price": 34357959,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
+      "stock": 41
+    },
+    {
+      "id": 79,
+      "name": "iPhone 15 Pro Max New",
+      "price": 34016835,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
+      "stock": 38
+    },
+    {
+      "id": 80,
+      "name": "iPhone 15 Pro Max Edition",
+      "price": 33238721,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
+      "stock": 47
+    },
+    {
+      "id": 81,
+      "name": "iPad Air 5 Max",
+      "price": 19045532,
+      "description": "iPad Air 5 trang bị chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch. Hỗ trợ Apple Pencil, phù hợp cho học tập, thiết kế và giải trí.",
+      "imageUrl": "https://minhtuanmobile.com/uploads/products/240528103456-ipad-air-5-64gb-wifi1.jpg",
       "categoryId": 3,
       "stock": 50
     },
     {
-      "id": 9,
-      "name": "Bàn phím cơ",
-      "price": 1500000,
-      "description": "Bàn phím gaming",
-      "imageUrl": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae",
+      "id": 82,
+      "name": "Samsung Galaxy S23 Ultra Ultra",
+      "price": 25382346,
+      "description": "Galaxy S23 Ultra sở hữu camera 200MP, zoom xa ấn tượng. Màn hình AMOLED 120Hz mượt mà, bút S-Pen tiện lợi cho công việc và ghi chú.",
+      "imageUrl": "https://cdn.tgdd.vn/Files/2023/02/01/1506480/galaxys23u_0012-020223-020637-800-resize.jpg",
+      "categoryId": 2,
+      "stock": 17
+    },
+    {
+      "id": 83,
+      "name": "MacBook Air M2 13 inch Edition",
+      "price": 31534487,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+      "categoryId": 1,
+      "stock": 39
+    },
+    {
+      "id": 84,
+      "name": "Keychron K6 Wireless Max",
+      "price": 4239905,
+      "description": "Bàn phím cơ Keychron K6 hỗ trợ Bluetooth và wired, layout 65%, switch mượt, phù hợp coder và game thủ.",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0059/0630/1017/t/5/assets/keychronk6pr0qmkviawirelesscustommechanicalkeyboard-1659094228146.jpg?v=1659094230",
+      "categoryId": 6,
+      "stock": 37
+    },
+    {
+      "id": 85,
+      "name": "Samsung Galaxy S23 Ultra Pro",
+      "price": 24826753,
+      "description": "Galaxy S23 Ultra sở hữu camera 200MP, zoom xa ấn tượng. Màn hình AMOLED 120Hz mượt mà, bút S-Pen tiện lợi cho công việc và ghi chú.",
+      "imageUrl": "https://cdn.tgdd.vn/Files/2023/02/01/1506480/galaxys23u_0012-020223-020637-800-resize.jpg",
+      "categoryId": 2,
+      "stock": 8
+    },
+    {
+      "id": 86,
+      "name": "iPad Air 5 Pro",
+      "price": 19796194,
+      "description": "iPad Air 5 trang bị chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch. Hỗ trợ Apple Pencil, phù hợp cho học tập, thiết kế và giải trí.",
+      "imageUrl": "https://minhtuanmobile.com/uploads/products/240528103456-ipad-air-5-64gb-wifi1.jpg",
       "categoryId": 3,
+      "stock": 29
+    },
+    {
+      "id": 87,
+      "name": "Samsung Galaxy S23 Ultra Gen 2",
+      "price": 25592502,
+      "description": "Galaxy S23 Ultra sở hữu camera 200MP, zoom xa ấn tượng. Màn hình AMOLED 120Hz mượt mà, bút S-Pen tiện lợi cho công việc và ghi chú.",
+      "imageUrl": "https://cdn.tgdd.vn/Files/2023/02/01/1506480/galaxys23u_0012-020223-020637-800-resize.jpg",
+      "categoryId": 2,
+      "stock": 32
+    },
+    {
+      "id": 88,
+      "name": "Samsung Galaxy S23 Ultra Ultra",
+      "price": 26900214,
+      "description": "Galaxy S23 Ultra sở hữu camera 200MP, zoom xa ấn tượng. Màn hình AMOLED 120Hz mượt mà, bút S-Pen tiện lợi cho công việc và ghi chú.",
+      "imageUrl": "https://cdn.tgdd.vn/Files/2023/02/01/1506480/galaxys23u_0012-020223-020637-800-resize.jpg",
+      "categoryId": 2,
+      "stock": 42
+    },
+    {
+      "id": 89,
+      "name": "Keychron K6 Wireless Edition",
+      "price": 1763512,
+      "description": "Bàn phím cơ Keychron K6 hỗ trợ Bluetooth và wired, layout 65%, switch mượt, phù hợp coder và game thủ.",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0059/0630/1017/t/5/assets/keychronk6pr0qmkviawirelesscustommechanicalkeyboard-1659094228146.jpg?v=1659094230",
+      "categoryId": 6,
+      "stock": 11
+    },
+    {
+      "id": 90,
+      "name": "Sony WH-1000XM5 Plus",
+      "price": 6413693,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 16
+    },
+    {
+      "id": 91,
+      "name": "iPad Air 5 Ultra",
+      "price": 18660085,
+      "description": "iPad Air 5 trang bị chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch. Hỗ trợ Apple Pencil, phù hợp cho học tập, thiết kế và giải trí.",
+      "imageUrl": "https://minhtuanmobile.com/uploads/products/240528103456-ipad-air-5-64gb-wifi1.jpg",
+      "categoryId": 3,
+      "stock": 9
+    },
+    {
+      "id": 92,
+      "name": "MacBook Air M2 13 inch Gen 2",
+      "price": 29868867,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+      "categoryId": 1,
+      "stock": 34
+    },
+    {
+      "id": 93,
+      "name": "LG UltraWide 29 inch Ultra",
+      "price": 9875662,
+      "description": "Màn hình LG UltraWide 29 inch, tỷ lệ 21:9, hiển thị rộng rãi, phù hợp làm việc đa nhiệm và giải trí.",
+      "imageUrl": "https://i.rtings.com/assets/products/qVeZ3Vwz/lg-29um69g-b/design-medium.jpg?format=auto",
+      "categoryId": 7,
+      "stock": 34
+    },
+    {
+      "id": 94,
+      "name": "Dell XPS 13 Plus 2024",
+      "price": 35959637,
+      "description": "Dell XPS 13 Plus nổi bật với thiết kế cao cấp, viền màn hình siêu mỏng. Trang bị CPU Intel Gen 12, RAM 16GB, SSD 512GB, phù hợp cho lập trình và công việc chuyên sâu.",
+      "imageUrl": "https://nhatminhlaptop.com/Upload/Editor/2023/11/12/dellxps13932020232-0fe2.jpg?v=2",
+      "categoryId": 1,
+      "stock": 31
+    },
+    {
+      "id": 95,
+      "name": "MacBook Air M2 13 inch New",
+      "price": 29103468,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+      "categoryId": 1,
+      "stock": 24
+    },
+    {
+      "id": 96,
+      "name": "iPad Air 5 Pro",
+      "price": 16130219,
+      "description": "iPad Air 5 trang bị chip M1 mạnh mẽ, màn hình Liquid Retina 10.9 inch. Hỗ trợ Apple Pencil, phù hợp cho học tập, thiết kế và giải trí.",
+      "imageUrl": "https://minhtuanmobile.com/uploads/products/240528103456-ipad-air-5-64gb-wifi1.jpg",
+      "categoryId": 3,
+      "stock": 46
+    },
+    {
+      "id": 97,
+      "name": "iPhone 15 Pro Max Pro",
+      "price": 35751946,
+      "description": "iPhone 15 Pro Max với khung Titanium siêu nhẹ, chip A17 Pro mạnh mẽ. Camera 48MP cho chất lượng ảnh vượt trội, zoom quang học 5x. Pin tối ưu cho cả ngày sử dụng.",
+      "imageUrl": "https://bizweb.dktcdn.net/100/312/636/products/iphone-15-pro-max-mau-xanh-1-1.jpg?v=1699865867370",
+      "categoryId": 2,
       "stock": 40
     },
     {
-      "id": 10,
-      "name": "Sạc dự phòng",
-      "price": 300000,
-      "description": "Pin 10000mAh",
-      "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5",
-      "categoryId": 3,
-      "stock": 60
+      "id": 98,
+      "name": "Logitech MX Master 3S Edition",
+      "price": 1776694,
+      "description": "Chuột không dây cao cấp Logitech MX Master 3S, thiết kế ergonomic, cuộn siêu mượt, kết nối đa thiết bị.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjZ2OljgmozExZblB01jPL6PclNTo8BXokJw&s",
+      "categoryId": 5,
+      "stock": 41
     },
     {
-      "name": "Iphone 17 ProMax",
-      "price": 25000000,
-      "description": "iPhone 17 Pro Max là mẫu smartphone cao cấp mới nhất đến từ Apple, nổi bật với thiết kế sang trọng, khung viền bền bỉ cùng màn hình lớn cho trải nghiệm hiển thị sắc nét và mượt mà. Máy được trang bị chip xử lý thế hệ mới mạnh mẽ, mang lại hiệu năng vượt trội trong mọi tác vụ từ làm việc đến giải trí. Hệ thống camera cải tiến giúp chụp ảnh và quay video chất lượng cao, trong khi thời lượng pin được tối ưu cho nhu cầu sử dụng cả ngày. Đây là lựa chọn lý tưởng cho người dùng cần một thiết bị cao cấp, ổn định và đẳng cấp.",
-      "imageUrl": "data:image/webp;base64,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",
-      "categoryId": 2,
-      "stock": 19,
-      "id": 11
+      "id": 99,
+      "name": "MacBook Air M2 13 inch 2025",
+      "price": 30690312,
+      "description": "MacBook Air M2 sở hữu thiết kế mỏng nhẹ chỉ 1.24kg, trang bị chip Apple M2 mạnh mẽ cho hiệu năng vượt trội. Màn hình Retina 13.6 inch sắc nét, pin lên đến 18 giờ sử dụng. Phù hợp cho sinh viên và dân văn phòng.",
+      "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+      "categoryId": 1,
+      "stock": 5
+    },
+    {
+      "id": 100,
+      "name": "Sony WH-1000XM5 Edition",
+      "price": 9299330,
+      "description": "Tai nghe Sony WH-1000XM5 nổi bật với công nghệ chống ồn chủ động hàng đầu. Âm thanh Hi-Res sống động, pin lên đến 30 giờ.",
+      "imageUrl": "https://www.stuff.tv/wp-content/uploads/sites/2/2022/06/IMG_5175.jpg?quality=75&w=1080",
+      "categoryId": 4,
+      "stock": 10
     }
   ],
   "carts": []
