@@ -7,6 +7,7 @@ import AdminLayout from '../layouts/AdminLayout';
 import Home from '../pages/Home';
 import ProductList from '../pages/admin/products/ProductList';
 import ProductForm from '../pages/admin/products/ProductForm';
+import Dashboard from '../pages/admin/Dashboard';
 
 const router = createBrowserRouter([
   // 1. Các phòng mở cửa tự do (ai vào cũng được)
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
         children: [
           {
             path: 'dashboard',
-            element: <div>Trang Dashboard chính thức</div>,
+            element: <Dashboard />,
           },
           {
             path: 'products',

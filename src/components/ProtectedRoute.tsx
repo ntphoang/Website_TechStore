@@ -1,18 +1,13 @@
-// Đây là component dùng để bảo vệ route (giống như "vệ sĩ đứng canh cửa")
-// Ai muốn vào trang phải qua kiểm tra ở đây
-
 import { useSelector } from 'react-redux';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 import type { RootState } from '../store/store';
 
-// Interface định nghĩa props truyền vào component
 interface ProtectedRouteProps {
   allowedRoles?: Array<'admin' | 'user'>;
 }
 
-const ProtectedRoute = ({ allowedRoles }: ProtectedRouteProps) => {
+export default function ProtectedRoute({ allowedRoles }: ProtectedRouteProps) {
   const auth = useSelector((state: RootState) => state.auth);
-
   const location = useLocation();
 
   // TH1: Người chưa đăng nhập
@@ -25,8 +20,6 @@ const ProtectedRoute = ({ allowedRoles }: ProtectedRouteProps) => {
     return <Navigate to="/" replace />;
   }
 
-  // TH3: Hợp lệ → cho phép truy cập
+  // TH3: Hợp lệ → cho phép truy cập render các Route con
   return <Outlet />;
-};
-
-export default ProtectedRoute;
+}

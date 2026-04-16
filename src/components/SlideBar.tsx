@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { RootState } from '../store/store';
+import type { RootState } from '../store/store';
 import {
   HiHome,
   HiShoppingBag,
@@ -52,8 +52,8 @@ const defaultMenuItems: MenuItem[] = [
   },
 ];
 
-const SlideBar: React.FC<SlideBarProps> = ({ menuItems = defaultMenuItems }) => {
-  const { isAuthenticated, user } = useSelector((state: typeof RootState) => state.auth);
+export default function SlideBar({ menuItems = defaultMenuItems }: SlideBarProps) {
+  const { isAuthenticated, user } = useSelector((state: RootState) => state.auth);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
@@ -63,60 +63,66 @@ const SlideBar: React.FC<SlideBarProps> = ({ menuItems = defaultMenuItems }) => 
     return true;
   });
 
-  const handleLinkClick = () => {
-    setIsMobileOpen(false);
-  };
-
   return (
     <>
-      {/* Overlay for mobile */}
+      {/* Overlay cho Mobile */}
       {isMobileOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          className="fixed inset-0 bg-slate-900/30 backdrop-blur-sm z-40 lg:hidden transition-opacity"
           onClick={() => setIsMobileOpen(false)}
         />
       )}
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-screen bg-white shadow-lg z-50 transition-all duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-screen bg-white border-r border-slate-100 shadow-xl lg:shadow-none z-50 transition-all duration-300 ease-in-out flex flex-col ${
           isMobileOpen ? 'translate-x-0' : '-translate-x-full'
-        } lg:translate-x-0 lg:static lg:shadow-none ${isCollapsed ? 'lg:w-20' : 'lg:w-64'} w-64`}
+        } lg:translate-x-0 lg:static ${isCollapsed ? 'lg:w-20' : 'lg:w-64'} w-64`}
       >
-        {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b">
-          {!isCollapsed && <h2 className="text-xl font-bold text-gray-800">TechStore</h2>}
+        {/* Nút thu gọn Sidebar (Chỉ hiện trên PC) */}
+        <div className="flex justify-end p-4 lg:block hidden">
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
-            className="p-2 rounded-md hover:bg-gray-100 lg:block hidden"
+            className="p-2 rounded-xl text-slate-400 hover:bg-pastel-ice hover:text-pastel-teal transition-colors"
           >
             <svg
-              className={`w-6 h-6 transition-transform ${isCollapsed ? 'rotate-180' : ''}`}
+              className={`w-5 h-5 transition-transform duration-300 ${isCollapsed ? 'rotate-180' : ''}`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
         </div>
 
         {/* Menu Items */}
-        <nav className="mt-4">
-          <ul className="space-y-2 px-4">
+        <nav className="flex-1 overflow-y-auto py-2 px-4">
+          <ul className="space-y-2">
             {filteredMenuItems.map((item) => (
               <li key={item.path}>
                 <NavLink
                   to={item.path}
-                  onClick={handleLinkClick}
+                  onClick={() => setIsMobileOpen(false)}
                   className={({ isActive }) =>
-                    `flex items-center p-3 rounded-md transition-colors ${
-                      isActive ? 'bg-blue-100 text-blue-600' : 'text-gray-700 hover:bg-gray-100'
+                    `flex items-center p-3 rounded-xl transition-all duration-200 group ${
+                      // Đã sửa lại logic màu Active ở đây
+                      isActive
+                        ? 'bg-pastel-ice text-pastel-teal font-extrabold shadow-sm'
+                        : 'text-slate-500 hover:bg-slate-50 hover:text-pastel-teal font-semibold'
                     } ${isCollapsed ? 'justify-center' : ''}`
                   }
+                  title={isCollapsed ? item.title : ''}
                 >
-                  {item.icon}
-                  {!isCollapsed && <span className="ml-3">{item.title}</span>}
+                  <span className="transition-transform duration-200 group-hover:scale-110">
+                    {item.icon}
+                  </span>
+                  {!isCollapsed && <span className="ml-3 tracking-wide">{item.title}</span>}
                 </NavLink>
               </li>
             ))}
@@ -125,6 +131,4 @@ const SlideBar: React.FC<SlideBarProps> = ({ menuItems = defaultMenuItems }) => 
       </div>
     </>
   );
-};
-
-export default SlideBar;
+}

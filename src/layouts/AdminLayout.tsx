@@ -12,38 +12,36 @@ export default function AdminLayout() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const dispatch = useDispatch();
 
-  // Chỉ lấy items từ cartSlice, không cần productSlice nữa
-  const items = useSelector((state: typeof RootState) => state.cart.items);
+  // Đã sửa lỗi: RootState thay vì typeof RootState
+  const items = useSelector((state: RootState) => state.cart.items);
 
   const handleOpenCart = () => {
     setIsCartOpen(true);
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
+    <div className="flex flex-col h-screen bg-slate-50 font-sans text-slate-900 overflow-hidden">
       {/* Header */}
       <Header onOpenCart={handleOpenCart} />
 
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden relative">
+        {/* Sidebar */}
         <SlideBar />
 
-        <main className="flex-1 overflow-x-hidden overflow-y-auto p-6">
-          <Outlet />
+        {/* Nội dung chính của Admin - Cuộn độc lập */}
+        <main className="flex-1 overflow-x-hidden overflow-y-auto p-6 md:p-8 bg-slate-50/50 animate-in fade-in duration-500">
+          <div className="mx-auto max-w-7xl pb-10">
+            <Outlet />
+          </div>
         </main>
       </div>
 
       <CartDrawer
         isOpen={isCartOpen}
         onClose={() => setIsCartOpen(false)}
-        items={items} // Truyền trực tiếp items vào
-        onUpdateQuantity={(id, delta) => {
-          // Gọi action cập nhật số lượng lên Redux
-          dispatch(updateQuantity({ productId: id, delta }));
-        }}
-        onRemove={(id) => {
-          // Gọi action xóa sản phẩm khỏi giỏ hàng
-          dispatch(removeFromCart(id));
-        }}
+        items={items}
+        onUpdateQuantity={(id, delta) => dispatch(updateQuantity({ productId: id, delta }))}
+        onRemove={(id) => dispatch(removeFromCart(id))}
       />
     </div>
   );

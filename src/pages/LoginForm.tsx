@@ -26,20 +26,30 @@ export default function LoginForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-full">
-      <h2 className="text-2xl font-bold mb-5 text-center">Login</h2>
+      <div className="mb-8">
+        <h2 className="text-3xl font-black text-slate-800 mb-2">Đăng nhập</h2>
+        <p className="text-slate-500 font-medium text-sm">Vui lòng điền thông tin để tiếp tục</p>
+      </div>
 
-      <Input label="Email" {...register('email')} error={errors.email?.message} />
-      <Input
-        label="Password"
-        type="password"
-        {...register('password')}
-        error={errors.password?.message}
-      />
+      <div className="space-y-1">
+        <Input label="Email của bạn" placeholder="VD: techstore@email.com" {...register('email')} error={errors.email?.message} />
+        <Input
+          label="Mật khẩu"
+          type="password"
+          placeholder="••••••••"
+          {...register('password')}
+          error={errors.password?.message}
+        />
+      </div>
 
-      <div className="text-right text-sm mb-3 text-gray-500 cursor-pointer">Forgot Password</div>
+      <div className="flex justify-end mb-6 mt-2">
+        <span className="text-sm font-bold text-slate-400 hover:text-pastel-teal cursor-pointer transition-colors">
+          Quên mật khẩu?
+        </span>
+      </div>
 
-      <Button type="submit" isLoading={isLoading}>
-        Login
+      <Button type="submit" isLoading={isLoading} className="py-3 text-base shadow-lg shadow-pastel-teal/20">
+        Đăng nhập
       </Button>
     </form>
   );

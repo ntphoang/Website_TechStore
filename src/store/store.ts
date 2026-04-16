@@ -13,5 +13,5 @@ export const store = configureStore({
 });
 
 // Export RootState as a const for importing without "type"
-export const RootState = {} as ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = ReturnType<typeof store.dispatch>;

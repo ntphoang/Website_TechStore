@@ -2,12 +2,10 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
-// Import cấu hình API và các Type
 import axiosClient from '../../../lib/axiosClient';
 import type { Product } from '../../../types/product.type';
 import type { Category } from '../../../types/category.type';
 
-// Import các UI Components
 import Button from '../../../components/Button';
 import LoadingSpinner from '../../../components/LoadingSpinner';
 import ConfirmModal from '../../../components/ConfirmModal';
@@ -15,54 +13,42 @@ import ConfirmModal from '../../../components/ConfirmModal';
 export default function ProductList() {
   const navigate = useNavigate();
 
-  // --- STATE QUẢN LÝ DỮ LIỆU ---
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  // --- STATE QUẢN LÝ MODAL XÓA ---
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState<number | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  // 1. Fetch dữ liệu khi trang vừa render
   useEffect(() => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        // Chạy song song 2 API để giảm thời gian chờ
         const [productsData, categoriesData] = await Promise.all([
           axiosClient.get('/products'),
           axiosClient.get('/categories'),
         ]);
-
-        setProducts(productsData as Product[]);
-        setCategories(categoriesData as Category[]);
+        setProducts(productsData as unknown as Product[]);
+        setCategories(categoriesData as unknown as Category[]);
       } catch (error) {
-        console.error('Lỗi khi tải dữ liệu:', error);
         toast.error('Không thể tải danh sách sản phẩm');
       } finally {
         setIsLoading(false);
       }
     };
-
     fetchData();
   }, []);
 
-  // 2. Các hàm Helper xử lý hiển thị UI
   const getCategoryName = (categoryId: number) => {
     const category = categories.find((c) => c.id === categoryId);
     return category ? category.name : 'Chưa phân loại';
   };
 
   const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('vi-VN', {
-      style: 'currency',
-      currency: 'VND',
-    }).format(price);
+    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
   };
 
-  // 3. Logic Xóa sản phẩm
   const openDeleteModal = (id: number) => {
     setSelectedProductId(id);
     setIsDeleteModalOpen(true);
@@ -70,17 +56,12 @@ export default function ProductList() {
 
   const confirmDelete = async () => {
     if (!selectedProductId) return;
-
     try {
       setIsDeleting(true);
-      // Gọi API xóa dữ liệu trên Server
       await axiosClient.delete(`/products/${selectedProductId}`);
-
-      // Cập nhật lại UI bằng cách loại bỏ sản phẩm vừa xóa khỏi mảng
       setProducts(products.filter((p) => p.id !== selectedProductId));
       toast.success('Đã xóa sản phẩm thành công!');
     } catch (error) {
-      console.error('Lỗi khi xóa:', error);
       toast.error('Không thể xóa sản phẩm này');
     } finally {
       setIsDeleting(false);
@@ -89,110 +70,114 @@ export default function ProductList() {
     }
   };
 
-  // --- RENDER GIAO DIỆN ---
-
   if (isLoading) {
     return (
-      <div className="flex h-64 items-center justify-center">
+      <div className="flex h-[60vh] items-center justify-center">
         <LoadingSpinner />
       </div>
     );
   }
 
   return (
-    <div className="space-y-6">
-      {/* Header Section */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold text-slate-800">Quản lý sản phẩm</h1>
-          <p className="text-slate-500 text-sm mt-1">
-            Danh sách tất cả sản phẩm đang có trong hệ thống
-          </p>
+    <div className="space-y-8 animate-in fade-in duration-500">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-6 rounded-3xl shadow-sm border border-slate-50">
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 bg-pastel-ice rounded-2xl flex items-center justify-center text-pastel-teal font-black text-xl">
+            {products.length}
+          </div>
+          <div>
+            <h1 className="text-2xl font-black text-slate-800">Kho Sản Phẩm</h1>
+            <p className="text-slate-500 text-sm mt-0.5 font-medium">
+              Quản lý và cập nhật kho hàng
+            </p>
+          </div>
         </div>
-        <div className="w-48">
-          <Button onClick={() => navigate('/admin/products/add')}>+ Thêm sản phẩm mới</Button>
+        <div className="w-full sm:w-56">
+          <Button
+            onClick={() => navigate('/admin/products/add')}
+            className="py-3 shadow-lg shadow-pastel-teal/20"
+          >
+            + Thêm sản phẩm mới
+          </Button>
         </div>
       </div>
 
-      {/* Table Section */}
-      <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+      {/* Table */}
+      <div className="bg-white rounded-3xl shadow-sm border border-slate-50 overflow-hidden">
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-sm text-slate-600">
-            <thead className="bg-slate-50 text-slate-700 border-b border-slate-200">
-              <tr>
-                <th className="px-6 py-4 font-semibold">Hình ảnh</th>
-                <th className="px-6 py-4 font-semibold">Tên sản phẩm</th>
-                <th className="px-6 py-4 font-semibold">Danh mục</th>
-                <th className="px-6 py-4 font-semibold">Giá</th>
-                <th className="px-6 py-4 font-semibold">Kho</th>
-                <th className="px-6 py-4 font-semibold text-center">Hành động</th>
+          <table className="w-full text-left whitespace-nowrap">
+            <thead>
+              <tr className="bg-slate-50/50 text-slate-500 text-xs uppercase tracking-widest">
+                <th className="px-8 py-5 font-bold">Hình ảnh</th>
+                <th className="px-8 py-5 font-bold">Tên sản phẩm</th>
+                <th className="px-8 py-5 font-bold">Danh mục</th>
+                <th className="px-8 py-5 font-bold">Giá bán</th>
+                <th className="px-8 py-5 font-bold">Kho</th>
+                <th className="px-8 py-5 font-bold text-center">Hành động</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100">
+            <tbody className="divide-y divide-slate-50/80">
               {products.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="px-6 py-12 text-center text-slate-500">
-                    <p className="text-lg font-medium">Chưa có sản phẩm nào</p>
-                    <p className="text-sm mt-1">Hãy bấm "Thêm sản phẩm mới" để bắt đầu.</p>
+                  <td colSpan={6} className="px-8 py-20 text-center">
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-slate-50 rounded-full mb-4">
+                      📦
+                    </div>
+                    <p className="text-lg font-bold text-slate-800">Chưa có sản phẩm nào</p>
+                    <p className="text-sm text-slate-500 mt-1">
+                      Bấm nút "Thêm sản phẩm" phía trên để bắt đầu
+                    </p>
                   </td>
                 </tr>
               ) : (
                 products.map((product) => (
-                  <tr key={product.id} className="hover:bg-slate-50 transition-colors">
-                    {/* Ảnh */}
-                    <td className="px-6 py-4">
-                      <div className="h-12 w-12 overflow-hidden rounded-lg border border-slate-100 bg-slate-50">
+                  <tr key={product.id} className="hover:bg-pastel-ice/10 transition-colors group">
+                    <td className="px-8 py-4">
+                      <div className="h-16 w-16 overflow-hidden rounded-2xl bg-pastel-ice/30 p-2 group-hover:bg-pastel-ice/50 transition-colors">
                         <img
                           src={product.imageUrl}
                           alt={product.name}
-                          className="h-full w-full object-cover"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            if (
-                              target.src !==
-                              'https://img.freepik.com/vector-cao-cap/bieu-tuong-hinh-anh-loi_194117-662.jpg'
-                            ) {
-                              target.src =
-                                'https://img.freepik.com/vector-cao-cap/bieu-tuong-hinh-anh-loi_194117-662.jpg';
-                            }
-                          }}
+                          className="h-full w-full object-cover mix-blend-multiply rounded-xl"
                         />
                       </div>
                     </td>
-                    {/* Tên */}
-                    <td className="px-6 py-4 font-medium text-slate-800 max-w-xs truncate">
-                      {product.name}
+                    <td className="px-8 py-4">
+                      <p className="font-bold text-slate-800 max-w-[200px] truncate">
+                        {product.name}
+                      </p>
+                      <p className="text-xs text-slate-400 font-medium mt-1">ID: #{product.id}</p>
                     </td>
-                    {/* Danh mục */}
-                    <td className="px-6 py-4">
-                      <span className="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 border border-blue-100">
+                    <td className="px-8 py-4">
+                      <span className="inline-flex items-center rounded-lg bg-pastel-ice/50 px-3 py-1 text-xs font-bold text-pastel-teal">
                         {getCategoryName(product.categoryId)}
                       </span>
                     </td>
-                    {/* Giá */}
-                    <td className="px-6 py-4 font-medium text-slate-900">
-                      {formatPrice(product.price)}
+                    <td className="px-8 py-4">
+                      <span className="font-black text-slate-900">
+                        {formatPrice(product.price)}
+                      </span>
                     </td>
-                    {/* Kho */}
-                    <td className="px-6 py-4">
+                    <td className="px-8 py-4">
                       {product.stock > 0 ? (
-                        <span className="font-medium text-slate-700">{product.stock}</span>
+                        <span className="font-bold text-slate-600">{product.stock}</span>
                       ) : (
-                        <span className="text-red-500 font-medium">Hết hàng</span>
+                        <span className="inline-flex items-center rounded-lg bg-red-50 px-3 py-1 text-xs font-bold text-red-500">
+                          Hết hàng
+                        </span>
                       )}
                     </td>
-                    {/* Nút hành động */}
-                    <td className="px-6 py-4">
-                      <div className="flex items-center justify-center space-x-4">
+                    <td className="px-8 py-4">
+                      <div className="flex items-center justify-center gap-3">
                         <button
                           onClick={() => navigate(`/admin/products/edit/${product.id}`)}
-                          className="text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                          className="px-4 py-2 bg-slate-50 text-slate-500 hover:bg-pastel-yellow hover:text-yellow-800 rounded-xl text-xs font-bold transition-colors"
                         >
                           Sửa
                         </button>
                         <button
                           onClick={() => openDeleteModal(product.id)}
-                          className="text-red-600 hover:text-red-800 font-medium transition-colors"
+                          className="px-4 py-2 bg-slate-50 text-slate-500 hover:bg-red-50 hover:text-red-500 rounded-xl text-xs font-bold transition-colors"
                         >
                           Xóa
                         </button>
@@ -206,13 +191,11 @@ export default function ProductList() {
         </div>
       </div>
 
-      {/* Modal Xác nhận Xóa */}
       <ConfirmModal
         isOpen={isDeleteModalOpen}
-        title="Xác nhận xóa sản phẩm"
-        message="Bạn có chắc chắn muốn xóa sản phẩm này không? Dữ liệu sau khi xóa sẽ không thể khôi phục."
-        confirmLabel="Xóa sản phẩm"
-        cancelLabel="Đóng"
+        title="Xóa sản phẩm"
+        message="Hành động này không thể hoàn tác. Sản phẩm sẽ bị xóa khỏi hệ thống hoàn toàn."
+        confirmLabel="Xác nhận xóa"
         onConfirm={confirmDelete}
         onCancel={() => setIsDeleteModalOpen(false)}
         isLoading={isDeleting}
