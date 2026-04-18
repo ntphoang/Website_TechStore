@@ -4,6 +4,7 @@ export interface User {
   email: string;
   role: 'admin' | 'user';
   phone?: string;
-  status: 'active' | 'locked';
-  joinDate: string;
+  address?: string;
+  status?: 'active' | 'locked';
+  joinDate?: string;
 }

@@ -18,7 +18,7 @@ export default function ProductList() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-  const [selectedProductId, setSelectedProductId] = useState<number | null>(null);
+  const [selectedProductId, setSelectedProductId] = useState<string | number | null>(null);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export default function ProductList() {
     fetchData();
   }, []);
 
-  const getCategoryName = (categoryId: number) => {
+  const getCategoryName = (categoryId: string | number) => {
     const category = categories.find((c) => c.id === categoryId);
     return category ? category.name : 'Chưa phân loại';
   };
@@ -49,7 +49,7 @@ export default function ProductList() {
     return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
   };
 
-  const openDeleteModal = (id: number) => {
+  const openDeleteModal = (id: string | number) => {
     setSelectedProductId(id);
     setIsDeleteModalOpen(true);
   };

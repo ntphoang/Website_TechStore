@@ -1,24 +1,22 @@
 import { useState } from 'react';
 import { HiOutlineEye, HiOutlineCheck, HiOutlineX } from 'react-icons/hi';
-import type { Order } from '../../types/order.type';
 import Badge from '../../components/Badge';
 
-// Dữ liệu mẫu tạm thời để test UI
+import type { Order } from '../../types';
+
 const mockOrders: Order[] = [
   { id: 'ORD-2026-001', customerName: 'Nguyễn Văn A', date: '16/04/2026', totalAmount: 32000000, status: 'pending', paymentMethod: 'COD' },
   { id: 'ORD-2026-002', customerName: 'Trần Thị B', date: '15/04/2026', totalAmount: 1250000, status: 'processing', paymentMethod: 'Momo' },
   { id: 'ORD-2026-003', customerName: 'Lê Hoàng C', date: '12/04/2026', totalAmount: 45000000, status: 'delivered', paymentMethod: 'Credit Card' },
-  { id: 'ORD-2026-004', customerName: 'Phạm D', date: '10/04/2026', totalAmount: 550000, status: 'cancelled', paymentMethod: 'COD' },
 ];
 
 export default function OrderList() {
-  const [orders, setOrders] = useState<Order[]>(mockOrders);
+  const [orders] = useState<Order[]>(mockOrders);
 
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
-  };
+  const formatPrice = (price: number) => 
+    new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
 
-  const renderStatusBadge = (status: Order['status']) => {
+  const renderStatus = (status: Order['status']) => {
     switch (status) {
       case 'pending': return <Badge variant="yellow">Chờ duyệt</Badge>;
       case 'processing': return <Badge variant="ice">Đang giao</Badge>;
@@ -62,23 +60,16 @@ export default function OrderList() {
                   <td className="px-8 py-4 font-semibold text-slate-700">{order.customerName}</td>
                   <td className="px-8 py-4 text-sm font-medium text-slate-500">{order.date}</td>
                   <td className="px-8 py-4 font-black text-slate-900">{formatPrice(order.totalAmount)}</td>
-                  <td className="px-8 py-4">{renderStatusBadge(order.status)}</td>
-                  <td className="px-8 py-4">
-                    <div className="flex items-center justify-center gap-2">
-                      <button className="p-2 bg-slate-50 text-slate-500 hover:bg-pastel-ice hover:text-pastel-teal rounded-xl" title="Xem">
-                        <HiOutlineEye className="w-5 h-5" />
+                  <td className="px-8 py-4">{renderStatus(order.status)}</td>
+                  <td className="px-8 py-4 flex items-center justify-center gap-2">
+                    <button className="p-2 bg-slate-50 text-slate-500 hover:bg-pastel-ice hover:text-pastel-teal rounded-xl transition-colors">
+                      <HiOutlineEye className="w-5 h-5" />
+                    </button>
+                    {order.status === 'pending' && (
+                      <button className="p-2 bg-slate-50 text-slate-500 hover:bg-pastel-mint hover:text-emerald-700 rounded-xl transition-colors">
+                        <HiOutlineCheck className="w-5 h-5" />
                       </button>
-                      {order.status === 'pending' && (
-                        <button className="p-2 bg-slate-50 text-slate-500 hover:bg-pastel-mint hover:text-emerald-700 rounded-xl" title="Duyệt">
-                          <HiOutlineCheck className="w-5 h-5" />
-                        </button>
-                      )}
-                      {(order.status === 'pending' || order.status === 'processing') && (
-                        <button className="p-2 bg-slate-50 text-slate-500 hover:bg-red-50 hover:text-red-500 rounded-xl" title="Hủy">
-                          <HiOutlineX className="w-5 h-5" />
-                        </button>
-                      )}
-                    </div>
+                    )}
                   </td>
                 </tr>
               ))}

@@ -4,6 +4,13 @@ import AuthPage from '../pages/AuthPage';
 import ProtectedRoute from '../components/ProtectedRoute';
 import AdminLayout from '../layouts/AdminLayout';
 import Home from '../pages/Home';
+
+// --- BỔ SUNG IMPORT CÁC TRANG CLIENT TẠI ĐÂY ---
+import ProductsPage from '../pages/ProductsPage';
+// import ProductDetail from '../pages/ProductDetail'; // Mở comment khi bạn tạo file này
+// import Checkout from '../pages/Checkout'; // Mở comment khi bạn tạo file này
+
+// --- CÁC TRANG ADMIN ---
 import ProductList from '../pages/admin/products/ProductList';
 import ProductForm from '../pages/admin/products/ProductForm';
 import Dashboard from '../pages/admin/Dashboard';
@@ -43,7 +50,6 @@ const router = createBrowserRouter([
               { path: 'edit/:id', element: <ProductForm /> }, // Khớp với: /admin/products/edit/1
             ],
           },
-          // THÊM MỚI: Đã bổ sung 2 trang Order và User ngang hàng với Products
           {
             path: 'orders',
             element: <OrderList />,
@@ -62,6 +68,7 @@ const router = createBrowserRouter([
   // ==========================================
   {
     path: '/',
+    // LƯU Ý: Hiện tại bạn đang yêu cầu phải đăng nhập (admin/user) mới được vào trang chủ và xem sản phẩm.
     element: <ProtectedRoute allowedRoles={['admin', 'user']} />,
     children: [
       {
@@ -72,6 +79,19 @@ const router = createBrowserRouter([
         path: 'home',
         element: <Home />,
       },
+      // THÊM MỚI: Khai báo đường dẫn cho trang Sản phẩm
+      {
+        path: 'products',
+        element: <ProductsPage />,
+      },
+      // {
+      //   path: 'products/:id',
+      //   element: <ProductDetail />,
+      // },
+      // {
+      //   path: 'checkout',
+      //   element: <Checkout />,
+      // },
     ],
   },
 

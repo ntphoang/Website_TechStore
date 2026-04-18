@@ -1,57 +1,46 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { HiOutlineAdjustments, HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
-import axiosClient from '../lib/axiosClient';
 import ProductCard from '../components/ProductCard';
 import LoadingSpinner from '../components/LoadingSpinner';
-import type { Product } from '../types/product.type';
-import type { Category } from '../types/category.type';
+import { useStoreData } from '../hooks/useProduct';
 
 export default function ProductsPage() {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  // Lấy toàn bộ data và trạng thái từ React Query chỉ bằng 1 dòng
+  const { data, isLoading, isError } = useStoreData();
 
   // State cho Lọc và Phân trang
   const [selectedCategory, setSelectedCategory] = useState<number | 'all'>('all');
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 8;
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setIsLoading(true);
-        const [productsData, categoriesData] = await Promise.all([
-          axiosClient.get('/products'),
-          axiosClient.get('/categories'),
-        ]);
-        setProducts(productsData as unknown as Product[]);
-        setCategories(categoriesData as unknown as Category[]);
-      } catch (error) {
-        console.error('Lỗi tải dữ liệu cửa hàng');
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchData();
-  }, []);
-
-  // Logic lọc sản phẩm
-  const filteredProducts = products.filter(
-    (p) => selectedCategory === 'all' || p.categoryId === selectedCategory
-  );
-
-  // Logic phân trang
-  const indexOfLastProduct = currentPage * productsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
-  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
-
-  if (isLoading)
+  // 1. XỬ LÝ TRẠNG THÁI LOADING & LỖI
+  if (isLoading) {
     return (
       <div className="h-96 flex items-center justify-center">
         <LoadingSpinner />
       </div>
     );
+  }
+
+  if (isError || !data) {
+    return (
+      <div className="h-96 flex items-center justify-center text-red-500 font-bold">
+        Đã có lỗi xảy ra khi tải dữ liệu cửa hàng.
+      </div>
+    );
+  }
+
+  const { products, categories } = data;
+
+  // 2. LOGIC LỌC VÀ PHÂN TRANG (Giữ nguyên của bạn vì đã viết rất tốt)
+  const filteredProducts = products.filter(
+    (p) => selectedCategory === 'all' || p.categoryId === selectedCategory
+  );
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
   return (
     <div className="animate-in fade-in duration-700">

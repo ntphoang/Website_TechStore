@@ -4,11 +4,10 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useNavigate, useParams } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
-import { productSchema } from '../../../schemas/product.schema';
-import type { ProductFormValues } from '../../../schemas/product.schema';
-import type { Category } from '../../../types/category.type';
+import { productSchema, type ProductFormValues } from '../../../schemas/product.schema';
+import { type Category } from '../../../types';
 import axiosClient from '../../../lib/axiosClient';
-
+import { useProductMutation } from '../../../hooks/useProduct';
 import Button from '../../../components/Button';
 import Input from '../../../components/Input';
 import Select from '../../../components/Select';
@@ -18,92 +17,67 @@ export default function ProductForm() {
   const navigate = useNavigate();
   const { id } = useParams();
   const isEditMode = Boolean(id);
-
   const [categories, setCategories] = useState<Category[]>([]);
+  const { create, update, isPending } = useProductMutation();
 
   const {
     register,
     handleSubmit,
     reset,
-    formState: { errors, isSubmitting },
+    formState: { errors },
   } = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema),
-    defaultValues: {
-      name: '',
-      price: 0,
-      description: '',
-      imageUrl: '',
-      categoryId: 0,
-      stock: 0,
-    },
+    defaultValues: { name: '', price: 0, description: '', imageUrl: '', categoryId: 0, stock: 0 },
   });
 
   useEffect(() => {
-    const fetchInitialData = async () => {
+    const loadData = async () => {
       try {
-        const categoriesData = await axiosClient.get('/categories');
-        setCategories(categoriesData as unknown as Category[]);
-
+        const cats = await axiosClient.get<any, Category[]>('/categories');
+        setCategories(cats);
         if (isEditMode) {
-          const productData = await axiosClient.get(`/products/${id}`);
-          reset(productData as unknown as ProductFormValues);
+          const prod = await axiosClient.get(`/products/${id}`);
+          reset(prod as any);
         }
       } catch (error) {
-        console.error('Lỗi khi tải dữ liệu form:', error);
-        toast.error('Không thể tải dữ liệu sản phẩm');
+        toast.error('Lỗi tải dữ liệu');
       }
     };
-
-    fetchInitialData();
+    loadData();
   }, [id, isEditMode, reset]);
 
   const onSubmit = async (data: ProductFormValues) => {
     try {
       if (isEditMode) {
-        await axiosClient.put(`/products/${id}`, data);
-        toast.success('Cập nhật sản phẩm thành công!');
+        await update({ id: id!, data });
       } else {
-        await axiosClient.post('/products', data);
-        toast.success('Thêm sản phẩm mới thành công!');
+        await create(data);
       }
       navigate('/admin/products');
     } catch (error) {
-      console.error('Lỗi khi lưu sản phẩm:', error);
-      toast.error('Có lỗi xảy ra, vui lòng thử lại');
+      console.error(error);
     }
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-100 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="max-w-4xl mx-auto bg-white p-8 rounded-3xl border border-slate-100 shadow-sm animate-in fade-in duration-500">
       <div className="mb-10 flex items-center gap-4">
         <div className="w-3 h-10 bg-pastel-teal rounded-full"></div>
-        <div>
-          <h2 className="text-3xl font-black text-slate-800">
-            {isEditMode ? 'Chỉnh sửa sản phẩm' : 'Thêm sản phẩm mới'}
-          </h2>
-          <p className="text-slate-500 text-sm mt-1.5 font-medium">
-            Điền đầy đủ các thông tin bên dưới để đưa sản phẩm lên kệ.
-          </p>
-        </div>
+        <h2 className="text-3xl font-black text-slate-800">
+          {isEditMode ? 'Chỉnh sửa sản phẩm' : 'Thêm sản phẩm mới'}
+        </h2>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-        {/* Hàng 1: Tên & Danh mục */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 bg-slate-50/50 p-6 rounded-2xl">
-          <Input
-            label="Tên sản phẩm"
-            placeholder="Ví dụ: iPhone 15 Pro Max"
-            error={errors.name?.message}
-            {...register('name')}
-          />
-
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50/50 p-6 rounded-2xl">
+          <Input label="Tên sản phẩm" {...register('name')} error={errors.name?.message} />
           <Select
-            label="Danh mục sản phẩm"
-            error={errors.categoryId?.message}
+            label="Danh mục"
             {...register('categoryId', { valueAsNumber: true })}
+            error={errors.categoryId?.message}
           >
             <option value={0} disabled>
-              -- Chọn một danh mục --
+              -- Chọn danh mục --
             </option>
             {categories.map((cat) => (
               <option key={cat.id} value={cat.id}>
@@ -113,60 +87,41 @@ export default function ProductForm() {
           </Select>
         </div>
 
-        {/* Hàng 2: Giá bán & Số lượng */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2 bg-slate-50/50 p-6 rounded-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-slate-50/50 p-6 rounded-2xl">
           <Input
             label="Giá bán (VNĐ)"
             type="number"
-            placeholder="Nhập giá sản phẩm"
-            error={errors.price?.message}
             {...register('price', { valueAsNumber: true })}
+            error={errors.price?.message}
           />
-
           <Input
-            label="Số lượng trong kho"
+            label="Kho"
             type="number"
-            placeholder="Ví dụ: 50"
-            error={errors.stock?.message}
             {...register('stock', { valueAsNumber: true })}
+            error={errors.stock?.message}
           />
         </div>
 
-        {/* Hàng 3: Hình ảnh & Mô tả */}
         <div className="bg-slate-50/50 p-6 rounded-2xl space-y-4">
-          <Input
-            label="Đường dẫn hình ảnh"
-            placeholder="https://example.com/image.jpg"
-            error={errors.imageUrl?.message}
-            {...register('imageUrl')}
-          />
-
-          {/* Component TextArea đã được thêm vào đây */}
+          <Input label="URL Hình ảnh" {...register('imageUrl')} error={errors.imageUrl?.message} />
           <TextArea
-            label="Mô tả chi tiết"
-            placeholder="Nhập thông tin mô tả cấu hình, tính năng nổi bật của sản phẩm..."
-            error={errors.description?.message}
+            label="Mô tả"
             {...register('description')}
+            error={errors.description?.message}
           />
         </div>
 
-        {/* Nút hành động */}
-        <div className="flex items-center justify-end gap-4 pt-8">
+        <div className="flex justify-end gap-4 pt-4">
           <button
             type="button"
-            onClick={() => navigate('/admin/products')}
-            className="px-8 py-3 text-sm font-bold text-slate-500 hover:text-slate-800 hover:bg-slate-100 rounded-xl transition-colors"
+            onClick={() => navigate(-1)}
+            className="px-6 py-2 text-slate-500 font-bold"
           >
-            Hủy bỏ
+            Hủy
           </button>
-
-          <div className="w-56">
-            <Button
-              type="submit"
-              isLoading={isSubmitting}
-              className="py-3 shadow-lg shadow-pastel-teal/20"
-            >
-              {isEditMode ? 'Cập nhật thay đổi' : 'Tạo sản phẩm'}
+          <div className="w-48">
+            <Button type="submit" isLoading={isPending}>
+              {isEditMode ? 'Cập nhật' : 'Tạo mới'}
             </Button>
           </div>
         </div>
