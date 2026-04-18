@@ -34,7 +34,7 @@ const defaultMenuItems: MenuItem[] = [
   },
   {
     title: 'Đơn hàng',
-    path: '/orders',
+    path: '/admin/orders',
     icon: <HiClipboardList className="w-6 h-6" />,
     requireAuth: true,
   },
