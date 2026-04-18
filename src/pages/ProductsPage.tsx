@@ -1,19 +1,23 @@
 import { useState } from 'react';
-import { HiOutlineAdjustments, HiOutlineChevronLeft, HiOutlineChevronRight } from 'react-icons/hi';
+import { 
+  HiOutlineAdjustments, 
+  HiOutlineChevronLeft, 
+  HiOutlineChevronRight,
+  HiOutlineChevronDown // Thêm icon này cho Dropdown
+} from 'react-icons/hi';
 import ProductCard from '../components/ProductCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { useStoreData } from '../hooks/useProduct';
 
 export default function ProductsPage() {
-  // Lấy toàn bộ data và trạng thái từ React Query chỉ bằng 1 dòng
   const { data, isLoading, isError } = useStoreData();
 
-  // State cho Lọc và Phân trang
   const [selectedCategory, setSelectedCategory] = useState<number | 'all'>('all');
   const [currentPage, setCurrentPage] = useState(1);
-  const productsPerPage = 8;
+  const [isFilterOpen, setIsFilterOpen] = useState(false); // State để đóng/mở Dropdown
+  
+  const productsPerPage = 8; // Hoặc bạn có thể tăng lên 12 vì không gian giờ đã rộng hơn
 
-  // 1. XỬ LÝ TRẠNG THÁI LOADING & LỖI
   if (isLoading) {
     return (
       <div className="h-96 flex items-center justify-center">
@@ -32,9 +36,8 @@ export default function ProductsPage() {
 
   const { products, categories } = data;
 
-  // 2. LOGIC LỌC VÀ PHÂN TRANG (Giữ nguyên của bạn vì đã viết rất tốt)
   const filteredProducts = products.filter(
-    (p) => selectedCategory === 'all' || p.categoryId === selectedCategory
+    (p: any) => selectedCategory === 'all' || p.categoryId === selectedCategory
   );
 
   const indexOfLastProduct = currentPage * productsPerPage;
@@ -42,101 +45,122 @@ export default function ProductsPage() {
   const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
 
+  // Lấy tên danh mục đang được chọn để hiển thị trên nút Dropdown
+  const currentCategoryName = selectedCategory === 'all' 
+    ? 'Tất cả danh mục' 
+    : categories.find((c: any) => c.id === selectedCategory)?.name;
+
   return (
     <div className="animate-in fade-in duration-700">
-      {/* Breadcrumb & Title */}
-      <div className="mb-8">
-        <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
-          Trang chủ / Sản phẩm
-        </p>
-        <h1 className="text-3xl font-black text-slate-800">Tất cả sản phẩm</h1>
-      </div>
+      
+      {/* KHU VỰC TIÊU ĐỀ & DROPDOWN LỌC */}
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+        <div>
+          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">
+            Trang chủ / Sản phẩm
+          </p>
+          <h1 className="text-3xl font-black text-slate-800">
+            {currentCategoryName}
+          </h1>
+        </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        {/* SIDEBAR LỌC */}
-        <aside className="lg:col-span-3 space-y-8">
-          <div className="bg-white p-6 rounded-[24px] border border-slate-50 shadow-sm">
-            <h3 className="flex items-center gap-2 font-black text-slate-800 mb-6">
-              <HiOutlineAdjustments className="text-pastel-teal" />
-              Bộ lọc
-            </h3>
+        {/* Dropdown Bộ Lọc */}
+        <div className="relative">
+          <button 
+            onClick={() => setIsFilterOpen(!isFilterOpen)}
+            className="flex items-center gap-3 bg-white border border-slate-200 px-5 py-3 rounded-xl font-bold text-slate-700 hover:border-pastel-teal hover:text-pastel-teal transition-colors shadow-sm focus:outline-none focus:ring-4 focus:ring-pastel-teal/10"
+          >
+            <HiOutlineAdjustments className="w-5 h-5 text-pastel-teal" />
+            <span>{currentCategoryName}</span>
+            <HiOutlineChevronDown className={`w-5 h-5 text-slate-400 transition-transform duration-300 ${isFilterOpen ? 'rotate-180' : ''}`} />
+          </button>
 
-            {/* Lọc theo danh mục */}
-            <div className="space-y-3">
-              <p className="text-xs font-black text-slate-400 uppercase tracking-wider mb-4">
-                Danh mục
-              </p>
-              <button
-                onClick={() => {
-                  setSelectedCategory('all');
-                  setCurrentPage(1);
-                }}
-                className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold transition-all ${selectedCategory === 'all' ? 'bg-pastel-teal text-white shadow-md shadow-pastel-teal/20' : 'text-slate-500 hover:bg-slate-50'}`}
-              >
-                Tất cả
-              </button>
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => {
-                    setSelectedCategory(cat.id);
-                    setCurrentPage(1);
-                  }}
-                  className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-bold transition-all ${selectedCategory === cat.id ? 'bg-pastel-teal text-white shadow-md shadow-pastel-teal/20' : 'text-slate-500 hover:bg-slate-50'}`}
-                >
-                  {cat.name}
-                </button>
-              ))}
-            </div>
-          </div>
-        </aside>
-
-        {/* LƯỚI SẢN PHẨM */}
-        <div className="lg:col-span-9">
-          {currentProducts.length > 0 ? (
+          {/* Menu Dropdown */}
+          {isFilterOpen && (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-                {currentProducts.map((product) => (
-                  <ProductCard key={product.id} product={product} />
-                ))}
-              </div>
+              {/* Lớp phủ vô hình để bắt sự kiện click ra ngoài menu */}
+              <div 
+                className="fixed inset-0 z-10" 
+                onClick={() => setIsFilterOpen(false)}
+              ></div>
 
-              {/* PHÂN TRANG (Pagination UI) */}
-              <div className="mt-12 flex justify-center items-center gap-2">
+              <div className="absolute right-0 mt-2 w-64 bg-white border border-slate-100 rounded-2xl shadow-xl z-20 py-2 animate-in fade-in slide-in-from-top-2">
                 <button
-                  disabled={currentPage === 1}
-                  onClick={() => setCurrentPage((prev) => prev - 1)}
-                  className="p-3 rounded-xl bg-white border border-slate-100 text-slate-400 hover:text-pastel-teal hover:border-pastel-teal transition-all disabled:opacity-30"
+                  onClick={() => {
+                    setSelectedCategory('all');
+                    setCurrentPage(1);
+                    setIsFilterOpen(false);
+                  }}
+                  className={`w-full text-left px-5 py-3 text-sm font-bold transition-colors ${selectedCategory === 'all' ? 'text-pastel-teal bg-pastel-ice/30 border-l-4 border-pastel-teal' : 'text-slate-600 hover:bg-slate-50 border-l-4 border-transparent'}`}
                 >
-                  <HiOutlineChevronLeft className="w-5 h-5" />
+                  Tất cả danh mục
                 </button>
-
-                {[...Array(totalPages)].map((_, i) => (
+                
+                {categories.map((cat: any) => (
                   <button
-                    key={i}
-                    onClick={() => setCurrentPage(i + 1)}
-                    className={`w-11 h-11 rounded-xl text-sm font-black transition-all ${currentPage === i + 1 ? 'bg-pastel-teal text-white shadow-lg shadow-pastel-teal/20 scale-110' : 'bg-white border border-slate-100 text-slate-400 hover:bg-slate-50'}`}
+                    key={cat.id}
+                    onClick={() => {
+                      setSelectedCategory(cat.id);
+                      setCurrentPage(1);
+                      setIsFilterOpen(false);
+                    }}
+                    className={`w-full text-left px-5 py-3 text-sm font-bold transition-colors ${selectedCategory === cat.id ? 'text-pastel-teal bg-pastel-ice/30 border-l-4 border-pastel-teal' : 'text-slate-600 hover:bg-slate-50 border-l-4 border-transparent'}`}
                   >
-                    {i + 1}
+                    {cat.name}
                   </button>
                 ))}
-
-                <button
-                  disabled={currentPage === totalPages}
-                  onClick={() => setCurrentPage((prev) => prev + 1)}
-                  className="p-3 rounded-xl bg-white border border-slate-100 text-slate-400 hover:text-pastel-teal hover:border-pastel-teal transition-all disabled:opacity-30"
-                >
-                  <HiOutlineChevronRight className="w-5 h-5" />
-                </button>
               </div>
             </>
-          ) : (
-            <div className="text-center py-20 bg-white rounded-[32px] border border-dashed border-slate-200">
-              <p className="text-slate-400 font-bold">Không tìm thấy sản phẩm nào phù hợp.</p>
-            </div>
           )}
         </div>
       </div>
+
+      {/* LƯỚI SẢN PHẨM (Đã dàn full màn hình) */}
+      {currentProducts.length > 0 ? (
+        <>
+          {/* Lưới mở rộng từ 1 -> 2 -> 3 -> 4 cột tùy kích thước màn hình */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+            {currentProducts.map((product: any) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+
+          {/* PHÂN TRANG */}
+          {totalPages > 1 && (
+            <div className="mt-12 flex justify-center items-center gap-2">
+              <button
+                disabled={currentPage === 1}
+                onClick={() => setCurrentPage((prev) => prev - 1)}
+                className="p-3 rounded-xl bg-white border border-slate-100 text-slate-400 hover:text-pastel-teal hover:border-pastel-teal transition-all disabled:opacity-30"
+              >
+                <HiOutlineChevronLeft className="w-5 h-5" />
+              </button>
+
+              {[...Array(totalPages)].map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentPage(i + 1)}
+                  className={`w-11 h-11 rounded-xl text-sm font-black transition-all ${currentPage === i + 1 ? 'bg-pastel-teal text-white shadow-lg shadow-pastel-teal/20 scale-110' : 'bg-white border border-slate-100 text-slate-400 hover:bg-slate-50'}`}
+                >
+                  {i + 1}
+                </button>
+              ))}
+
+              <button
+                disabled={currentPage === totalPages}
+                onClick={() => setCurrentPage((prev) => prev + 1)}
+                className="p-3 rounded-xl bg-white border border-slate-100 text-slate-400 hover:text-pastel-teal hover:border-pastel-teal transition-all disabled:opacity-30"
+              >
+                <HiOutlineChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+          )}
+        </>
+      ) : (
+        <div className="text-center py-32 bg-white rounded-[32px] border border-dashed border-slate-200">
+          <p className="text-slate-400 font-bold text-lg">Không tìm thấy sản phẩm nào trong danh mục này.</p>
+        </div>
+      )}
     </div>
   );
 }

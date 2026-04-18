@@ -13,6 +13,7 @@ import ProductForm from '../pages/admin/products/ProductForm';
 import Dashboard from '../pages/admin/Dashboard';
 import OrderList from '../pages/admin/OrderList';
 import UserList from '../pages/admin/UserList';
+import MainLayout from '../layouts/MainLayout';
 
 const router = createBrowserRouter([
   {
@@ -54,27 +55,17 @@ const router = createBrowserRouter([
 
   {
     path: '/',
-    element: <ProtectedRoute allowedRoles={['admin', 'user']} />,
+    element: <MainLayout />, // <-- Bọc Header và Footer cho Khách hàng
     children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-      {
-        path: 'home',
-        element: <Home />,
-      },
-      {
-        path: 'products',
-        element: <ProductsPage />,
-      },
-      {
-        path: 'products/:id',
-        element: <ProductDetail />,
-      },
+      { index: true, element: <Home /> },
+      { path: 'home', element: <Home /> },
+      { path: 'products', element: <ProductsPage /> },
+      { path: 'products/:id', element: <ProductDetail /> },
+
       {
         path: 'checkout',
-        element: <Checkout />,
+        element: <ProtectedRoute allowedRoles={['admin', 'user']} />,
+        children: [{ index: true, element: <Checkout /> }],
       },
     ],
   },
