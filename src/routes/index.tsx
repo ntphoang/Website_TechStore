@@ -1,5 +1,4 @@
 // Đây là nơi vẽ ra toàn bộ bản đồ (điều hướng) của trang web
-
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import AuthPage from '../pages/AuthPage';
 import ProtectedRoute from '../components/ProtectedRoute';
@@ -8,21 +7,27 @@ import Home from '../pages/Home';
 import ProductList from '../pages/admin/products/ProductList';
 import ProductForm from '../pages/admin/products/ProductForm';
 import Dashboard from '../pages/admin/Dashboard';
+import OrderList from '../pages/admin/OrderList';
+import UserList from '../pages/admin/UserList';
 
 const router = createBrowserRouter([
-  // 1. Các phòng mở cửa tự do (ai vào cũng được)
+  // ==========================================
+  // 1. CÁC PHÒNG MỞ CỬA TỰ DO (Xác thực)
+  // ==========================================
   {
     path: '/login',
     element: <AuthPage />,
   },
 
-  // 2. Các phòng vip chỉ có admin mới được vào
+  // ==========================================
+  // 2. CÁC PHÒNG VIP CHỈ CÓ ADMIN MỚI ĐƯỢC VÀO
+  // ==========================================
   {
     path: '/admin',
     element: <ProtectedRoute allowedRoles={['admin']} />,
     children: [
       {
-        // Layout chung bọc bên ngoài
+        // Layout chung bọc bên ngoài toàn bộ trang Admin
         element: <AdminLayout />,
         children: [
           {
@@ -38,12 +43,23 @@ const router = createBrowserRouter([
               { path: 'edit/:id', element: <ProductForm /> }, // Khớp với: /admin/products/edit/1
             ],
           },
+          // THÊM MỚI: Đã bổ sung 2 trang Order và User ngang hàng với Products
+          {
+            path: 'orders',
+            element: <OrderList />,
+          },
+          {
+            path: 'users',
+            element: <UserList />,
+          },
         ],
       },
     ],
   },
 
-  // 3. Các phòng chung cho admin và user
+  // ==========================================
+  // 3. CÁC PHÒNG CHUNG CHO ADMIN VÀ USER
+  // ==========================================
   {
     path: '/',
     element: <ProtectedRoute allowedRoles={['admin', 'user']} />,
@@ -59,7 +75,9 @@ const router = createBrowserRouter([
     ],
   },
 
-  // 4. Nếu vào đường dẫn không hợp lệ thì chuyển về đăng nhập
+  // ==========================================
+  // 4. FALLBACK ROUTE (Đường dẫn không hợp lệ)
+  // ==========================================
   {
     path: '*',
     element: <Navigate to="/login" replace />,
