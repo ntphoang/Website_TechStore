@@ -1,65 +1,156 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import type { RootState } from '../store/store';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useMutation } from '@tanstack/react-query';
+import toast from 'react-hot-toast';
+
+import { checkoutSchema } from '../schemas/checkout.schema';
+import { orderApi } from '../api/orderApi';
+import { clearCart } from '../store/cartSlice';
+
 import Input from '../components/Input';
 import TextArea from '../components/TextArea';
 import Button from '../components/Button';
-import toast from 'react-hot-toast';
+
+import type { RootState } from '../store/store';
+import type { CheckoutFormValues } from '../schemas/checkout.schema';
 
 export default function Checkout() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const { items } = useSelector((state: RootState) => state.cart);
+  const { user } = useSelector((state: RootState) => state.auth); // Lấy thông tin user nếu có
+
   const totalAmount = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-  const handleOrder = () => {
-    toast.success('Đặt hàng thành công! Đơn hàng đang được xử lý.');
-    navigate('/');
+  // 1. Khởi tạo Form với dữ liệu mặc định lấy từ User (nếu đã đăng nhập)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<CheckoutFormValues>({
+    resolver: zodResolver(checkoutSchema),
+    defaultValues: {
+      customerName: user?.name || '',
+      email: user?.email || '',
+      phone: user?.phone || '',
+      address: user?.address || '',
+      note: '',
+    },
+  });
+
+  // 2. Khởi tạo Mutation để gọi API tạo đơn hàng
+  const createOrderMutation = useMutation({
+    mutationFn: orderApi.create,
+    onSuccess: () => {
+      dispatch(clearCart()); // Dọn sạch giỏ hàng trong Redux
+      toast.success('🎉 Đặt hàng thành công! Đơn hàng đang được xử lý.');
+      navigate('/'); // Quay về trang chủ
+    },
+    onError: () => {
+      toast.error('Có lỗi xảy ra khi tạo đơn hàng. Vui lòng thử lại!');
+    },
+  });
+
+  // 3. Hàm xử lý Submit Form
+  const onSubmit = (formData: CheckoutFormValues) => {
+    // Tạo cấu trúc dữ liệu đơn hàng để gửi lên Server
+    const newOrder = {
+      id: `ORD-${Date.now().toString().slice(-6)}`, // Tạo mã đơn ngẫu nhiên
+      customerName: formData.customerName,
+      email: formData.email,
+      phone: formData.phone,
+      shippingAddress: formData.address,
+      note: formData.note,
+      date: new Date().toLocaleDateString('vi-VN'),
+      totalAmount: totalAmount,
+      status: 'pending', // Mặc định là Chờ duyệt
+      paymentMethod: 'COD',
+      items: items, // Kèm theo danh sách món hàng khách mua
+      userId: user?.id || null, // Lưu lại ID người mua nếu có
+    };
+
+    // Gọi API
+    createOrderMutation.mutate(newOrder);
   };
 
+  // Nếu giỏ hàng trống thì không cho thanh toán
   if (items.length === 0) {
     return (
       <div className="text-center py-20">
         <h2 className="text-2xl font-black text-slate-800 mb-4">Giỏ hàng của bạn đang trống</h2>
-        <Button onClick={() => navigate('/')} className="w-auto px-10">
-          Quay lại mua sắm
-        </Button>
+        <div className="flex justify-center mt-6">
+          <Button onClick={() => navigate('/products')} className="w-auto px-10">
+            Quay lại Cửa hàng
+          </Button>
+        </div>
       </div>
     );
   }
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      {/* CỘT TRÁI: THÔNG TIN GIAO HÀNG */}
+      {/* CỘT TRÁI: THÔNG TIN GIAO HÀNG (Form) */}
       <div className="lg:col-span-7">
-        <div className="bg-white p-8 rounded-[32px] border border-slate-50 shadow-sm">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="bg-white p-8 rounded-[32px] border border-slate-50 shadow-sm"
+        >
           <h2 className="text-2xl font-black text-slate-800 mb-8 flex items-center gap-3">
             <div className="w-2 h-8 bg-pastel-teal rounded-full"></div>
             Thông tin giao hàng
           </h2>
 
           <div className="space-y-2">
-            <Input label="Họ và tên người nhận" placeholder="Nhập đầy đủ họ tên" />
+            <Input
+              label="Họ và tên người nhận"
+              placeholder="Nhập đầy đủ họ tên"
+              {...register('customerName')}
+              error={errors.customerName?.message}
+            />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input label="Số điện thoại" placeholder="090x xxx xxx" />
-              <Input label="Email (Không bắt buộc)" placeholder="techstore@email.com" />
+              <Input
+                label="Số điện thoại"
+                placeholder="090x xxx xxx"
+                {...register('phone')}
+                error={errors.phone?.message}
+              />
+              <Input
+                label="Email (Không bắt buộc)"
+                placeholder="techstore@email.com"
+                {...register('email')}
+                error={errors.email?.message}
+              />
             </div>
-            <Input label="Địa chỉ nhận hàng" placeholder="Số nhà, tên đường, phường/xã..." />
+            <Input
+              label="Địa chỉ nhận hàng"
+              placeholder="Số nhà, tên đường, phường/xã..."
+              {...register('address')}
+              error={errors.address?.message}
+            />
             <TextArea
-              label="Ghi chú thêm"
+              label="Ghi chú thêm (Không bắt buộc)"
               placeholder="Lời nhắn cho nhân viên giao hàng (nếu có)..."
+              {...register('note')}
+              error={errors.note?.message}
             />
           </div>
-        </div>
 
-        <div className="mt-6 bg-pastel-ice/30 p-6 rounded-2xl border border-pastel-ice/50">
-          <p className="text-xs font-bold text-pastel-teal uppercase tracking-widest mb-2">
-            Phương thức thanh toán
-          </p>
-          <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-pastel-teal">
-            <div className="w-5 h-5 rounded-full border-4 border-pastel-teal"></div>
-            <span className="font-bold text-slate-800">Thanh toán khi nhận hàng (COD)</span>
+          <div className="mt-6 bg-pastel-ice/30 p-6 rounded-2xl border border-pastel-ice/50">
+            <p className="text-xs font-bold text-pastel-teal uppercase tracking-widest mb-2">
+              Phương thức thanh toán
+            </p>
+            <div className="flex items-center gap-3 p-4 bg-white rounded-xl border-2 border-pastel-teal">
+              <div className="w-5 h-5 rounded-full border-4 border-pastel-teal"></div>
+              <span className="font-bold text-slate-800">Thanh toán khi nhận hàng (COD)</span>
+            </div>
           </div>
-        </div>
+
+          {/* Nút Submit giấu trong form nhưng hiển thị ở cột phải cho đẹp */}
+          <button id="submit-order-btn" type="submit" className="hidden"></button>
+        </form>
       </div>
 
       {/* CỘT PHẢI: TÓM TẮT ĐƠN HÀNG */}
@@ -113,8 +204,10 @@ export default function Checkout() {
             </div>
           </div>
 
+          {/* Nút bấm này sẽ kích hoạt nút Submit đang ẩn bên trong Form */}
           <Button
-            onClick={handleOrder}
+            onClick={() => document.getElementById('submit-order-btn')?.click()}
+            isLoading={createOrderMutation.isPending}
             className="mt-10 bg-pastel-teal hover:bg-[#326e6e] py-4 text-base"
           >
             Xác nhận đặt hàng

@@ -1,4 +1,29 @@
 {
+  "orders": [
+    {
+      "id": "ORD-254385",
+      "customerName": "Admin Hoang",
+      "email": "admin001@gmail.com",
+      "phone": "0900000000",
+      "shippingAddress": "Ha Noi",
+      "note": "",
+      "date": "18/4/2026",
+      "totalAmount": 57980000,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 1,
+          "productId": 1,
+          "name": "MacBook Air M2 13 inch",
+          "price": 28990000,
+          "imageUrl": "https://cdn.tgdd.vn/Products/Images/44/289441/Slider/vi-vn-apple-macbook-air-m2-2022-16gb-1.jpg",
+          "quantity": 2
+        }
+      ],
+      "userId": 5
+    }
+  ],
   "users": [
     {
       "id": 2,

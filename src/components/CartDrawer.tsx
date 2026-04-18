@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom'; // Thêm import này
 import { HiX, HiPlus, HiMinus, HiOutlineShoppingCart, HiOutlineTrash } from 'react-icons/hi';
 import Button from './Button';
 
@@ -12,10 +13,18 @@ interface CartDrawerProps {
 }
 
 export default function CartDrawer({ isOpen, onClose, items, onUpdateQuantity, onRemove }: CartDrawerProps) {
+  const navigate = useNavigate(); // Khởi tạo hook điều hướng
+  
   const totalAmount = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const formatPrice = (price: number) => 
     new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
+
+  // Hàm xử lý khi bấm thanh toán
+  const handleCheckout = () => {
+    navigate('/checkout'); // Chuyển hướng sang trang thanh toán
+    onClose(); // Đóng drawer lại
+  };
 
   if (!isOpen) return null;
 
@@ -82,7 +91,23 @@ export default function CartDrawer({ isOpen, onClose, items, onUpdateQuantity, o
                   <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">Tổng cộng</p>
                   <p className="text-2xl font-black text-slate-900">{formatPrice(totalAmount)}</p>
                 </div>
-                <Button className="w-full py-4 text-base shadow-lg shadow-pastel-teal/30">Thanh toán ngay</Button>
+                
+                {/* Đã thêm sự kiện onClick vào đây */}
+                <Button 
+                  onClick={handleCheckout} 
+                  className="w-full py-4 text-base shadow-lg shadow-pastel-teal/30"
+                >
+                  Thanh toán ngay
+                </Button>
+
+                <div className="mt-4 flex justify-center">
+                  <button
+                    onClick={onClose}
+                    className="text-xs font-bold text-slate-400 hover:text-pastel-teal uppercase tracking-wider transition-colors"
+                  >
+                    Tiếp tục mua sắm
+                  </button>
+                </div>
               </div>
             )}
           </div>
