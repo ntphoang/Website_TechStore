@@ -22,7 +22,7 @@ const getInitialState = (): AuthState => {
 
 const authSlice = createSlice({
   name: 'auth',
-  initialState: getInitialState(),
+  initialState: getInitialState(),  
   reducers: {
     loginSuccess: (state, action: PayloadAction<{ user: User; token: string }>) => {
       state.isAuthenticated = true;
