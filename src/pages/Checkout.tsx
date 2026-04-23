@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useMutation } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
+import { HiOutlineCheck } from 'react-icons/hi';
 
 import { checkoutSchema } from '../schemas/checkout.schema';
 import { orderApi } from '../api/orderApi';
@@ -21,11 +23,13 @@ export default function Checkout() {
   const dispatch = useDispatch();
 
   const { items } = useSelector((state: RootState) => state.cart);
-  const { user } = useSelector((state: RootState) => state.auth); // Lấy thông tin user nếu có
+  const { user } = useSelector((state: RootState) => state.auth);
+
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [createdOrderId, setCreatedOrderId] = useState('');
 
   const totalAmount = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-  // 1. Khởi tạo Form với dữ liệu mặc định lấy từ User (nếu đã đăng nhập)
   const {
     register,
     handleSubmit,
@@ -39,26 +43,25 @@ export default function Checkout() {
       address: user?.address || '',
       note: '',
     },
+    mode: 'onChange', // Validate Real-time
   });
 
-  // 2. Khởi tạo Mutation để gọi API tạo đơn hàng
   const createOrderMutation = useMutation({
     mutationFn: orderApi.create,
-    onSuccess: () => {
-      dispatch(clearCart()); // Dọn sạch giỏ hàng trong Redux
-      toast.success('🎉 Đặt hàng thành công! Đơn hàng đang được xử lý.');
-      navigate('/'); // Quay về trang chủ
+    onSuccess: (_, variables) => {
+      dispatch(clearCart());
+      setCreatedOrderId(variables.id as string);
+      setIsSuccess(true);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     },
     onError: () => {
       toast.error('Có lỗi xảy ra khi tạo đơn hàng. Vui lòng thử lại!');
     },
   });
 
-  // 3. Hàm xử lý Submit Form
   const onSubmit = (formData: CheckoutFormValues) => {
-    // Tạo cấu trúc dữ liệu đơn hàng để gửi lên Server
     const newOrder = {
-      id: `ORD-${Date.now().toString().slice(-6)}`, // Tạo mã đơn ngẫu nhiên
+      id: `ORD-${Date.now().toString().slice(-6)}`,
       customerName: formData.customerName,
       email: formData.email,
       phone: formData.phone,
@@ -66,20 +69,55 @@ export default function Checkout() {
       note: formData.note,
       date: new Date().toLocaleDateString('vi-VN'),
       totalAmount: totalAmount,
-      status: 'pending', // Mặc định là Chờ duyệt
+      status: 'pending' as const,
       paymentMethod: 'COD',
-      items: items, // Kèm theo danh sách món hàng khách mua
-      userId: user?.id || null, // Lưu lại ID người mua nếu có
+      items: items,
+      userId: user?.id || null,
     };
 
-    // Gọi API
     createOrderMutation.mutate(newOrder);
   };
 
-  // Nếu giỏ hàng trống thì không cho thanh toán
+  // 1. Màn hình Thành công
+  if (isSuccess) {
+    return (
+      <div className="max-w-xl mx-auto text-center py-20 px-4 animate-in zoom-in duration-500">
+        <div className="w-24 h-24 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8 border-4 border-white shadow-lg">
+          <HiOutlineCheck className="w-12 h-12" />
+        </div>
+        <h2 className="text-3xl sm:text-4xl font-black text-slate-800 mb-4 tracking-tight">
+          Đặt hàng thành công!
+        </h2>
+        <div className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm mb-8">
+          <p className="text-slate-500 mb-2 font-medium">Mã đơn hàng của bạn</p>
+          <p className="text-2xl font-black text-pastel-teal">#{createdOrderId}</p>
+          <div className="h-px w-16 bg-slate-100 mx-auto my-4"></div>
+          <p className="text-sm text-slate-500">
+            Chúng tôi sẽ sớm liên hệ với bạn để xác nhận và giao hàng.
+          </p>
+        </div>
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <Button
+            onClick={() => navigate('/products')}
+            className="bg-slate-100 text-slate-600 hover:bg-slate-200"
+          >
+            Tiếp tục mua sắm
+          </Button>
+          <Button
+            onClick={() => navigate('/my-orders')}
+            className="shadow-lg shadow-pastel-teal/20"
+          >
+            Xem đơn hàng của tôi
+          </Button>
+        </div>
+      </div>
+    );
+  }
+
+  // 2. Màn hình Giỏ hàng trống
   if (items.length === 0) {
     return (
-      <div className="text-center py-20">
+      <div className="text-center py-20 animate-in fade-in duration-500">
         <h2 className="text-2xl font-black text-slate-800 mb-4">Giỏ hàng của bạn đang trống</h2>
         <div className="flex justify-center mt-6">
           <Button onClick={() => navigate('/products')} className="w-auto px-10">
@@ -90,11 +128,12 @@ export default function Checkout() {
     );
   }
 
+  // 3. Màn hình Đặt hàng
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 animate-in fade-in slide-in-from-bottom-4 duration-700">
-      {/* CỘT TRÁI: THÔNG TIN GIAO HÀNG (Form) */}
       <div className="lg:col-span-7">
         <form
+          id="checkout-form"
           onSubmit={handleSubmit(onSubmit)}
           className="bg-white p-8 rounded-[32px] border border-slate-50 shadow-sm"
         >
@@ -113,7 +152,7 @@ export default function Checkout() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Input
                 label="Số điện thoại"
-                placeholder="090x xxx xxx"
+                placeholder="0901234567"
                 {...register('phone')}
                 error={errors.phone?.message}
               />
@@ -147,13 +186,9 @@ export default function Checkout() {
               <span className="font-bold text-slate-800">Thanh toán khi nhận hàng (COD)</span>
             </div>
           </div>
-
-          {/* Nút Submit giấu trong form nhưng hiển thị ở cột phải cho đẹp */}
-          <button id="submit-order-btn" type="submit" className="hidden"></button>
         </form>
       </div>
 
-      {/* CỘT PHẢI: TÓM TẮT ĐƠN HÀNG */}
       <div className="lg:col-span-5">
         <div className="bg-slate-900 text-white p-8 rounded-[32px] shadow-xl sticky top-24">
           <h2 className="text-xl font-black mb-8 border-b border-white/10 pb-4">
@@ -165,7 +200,11 @@ export default function Checkout() {
               <div key={item.productId} className="flex justify-between items-center gap-4">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-white rounded-xl p-1 flex-shrink-0">
-                    <img src={item.imageUrl} className="w-full h-full object-contain" />
+                    <img
+                      src={item.imageUrl}
+                      alt={item.name}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <div>
                     <p className="text-xs font-bold line-clamp-1">{item.name}</p>
@@ -204,11 +243,11 @@ export default function Checkout() {
             </div>
           </div>
 
-          {/* Nút bấm này sẽ kích hoạt nút Submit đang ẩn bên trong Form */}
           <Button
-            onClick={() => document.getElementById('submit-order-btn')?.click()}
+            type="submit"
+            form="checkout-form"
             isLoading={createOrderMutation.isPending}
-            className="mt-10 bg-pastel-teal hover:bg-[#326e6e] py-4 text-base"
+            className="mt-10 bg-pastel-teal hover:bg-[#326e6e] py-4 text-base shadow-lg shadow-pastel-teal/30"
           >
             Xác nhận đặt hàng
           </Button>

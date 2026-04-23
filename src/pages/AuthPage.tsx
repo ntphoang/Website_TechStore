@@ -9,12 +9,10 @@ import { loginSchema, registerSchema } from '../schemas/auth.schema';
 import { useAuth } from '../hooks/useAuth';
 import Input from '../components/Input';
 import Button from '../components/Button';
-
 import type { LoginFormData, RegisterFormData } from '../schemas/auth.schema';
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
-
   const { login, isLoginLoading, register: registerAuth, isRegisterLoading } = useAuth();
 
   const {
@@ -23,6 +21,7 @@ export default function AuthPage() {
     formState: { errors: loginErrors },
   } = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
+    mode: 'onTouched',
   });
 
   const {
@@ -31,6 +30,7 @@ export default function AuthPage() {
     formState: { errors: signupErrors },
   } = useForm<RegisterFormData>({
     resolver: zodResolver(registerSchema),
+    mode: 'onTouched',
   });
 
   const onLogin = (data: LoginFormData) => login(data);
@@ -43,7 +43,6 @@ export default function AuthPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-pastel-ice via-slate-50 to-pastel-peach/40 p-4">
       <div className="relative w-full max-w-[850px] min-h-[650px] bg-white rounded-3xl shadow-2xl shadow-pastel-teal/20 overflow-hidden flex">
-        {/* FORM AREA */}
         <div
           className={`absolute top-0 w-full md:w-1/2 h-full p-8 sm:p-12 transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] z-10 bg-white ${
             isLogin
@@ -55,14 +54,12 @@ export default function AuthPage() {
             {isLogin ? (
               <form onSubmit={handleLoginSubmit(onLogin)} className="space-y-4 animate-fade">
                 <h2 className="text-3xl font-black text-slate-800 mb-6">Đăng nhập</h2>
-
                 <Input
                   label="Email"
                   placeholder="techstore@email.com"
                   {...registerLogin('email')}
                   error={loginErrors.email?.message}
                 />
-
                 <Input
                   label="Mật khẩu"
                   type="password"
@@ -70,8 +67,6 @@ export default function AuthPage() {
                   {...registerLogin('password')}
                   error={loginErrors.password?.message}
                 />
-
-                {/* NÚT CHÍNH */}
                 <Button
                   type="submit"
                   className="w-full py-4 text-base mt-2 bg-pastel-teal hover:bg-[#326e6e] shadow-lg shadow-pastel-teal/30"
@@ -79,8 +74,6 @@ export default function AuthPage() {
                 >
                   Đăng nhập
                 </Button>
-
-                {/* NÚT TRANG CHỦ NHẠT HƠN */}
                 <Link
                   to="/"
                   className="w-full mt-3 flex items-center justify-center gap-2 py-3 rounded-2xl bg-slate-100 text-slate-500 font-semibold hover:bg-slate-200 hover:text-slate-700 transition-all duration-300"
@@ -92,22 +85,19 @@ export default function AuthPage() {
             ) : (
               <form onSubmit={handleSignupSubmit(onRegister)} className="space-y-3 animate-fade">
                 <h2 className="text-3xl font-black text-slate-800 mb-6">Đăng ký</h2>
-
                 <Input
                   label="Họ và tên"
                   placeholder="Nguyễn Văn A"
                   {...registerSignup('name')}
                   error={signupErrors.name?.message}
                 />
-
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Input
                     label="Email"
                     placeholder="abc@email.com"
                     {...registerSignup('email')}
                     error={signupErrors.email?.message}
                   />
-
                   <Input
                     label="Số điện thoại"
                     placeholder="090..."
@@ -115,7 +105,6 @@ export default function AuthPage() {
                     error={signupErrors.phone?.message}
                   />
                 </div>
-
                 <Input
                   label="Mật khẩu"
                   type="password"
@@ -123,7 +112,6 @@ export default function AuthPage() {
                   {...registerSignup('password')}
                   error={signupErrors.password?.message}
                 />
-
                 <Input
                   label="Xác nhận mật khẩu"
                   type="password"
@@ -131,17 +119,13 @@ export default function AuthPage() {
                   {...registerSignup('confirmPassword')}
                   error={signupErrors.confirmPassword?.message}
                 />
-
-                {/* NÚT CHÍNH */}
                 <Button
                   type="submit"
-                  className="border-2 border-white/50 hover:border-white hover:bg-white hover:text-pastel-teal px-10 py-3 rounded-2xl font-bold transition-all duration-300"
+                  className="border-2 border-slate-100 hover:bg-pastel-teal hover:text-white px-10 py-3 rounded-2xl font-bold transition-all duration-300"
                   isLoading={isRegisterLoading}
                 >
                   Đăng ký ngay
                 </Button>
-
-                {/* NÚT TRANG CHỦ NHẠT */}
                 <Link
                   to="/"
                   className="w-full mt-3 flex items-center justify-center gap-2 py-3 rounded-2xl bg-slate-100 text-slate-500 font-semibold hover:bg-slate-200 hover:text-slate-700 transition-all duration-300"
@@ -152,20 +136,17 @@ export default function AuthPage() {
               </form>
             )}
 
-            {/* SOCIAL */}
             <div className="mt-8">
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
                   <div className="w-full border-t border-slate-100"></div>
                 </div>
-
                 <div className="relative flex justify-center text-sm">
                   <span className="px-4 bg-white text-slate-400 font-medium">
                     Hoặc tiếp tục với
                   </span>
                 </div>
               </div>
-
               <div className="flex justify-center gap-4 mt-6">
                 <Icon
                   icon={<FaGoogle />}
@@ -186,7 +167,6 @@ export default function AuthPage() {
               </div>
             </div>
 
-            {/* MOBILE SWITCH */}
             <div className="mt-6 text-center text-sm font-bold text-slate-500 md:hidden">
               {isLogin ? 'Chưa có tài khoản? ' : 'Đã có tài khoản? '}
               <button
@@ -199,7 +179,6 @@ export default function AuthPage() {
           </div>
         </div>
 
-        {/* SLIDING PANEL */}
         <div
           className={`hidden md:flex absolute top-0 w-1/2 h-full bg-pastel-teal text-white flex-col justify-center items-center text-center p-12 transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] z-20 ${
             isLogin ? 'left-0 translate-x-0' : 'left-0 translate-x-full'
@@ -215,7 +194,6 @@ export default function AuthPage() {
                 <p className="mb-8 text-pastel-ice font-medium leading-relaxed max-w-sm">
                   Bạn chưa có tài khoản? Hãy đăng ký ngay để trải nghiệm mua sắm tuyệt vời nhất.
                 </p>
-
                 <button
                   onClick={() => setIsLogin(false)}
                   className="border-2 border-white/50 hover:border-white hover:bg-white hover:text-pastel-teal px-10 py-3 rounded-2xl font-bold transition-all duration-300"
@@ -229,7 +207,6 @@ export default function AuthPage() {
                 <p className="mb-8 text-pastel-ice font-medium leading-relaxed max-w-sm">
                   Bạn đã có tài khoản? Hãy đăng nhập để tiếp tục.
                 </p>
-
                 <button
                   onClick={() => setIsLogin(true)}
                   className="border-2 border-white/50 hover:border-white hover:bg-white hover:text-pastel-teal px-10 py-3 rounded-2xl font-bold transition-all duration-300"

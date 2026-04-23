@@ -10,25 +10,18 @@ import CartDrawer from '../components/CartDrawer';
 
 export default function AdminLayout() {
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const dispatch = useDispatch();
-
-  // Đã sửa lỗi: RootState thay vì typeof RootState
   const items = useSelector((state: RootState) => state.cart.items);
-
-  const handleOpenCart = () => {
-    setIsCartOpen(true);
-  };
 
   return (
     <div className="flex flex-col h-screen bg-slate-50 font-sans text-slate-900 overflow-hidden">
-      {/* Header */}
-      <Header onOpenCart={handleOpenCart} />
+      <Header onOpenCart={() => setIsCartOpen(true)} onOpenMenu={() => setIsMenuOpen(true)} />
 
       <div className="flex flex-1 overflow-hidden relative">
-        {/* Sidebar */}
-        <SlideBar />
+        <SlideBar isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
-        {/* Nội dung chính của Admin - Cuộn độc lập */}
         <main className="flex-1 overflow-x-hidden overflow-y-auto p-6 md:p-8 bg-slate-50/50 animate-in fade-in duration-500">
           <div className="mx-auto max-w-7xl pb-10">
             <Outlet />

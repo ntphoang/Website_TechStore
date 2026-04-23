@@ -2,14 +2,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../store/store';
-import {
-  HiHome,
-  HiShoppingBag,
-  HiShoppingCart,
-  HiClipboardList,
-  HiCog,
-  HiViewList,
-} from 'react-icons/hi';
+import { HiHome, HiShoppingBag, HiClipboardList, HiCog, HiViewList } from 'react-icons/hi';
 
 interface MenuItem {
   title: string;
@@ -21,22 +14,19 @@ interface MenuItem {
 
 interface SlideBarProps {
   menuItems?: MenuItem[];
+  isOpen?: boolean;
+  onClose?: () => void;
 }
 
 const defaultMenuItems: MenuItem[] = [
   { title: 'Trang chủ', path: '/', icon: <HiHome className="w-6 h-6" /> },
   { title: 'Sản phẩm', path: '/products', icon: <HiShoppingBag className="w-6 h-6" /> },
   {
-    title: 'Giỏ hàng',
-    path: '/cart',
-    icon: <HiShoppingCart className="w-6 h-6" />,
-    requireAuth: true,
-  },
-  {
-    title: 'Đơn hàng',
+    title: 'QL Đơn hàng',
     path: '/admin/orders',
     icon: <HiClipboardList className="w-6 h-6" />,
     requireAuth: true,
+    roles: ['admin'],
   },
   {
     title: 'Quản trị',
@@ -52,10 +42,9 @@ const defaultMenuItems: MenuItem[] = [
   },
 ];
 
-export default function SlideBar({ menuItems = defaultMenuItems }: SlideBarProps) {
+export default function SlideBar({ menuItems = defaultMenuItems, isOpen, onClose }: SlideBarProps) {
   const { isAuthenticated, user } = useSelector((state: RootState) => state.auth);
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const filteredMenuItems = menuItems.filter((item) => {
     if (item.requireAuth && !isAuthenticated) return false;
@@ -65,21 +54,18 @@ export default function SlideBar({ menuItems = defaultMenuItems }: SlideBarProps
 
   return (
     <>
-      {/* Overlay cho Mobile */}
-      {isMobileOpen && (
+      {isOpen && (
         <div
           className="fixed inset-0 bg-slate-900/30 backdrop-blur-sm z-40 lg:hidden transition-opacity"
-          onClick={() => setIsMobileOpen(false)}
+          onClick={onClose}
         />
       )}
 
-      {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-screen bg-white border-r border-slate-100 shadow-xl lg:shadow-none z-50 transition-all duration-300 ease-in-out flex flex-col ${
-          isMobileOpen ? 'translate-x-0' : '-translate-x-full'
+          isOpen ? 'translate-x-0' : '-translate-x-full'
         } lg:translate-x-0 lg:static ${isCollapsed ? 'lg:w-20' : 'lg:w-64'} w-64`}
       >
-        {/* Nút thu gọn Sidebar (Chỉ hiện trên PC) */}
         <div className="flex justify-end p-4 lg:block hidden">
           <button
             onClick={() => setIsCollapsed(!isCollapsed)}
@@ -101,17 +87,15 @@ export default function SlideBar({ menuItems = defaultMenuItems }: SlideBarProps
           </button>
         </div>
 
-        {/* Menu Items */}
         <nav className="flex-1 overflow-y-auto py-2 px-4">
           <ul className="space-y-2">
             {filteredMenuItems.map((item) => (
               <li key={item.path}>
                 <NavLink
                   to={item.path}
-                  onClick={() => setIsMobileOpen(false)}
+                  onClick={onClose}
                   className={({ isActive }) =>
                     `flex items-center p-3 rounded-xl transition-all duration-200 group ${
-                      // Đã sửa lại logic màu Active ở đây
                       isActive
                         ? 'bg-pastel-ice text-pastel-teal font-extrabold shadow-sm'
                         : 'text-slate-500 hover:bg-slate-50 hover:text-pastel-teal font-semibold'
