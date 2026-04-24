@@ -1,144 +1,4941 @@
 {
   "users": [
     {
-      "id": 2,
-      "email": "user@gmail.com",
-      "password": "123456",
-      "name": "Nguyen Van A",
-      "role": "user",
-      "phone": "0987654321",
-      "address": "Hanoi"
-    },
-    {
-      "email": "admin2@gmail.com",
+      "id": 1,
+      "name": "Nguyễn Trần Phi Hoàng",
+      "email": "ntphoang205@gmail.com",
       "password": "$2a$10$exYppPVLOIowsYXzst1I1.XBxORdAgtOxXg5HFQj9KQznHKkjZRUG",
-      "name": "Sếp Hoàng",
       "role": "admin",
-      "id": 3
+      "phone": "0896368408",
+      "address": "12 Nguyễn Văn Bảo, Gò Vấp, Hồ Chí Minh"
     },
     {
-      "email": "user001@gmail.com",
+      "id": 2,
+      "name": "Trần Gia Hương",
+      "email": "user002@gmail.com",
       "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
-      "name": "Tran Van B",
       "role": "user",
-      "phone": "0912345678",
-      "address": "Ho Chi Minh",
-      "id": 4
+      "phone": "0980310878",
+      "address": "262 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh"
     },
     {
-      "email": "admin001@gmail.com",
-      "password": "$2a$10$qO1oDta..FegirnrxUwdzOjD9jY974whHGRGRI7u8tUKih7XvlEUy",
-      "name": "Admin Hoang",
+      "id": 3,
+      "name": "Vũ Ngọc Tuấn",
+      "email": "user003@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0910037533",
+      "address": "232 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh"
+    },
+    {
+      "id": 4,
+      "name": "Lê Hải Hùng",
+      "email": "user004@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0930754877",
+      "address": "624 Nguyễn Trãi, Quận 1, Hà Nội"
+    },
+    {
+      "id": 5,
+      "name": "Hồ Gia Hoàng",
+      "email": "user005@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0993789526",
+      "address": "283 Nguyễn Trãi, Quận Hải Châu, Hải Phòng"
+    },
+    {
+      "id": 6,
+      "name": "Lê Minh Hùng",
+      "email": "user006@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0932136990",
+      "address": "835 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ"
+    },
+    {
+      "id": 7,
+      "name": "Đặng Thanh Hùng",
+      "email": "user007@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0938657046",
+      "address": "263 Nguyễn Trãi, Quận 3, Hồ Chí Minh"
+    },
+    {
+      "id": 8,
+      "name": "Vũ Bảo Anh",
+      "email": "user008@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0969540675",
+      "address": "210 Nguyễn Trãi, Quận Cầu Giấy, Hà Nội"
+    },
+    {
+      "id": 9,
+      "name": "Phạm Đức Hải",
+      "email": "user009@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0939838859",
+      "address": "433 Nguyễn Trãi, Quận Đống Đa, Hà Nội"
+    },
+    {
+      "id": 10,
+      "name": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0910133446",
+      "address": "967 Nguyễn Trãi, Quận 3, Cần Thơ"
+    },
+    {
+      "id": 11,
+      "name": "Đỗ Hải Tuấn",
+      "email": "user011@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0977607600",
+      "address": "550 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh"
+    },
+    {
+      "id": 12,
+      "name": "Lê Ngọc Tuấn",
+      "email": "user012@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0967581092",
+      "address": "26 Nguyễn Trãi, Quận 3, Cần Thơ"
+    },
+    {
+      "id": 13,
+      "name": "Hoàng Đức Nam",
+      "email": "user013@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0967511402",
+      "address": "60 Nguyễn Trãi, Quận Gò Vấp, Hồ Chí Minh"
+    },
+    {
+      "id": 14,
+      "name": "Lê Minh Nam",
+      "email": "user014@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0936229071",
+      "address": "979 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ"
+    },
+    {
+      "id": 15,
+      "name": "Đặng Hải Tâm",
+      "email": "user015@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0961108873",
+      "address": "214 Nguyễn Trãi, Quận Gò Vấp, Đà Nẵng"
+    },
+    {
+      "id": 16,
+      "name": "Phạm Hải Nam",
+      "email": "user016@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0928040294",
+      "address": "984 Nguyễn Trãi, Quận 1, Hải Phòng"
+    },
+    {
+      "id": 17,
+      "name": "Đỗ Văn Hương",
+      "email": "user017@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0921568231",
+      "address": "849 Nguyễn Trãi, Quận Gò Vấp, Hà Nội"
+    },
+    {
+      "id": 18,
+      "name": "Hoàng Thanh Anh",
+      "email": "user018@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0955990251",
+      "address": "308 Nguyễn Trãi, Quận Gò Vấp, Hà Nội"
+    },
+    {
+      "id": 19,
+      "name": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0941923419",
+      "address": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ"
+    },
+    {
+      "id": 20,
+      "name": "Nguyễn Gia Tuấn",
+      "email": "user020@gmail.com",
+      "password": "$2a$10$kE4Aj3ch.7sDU5ddRVXmSuschPbG9Vf8J9zp/9rcdS.Zx4eQ0dRA.",
+      "role": "user",
+      "phone": "0975147381",
+      "address": "500 Nguyễn Trãi, Quận Đống Đa, Cần Thơ"
+    },
+    {
+      "email": "admin1@gmail.com",
+      "password": "$2a$10$D3IXdnrvqySPHn0sI1WqTurXplUJdrOyKX6FHOXNJ4/r/v959LGaC",
+      "name": "Hoàng",
+      "phone": "0983459876",
       "role": "admin",
-      "phone": "0900000000",
-      "address": "Ha Noi",
-      "id": 5
+      "status": "active",
+      "joinDate": "23/4/2026",
+      "id": 21
     }
   ],
   "categories": [
     {
       "id": 1,
-      "name": "Laptop"
+      "name": "Laptop & MacBook"
     },
     {
       "id": 2,
-      "name": "Điện thoại"
+      "name": "Điện thoại thông minh"
     },
     {
       "id": 3,
-      "name": "Phụ kiện"
+      "name": "Tablet & iPad"
+    },
+    {
+      "id": 4,
+      "name": "Tai nghe & Âm thanh"
+    },
+    {
+      "id": 5,
+      "name": "Chuột máy tính"
+    },
+    {
+      "id": 6,
+      "name": "Bàn phím cơ"
+    },
+    {
+      "id": 7,
+      "name": "Màn hình PC"
+    },
+    {
+      "id": 8,
+      "name": "Đồng hồ thông minh"
+    },
+    {
+      "id": 9,
+      "name": "Sạc & Cáp kết nối"
+    },
+    {
+      "id": 10,
+      "name": "Ổ cứng & Thẻ nhớ"
+    },
+    {
+      "id": 11,
+      "name": "Pin sạc dự phòng"
+    },
+    {
+      "id": 12,
+      "name": "Máy ảnh DSLR"
+    },
+    {
+      "id": 13,
+      "name": "Ống kính (Lens)"
+    },
+    {
+      "id": 14,
+      "name": "Flycam & Drone"
+    },
+    {
+      "id": 15,
+      "name": "Thiết bị mạng (Router)"
+    },
+    {
+      "id": 16,
+      "name": "Máy chơi game Console"
+    },
+    {
+      "id": 17,
+      "name": "Card đồ họa (VGA)"
+    },
+    {
+      "id": 18,
+      "name": "Nhà thông minh (SmartHome)"
+    },
+    {
+      "id": 19,
+      "name": "Balo & Túi chống sốc"
+    },
+    {
+      "id": 20,
+      "name": "Microphone Studio"
     }
   ],
   "products": [
     {
-      "id": 2,
-      "name": "MacBook Air M2",
-      "price": 30000000,
-      "description": "Chip Apple M2 mạnh mẽ",
-      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
-      "categoryId": 1,
-      "stock": 5
-    },
-    {
-      "id": 3,
-      "name": "HP Pavilion",
-      "price": 17000000,
-      "description": "Laptop phổ thông",
-      "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
-      "categoryId": 1,
-      "stock": 12
-    },
-    {
-      "name": "iPhone 14 Pro",
-      "price": 28000000,
-      "description": "Camera xịn",
-      "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQdzZrp2JwW_BLxPHdEn1BKV5OE-iqSh0WF3VT2u_FG9Xj45FQASsjc66Kgxw4NiNEKRW9Jl3HmN89xE9fmQa3VuM32q1GR6jPZfFFv4i9a4IKM44VjpuLXjH8jj0W39UH7QtrRBw&usqp=CAc",
+      "name": "Google Pixel 8 Pro (Màu Trắng)",
+      "price": 27100000,
+      "description": "Sản phẩm Google Pixel 8 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
       "categoryId": 2,
-      "stock": 8,
+      "stock": 21,
+      "discount": 10,
+      "id": 1
+    },
+    {
+      "name": "DJI RS 3 Mini - 1TB",
+      "price": 7650000,
+      "description": "Sản phẩm DJI RS 3 Mini chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+      "categoryId": 14,
+      "stock": 9,
+      "id": 2
+    },
+    {
+      "name": "Xbox Series X - 1TB",
+      "price": 15060000,
+      "description": "Sản phẩm Xbox Series X chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1622297845775-5ff3fef71d13?w=800",
+      "categoryId": 16,
+      "stock": 12,
+      "id": 3
+    },
+    {
+      "name": "GoPro Hero 12 Black - 1TB",
+      "price": 10480000,
+      "description": "Sản phẩm GoPro Hero 12 Black chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1562564055-71e051d33c19?w=800",
+      "categoryId": 12,
+      "stock": 130,
       "id": 4
     },
     {
-      "name": "Samsung Galaxy S23",
-      "price": 22000000,
-      "description": "Android flagship",
-      "imageUrl": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTTTgFZcCjXd092oW2ZfXwb2yj4AI11-ubCdWO-9E3-sjeSFNORtlOXvekddXMylKP7jgTksLKPC6sjrf6Pu1mRQWyFGHXaMBAmDat5TiJgcD9RvF5XjL6pHGGbXhZD6aQWZhCJ7LeU2g&usqp=CAc",
-      "categoryId": 2,
-      "stock": 12,
+      "name": "Canon EOS R5 - 1TB",
+      "price": 85930000,
+      "description": "Sản phẩm Canon EOS R5 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800",
+      "categoryId": 12,
+      "stock": 65,
       "id": 5
     },
     {
-      "id": 6,
-      "name": "Xiaomi 13",
-      "price": 14000000,
-      "description": "Giá tốt, cấu hình cao",
-      "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf",
-      "categoryId": 2,
-      "stock": 18
+      "name": "GoPro Hero 12 Black - Bản Cao Cấp",
+      "price": 10520000,
+      "description": "Sản phẩm GoPro Hero 12 Black chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1562564055-71e051d33c19?w=800",
+      "categoryId": 12,
+      "stock": 39,
+      "discount": 20,
+      "id": 6
     },
     {
-      "name": "Tai nghe Sony",
-      "price": 2000000,
-      "description": "Chống ồn tốt",
-      "imageUrl": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRXWfeCP3t3_UYmmeAtM3T6VoElVVvIMAeLUK2gjfY7Beb0ezIUvOrCLZ59auImhisuPevbIka_2eYJPFj4SCw8-WsWOWQHy3ELOH5avNnkg9ln_m3f1ydgFss98JAT866oTbTykg&usqp=CAc",
-      "categoryId": 3,
-      "stock": 30,
+      "name": "Dell UltraSharp 32 (Màu Đen)",
+      "price": 15950000,
+      "description": "Sản phẩm Dell UltraSharp 32 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=800",
+      "categoryId": 7,
+      "stock": 13,
       "id": 7
     },
     {
-      "id": 8,
-      "name": "Chuột Logitech",
-      "price": 500000,
-      "description": "Chuột không dây",
-      "imageUrl": "https://images.unsplash.com/photo-1527814050087-3793815479db",
-      "categoryId": 3,
-      "stock": 50
+      "name": "Shure SM7B Microphone - 1TB",
+      "price": 9980000,
+      "description": "Sản phẩm Shure SM7B Microphone chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+      "categoryId": 20,
+      "stock": 109,
+      "id": 8
     },
     {
-      "id": 9,
-      "name": "Bàn phím cơ",
-      "price": 1500000,
-      "description": "Bàn phím gaming",
-      "imageUrl": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae",
-      "categoryId": 3,
-      "stock": 40
+      "name": "Sony A7 IV (Màu Trắng)",
+      "price": 71900000,
+      "description": "Sản phẩm Sony A7 IV chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+      "categoryId": 12,
+      "stock": 15,
+      "id": 9
     },
     {
-      "id": 10,
-      "name": "Sạc dự phòng",
-      "price": 300000,
-      "description": "Pin 10000mAh",
-      "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5",
-      "categoryId": 3,
-      "stock": 60
+      "name": "Shure SM7B Microphone - Bản Tiêu Chuẩn",
+      "price": 12130000,
+      "description": "Sản phẩm Shure SM7B Microphone chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+      "categoryId": 20,
+      "stock": 5,
+      "id": 10
     },
     {
-      "name": "Iphone 17 ProMax",
-      "price": 25000000,
-      "description": "iPhone 17 Pro Max là mẫu smartphone cao cấp mới nhất đến từ Apple, nổi bật với thiết kế sang trọng, khung viền bền bỉ cùng màn hình lớn cho trải nghiệm hiển thị sắc nét và mượt mà. Máy được trang bị chip xử lý thế hệ mới mạnh mẽ, mang lại hiệu năng vượt trội trong mọi tác vụ từ làm việc đến giải trí. Hệ thống camera cải tiến giúp chụp ảnh và quay video chất lượng cao, trong khi thời lượng pin được tối ưu cho nhu cầu sử dụng cả ngày. Đây là lựa chọn lý tưởng cho người dùng cần một thiết bị cao cấp, ổn định và đẳng cấp.",
-      "imageUrl": "data:image/webp;base64,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",
-      "categoryId": 2,
-      "stock": 19,
+      "name": "Samsung T7 SSD 1TB (Màu Trắng)",
+      "price": 3000000,
+      "description": "Sản phẩm Samsung T7 SSD 1TB chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+      "categoryId": 10,
+      "stock": 43,
       "id": 11
+    },
+    {
+      "name": "MacBook Pro 14 M3 (Màu Đen)",
+      "price": 38900000,
+      "description": "Sản phẩm MacBook Pro 14 M3 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+      "categoryId": 1,
+      "stock": 63,
+      "discount": 25,
+      "id": 12
+    },
+    {
+      "name": "Canon RF 50mm f/1.2L - Bản Cao Cấp",
+      "price": 59830000,
+      "description": "Sản phẩm Canon RF 50mm f/1.2L chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+      "categoryId": 13,
+      "stock": 3,
+      "id": 13
+    },
+    {
+      "name": "PlayStation 5 (PS5) (Màu Titan)",
+      "price": 18140000,
+      "description": "Sản phẩm PlayStation 5 (PS5) chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=800",
+      "categoryId": 16,
+      "stock": 5,
+      "id": 14
+    },
+    {
+      "name": "TP-Link Deco Mesh Wi-Fi - Bản Cao Cấp",
+      "price": 4940000,
+      "description": "Sản phẩm TP-Link Deco Mesh Wi-Fi chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+      "categoryId": 15,
+      "stock": 80,
+      "id": 15
+    },
+    {
+      "name": "iPad Air 5 (Màu Trắng)",
+      "price": 14760000,
+      "description": "Sản phẩm iPad Air 5 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+      "categoryId": 3,
+      "stock": 5,
+      "id": 16
+    },
+    {
+      "name": "MacBook Pro 14 M3 (Màu Titan)",
+      "price": 48860000,
+      "description": "Sản phẩm MacBook Pro 14 M3 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+      "categoryId": 1,
+      "stock": 17,
+      "id": 17
+    },
+    {
+      "name": "iPad Air 5 (Màu Titan)",
+      "price": 14510000,
+      "description": "Sản phẩm iPad Air 5 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+      "categoryId": 3,
+      "stock": 14,
+      "discount": 25,
+      "id": 18
+    },
+    {
+      "name": "Túi chống sốc Incase - 512GB",
+      "price": 740000,
+      "description": "Sản phẩm Túi chống sốc Incase chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+      "categoryId": 19,
+      "stock": 122,
+      "id": 19
+    },
+    {
+      "name": "NVIDIA RTX 4090 - Bản Tiêu Chuẩn",
+      "price": 57030000,
+      "description": "Sản phẩm NVIDIA RTX 4090 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+      "categoryId": 17,
+      "stock": 19,
+      "id": 20
+    },
+    {
+      "name": "Dell XPS 13 Plus - 256GB",
+      "price": 35600000,
+      "description": "Sản phẩm Dell XPS 13 Plus chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800",
+      "categoryId": 1,
+      "stock": 77,
+      "discount": 5,
+      "id": 21
+    },
+    {
+      "name": "MacBook Pro 14 M3 - 512GB",
+      "price": 47690000,
+      "description": "Sản phẩm MacBook Pro 14 M3 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+      "categoryId": 1,
+      "stock": 4,
+      "discount": 25,
+      "id": 22
+    },
+    {
+      "name": "Marshall Stanmore III - 1TB",
+      "price": 10620000,
+      "description": "Sản phẩm Marshall Stanmore III chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800",
+      "categoryId": 4,
+      "stock": 102,
+      "id": 23
+    },
+    {
+      "name": "DJI RS 3 Mini - Bản Cao Cấp",
+      "price": 8980000,
+      "description": "Sản phẩm DJI RS 3 Mini chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+      "categoryId": 14,
+      "stock": 25,
+      "id": 24
+    },
+    {
+      "name": "Sony WH-1000XM5 (Màu Titan)",
+      "price": 8450000,
+      "description": "Sản phẩm Sony WH-1000XM5 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=800",
+      "categoryId": 4,
+      "stock": 41,
+      "id": 25
+    },
+    {
+      "name": "TP-Link Deco Mesh Wi-Fi (Màu Đen)",
+      "price": 4190000,
+      "description": "Sản phẩm TP-Link Deco Mesh Wi-Fi chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+      "categoryId": 15,
+      "stock": 40,
+      "id": 26
+    },
+    {
+      "name": "TP-Link Deco Mesh Wi-Fi (Màu Titan)",
+      "price": 4710000,
+      "description": "Sản phẩm TP-Link Deco Mesh Wi-Fi chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+      "categoryId": 15,
+      "stock": 60,
+      "id": 27
+    },
+    {
+      "name": "Anker Prime 100W - 256GB",
+      "price": 1590000,
+      "description": "Sản phẩm Anker Prime 100W chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800",
+      "categoryId": 9,
+      "stock": 90,
+      "id": 28
+    },
+    {
+      "name": "iPhone 15 Pro Max - 1TB",
+      "price": 36210000,
+      "description": "Sản phẩm iPhone 15 Pro Max chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800",
+      "categoryId": 2,
+      "stock": 55,
+      "id": 29
+    },
+    {
+      "name": "DJI RS 3 Mini - Bản Tiêu Chuẩn",
+      "price": 9370000,
+      "description": "Sản phẩm DJI RS 3 Mini chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+      "categoryId": 14,
+      "stock": 8,
+      "discount": 15,
+      "id": 30
+    },
+    {
+      "name": "Anker Prime 100W (Màu Đen)",
+      "price": 1510000,
+      "description": "Sản phẩm Anker Prime 100W chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800",
+      "categoryId": 9,
+      "stock": 73,
+      "id": 31
+    },
+    {
+      "name": "Sony WH-1000XM5 (Màu Đen)",
+      "price": 7580000,
+      "description": "Sản phẩm Sony WH-1000XM5 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=800",
+      "categoryId": 4,
+      "stock": 20,
+      "id": 32
+    },
+    {
+      "name": "NVIDIA RTX 4070 Ti - Bản Cao Cấp",
+      "price": 31230000,
+      "description": "Sản phẩm NVIDIA RTX 4070 Ti chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+      "categoryId": 17,
+      "stock": 134,
+      "id": 33
+    },
+    {
+      "name": "NVIDIA RTX 4070 Ti - 512GB",
+      "price": 30310000,
+      "description": "Sản phẩm NVIDIA RTX 4070 Ti chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+      "categoryId": 17,
+      "stock": 88,
+      "id": 34
+    },
+    {
+      "name": "Google Nest Hub - Bản Tiêu Chuẩn",
+      "price": 2800000,
+      "description": "Sản phẩm Google Nest Hub chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=800",
+      "categoryId": 18,
+      "stock": 57,
+      "id": 35
+    },
+    {
+      "name": "DJI Mini 4 Pro (Màu Trắng)",
+      "price": 24770000,
+      "description": "Sản phẩm DJI Mini 4 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+      "categoryId": 14,
+      "stock": 7,
+      "id": 36
+    },
+    {
+      "name": "Philips Hue Starter Kit - 256GB",
+      "price": 4250000,
+      "description": "Sản phẩm Philips Hue Starter Kit chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800",
+      "categoryId": 18,
+      "stock": 18,
+      "id": 37
+    },
+    {
+      "name": "Dell UltraSharp 32 - 256GB",
+      "price": 18070000,
+      "description": "Sản phẩm Dell UltraSharp 32 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=800",
+      "categoryId": 7,
+      "stock": 40,
+      "discount": 5,
+      "id": 38
+    },
+    {
+      "name": "Asus ROG Zephyrus - 1TB",
+      "price": 45680000,
+      "description": "Sản phẩm Asus ROG Zephyrus chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800",
+      "categoryId": 1,
+      "stock": 7,
+      "id": 39
+    },
+    {
+      "name": "DJI RS 3 Mini (Màu Đen)",
+      "price": 8570000,
+      "description": "Sản phẩm DJI RS 3 Mini chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+      "categoryId": 14,
+      "stock": 23,
+      "id": 40
+    },
+    {
+      "name": "Canon EOS R5 (Màu Đen)",
+      "price": 84730000,
+      "description": "Sản phẩm Canon EOS R5 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800",
+      "categoryId": 12,
+      "stock": 51,
+      "id": 41
+    },
+    {
+      "name": "Dell XPS 13 Plus - Bản Cao Cấp",
+      "price": 31620000,
+      "description": "Sản phẩm Dell XPS 13 Plus chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800",
+      "categoryId": 1,
+      "stock": 113,
+      "discount": 20,
+      "id": 42
+    },
+    {
+      "name": "Sony FE 24-70mm GM II - 1TB",
+      "price": 47320000,
+      "description": "Sản phẩm Sony FE 24-70mm GM II chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800",
+      "categoryId": 13,
+      "stock": 95,
+      "discount": 10,
+      "id": 43
+    },
+    {
+      "name": "iPhone 14 Pro - Bản Tiêu Chuẩn",
+      "price": 28070000,
+      "description": "Sản phẩm iPhone 14 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=800",
+      "categoryId": 2,
+      "stock": 25,
+      "id": 44
+    },
+    {
+      "name": "iPhone 14 Pro (Màu Titan)",
+      "price": 28400000,
+      "description": "Sản phẩm iPhone 14 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=800",
+      "categoryId": 2,
+      "stock": 137,
+      "id": 45
+    },
+    {
+      "name": "WD Black SN850X - 1TB",
+      "price": 3710000,
+      "description": "Sản phẩm WD Black SN850X chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=800",
+      "categoryId": 10,
+      "stock": 8,
+      "id": 46
+    },
+    {
+      "name": "Balo Tomtoc Navigator - Bản Tiêu Chuẩn",
+      "price": 1810000,
+      "description": "Sản phẩm Balo Tomtoc Navigator chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800",
+      "categoryId": 19,
+      "stock": 149,
+      "discount": 20,
+      "id": 47
+    },
+    {
+      "name": "Samsung T7 SSD 1TB - 256GB",
+      "price": 2360000,
+      "description": "Sản phẩm Samsung T7 SSD 1TB chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+      "categoryId": 10,
+      "stock": 11,
+      "id": 48
+    },
+    {
+      "name": "Logitech MX Master 3S - Bản Cao Cấp",
+      "price": 2430000,
+      "description": "Sản phẩm Logitech MX Master 3S chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800",
+      "categoryId": 5,
+      "stock": 70,
+      "id": 49
+    },
+    {
+      "name": "Philips Hue Starter Kit - 512GB",
+      "price": 5590000,
+      "description": "Sản phẩm Philips Hue Starter Kit chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800",
+      "categoryId": 18,
+      "stock": 14,
+      "id": 50
+    },
+    {
+      "name": "Akko 3098B - 256GB",
+      "price": 2180000,
+      "description": "Sản phẩm Akko 3098B chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800",
+      "categoryId": 6,
+      "stock": 102,
+      "id": 51
+    },
+    {
+      "name": "NVIDIA RTX 4070 Ti - 1TB",
+      "price": 27400000,
+      "description": "Sản phẩm NVIDIA RTX 4070 Ti chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+      "categoryId": 17,
+      "stock": 11,
+      "id": 52
+    },
+    {
+      "name": "Philips Hue Starter Kit (Màu Titan)",
+      "price": 5110000,
+      "description": "Sản phẩm Philips Hue Starter Kit chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800",
+      "categoryId": 18,
+      "stock": 109,
+      "id": 53
+    },
+    {
+      "name": "Túi chống sốc Incase (Màu Titan)",
+      "price": 820000,
+      "description": "Sản phẩm Túi chống sốc Incase chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+      "categoryId": 19,
+      "stock": 93,
+      "id": 54
+    },
+    {
+      "name": "iPhone 14 Pro - 256GB",
+      "price": 24370000,
+      "description": "Sản phẩm iPhone 14 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=800",
+      "categoryId": 2,
+      "stock": 70,
+      "id": 55
+    },
+    {
+      "name": "Philips Hue Starter Kit - 1TB",
+      "price": 4790000,
+      "description": "Sản phẩm Philips Hue Starter Kit chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800",
+      "categoryId": 18,
+      "stock": 24,
+      "id": 56
+    },
+    {
+      "name": "Canon RF 50mm f/1.2L (Màu Đen)",
+      "price": 55170000,
+      "description": "Sản phẩm Canon RF 50mm f/1.2L chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+      "categoryId": 13,
+      "stock": 52,
+      "id": 57
+    },
+    {
+      "name": "Bàn phím Logitech MX Keys - Bản Tiêu Chuẩn",
+      "price": 2470000,
+      "description": "Sản phẩm Bàn phím Logitech MX Keys chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+      "categoryId": 6,
+      "stock": 5,
+      "id": 58
+    },
+    {
+      "name": "Sony A7 IV (Màu Titan)",
+      "price": 73690000,
+      "description": "Sản phẩm Sony A7 IV chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+      "categoryId": 12,
+      "stock": 143,
+      "discount": 25,
+      "id": 59
+    },
+    {
+      "name": "Google Pixel 8 Pro - 256GB",
+      "price": 26160000,
+      "description": "Sản phẩm Google Pixel 8 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+      "categoryId": 2,
+      "stock": 29,
+      "id": 60
+    },
+    {
+      "name": "Bàn phím Logitech MX Keys - 256GB",
+      "price": 2670000,
+      "description": "Sản phẩm Bàn phím Logitech MX Keys chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+      "categoryId": 6,
+      "stock": 26,
+      "discount": 25,
+      "id": 61
+    },
+    {
+      "name": "Blue Yeti USB Mic - Bản Tiêu Chuẩn",
+      "price": 3270000,
+      "description": "Sản phẩm Blue Yeti USB Mic chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800",
+      "categoryId": 20,
+      "stock": 8,
+      "discount": 20,
+      "id": 62
+    },
+    {
+      "name": "iPhone 14 Pro (Màu Đen)",
+      "price": 25270000,
+      "description": "Sản phẩm iPhone 14 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=800",
+      "categoryId": 2,
+      "stock": 62,
+      "id": 63
+    },
+    {
+      "name": "iPad Air 5 - Bản Cao Cấp",
+      "price": 14620000,
+      "description": "Sản phẩm iPad Air 5 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+      "categoryId": 3,
+      "stock": 38,
+      "discount": 25,
+      "id": 64
+    },
+    {
+      "name": "WD Black SN850X (Màu Trắng)",
+      "price": 3700000,
+      "description": "Sản phẩm WD Black SN850X chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=800",
+      "categoryId": 10,
+      "stock": 121,
+      "id": 65
+    },
+    {
+      "name": "Pin dự phòng Baseus - 1TB",
+      "price": 920000,
+      "description": "Sản phẩm Pin dự phòng Baseus chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/p/i/pin-sac-du-phong-baseus-enerfill-fc11-10000mah-22-5w_1_.png",
+      "categoryId": 11,
+      "stock": 20,
+      "discount": 10,
+      "id": 66
+    },
+    {
+      "name": "Shure SM7B Microphone (Màu Trắng)",
+      "price": 11530000,
+      "description": "Sản phẩm Shure SM7B Microphone chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+      "categoryId": 20,
+      "stock": 145,
+      "discount": 15,
+      "id": 67
+    },
+    {
+      "name": "PlayStation 5 (PS5) - 256GB",
+      "price": 13770000,
+      "description": "Sản phẩm PlayStation 5 (PS5) chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=800",
+      "categoryId": 16,
+      "stock": 66,
+      "id": 68
+    },
+    {
+      "name": "Canon EOS R5 - Bản Cao Cấp",
+      "price": 106760000,
+      "description": "Sản phẩm Canon EOS R5 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800",
+      "categoryId": 12,
+      "stock": 22,
+      "id": 69
+    },
+    {
+      "name": "Pin dự phòng Anker 20000mAh - Bản Cao Cấp",
+      "price": 1160000,
+      "description": "Sản phẩm Pin dự phòng Anker 20000mAh chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+      "categoryId": 11,
+      "stock": 34,
+      "id": 70
+    },
+    {
+      "name": "Galaxy Watch 6 - Bản Tiêu Chuẩn",
+      "price": 7000000,
+      "description": "Sản phẩm Galaxy Watch 6 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800",
+      "categoryId": 8,
+      "stock": 89,
+      "discount": 10,
+      "id": 71
+    },
+    {
+      "name": "Pin dự phòng Anker 20000mAh - 256GB",
+      "price": 1310000,
+      "description": "Sản phẩm Pin dự phòng Anker 20000mAh chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+      "categoryId": 11,
+      "stock": 81,
+      "discount": 25,
+      "id": 72
+    },
+    {
+      "name": "TP-Link Deco Mesh Wi-Fi - Bản Tiêu Chuẩn",
+      "price": 3970000,
+      "description": "Sản phẩm TP-Link Deco Mesh Wi-Fi chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+      "categoryId": 15,
+      "stock": 12,
+      "id": 73
+    },
+    {
+      "name": "Balo Tomtoc Navigator - 512GB",
+      "price": 2140000,
+      "description": "Sản phẩm Balo Tomtoc Navigator chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800",
+      "categoryId": 19,
+      "stock": 11,
+      "id": 74
+    },
+    {
+      "name": "Galaxy Tab S9 - 1TB",
+      "price": 24600000,
+      "description": "Sản phẩm Galaxy Tab S9 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+      "categoryId": 3,
+      "stock": 110,
+      "discount": 25,
+      "id": 75
+    },
+    {
+      "name": "iPad Pro M4 11-inch (Màu Trắng)",
+      "price": 33770000,
+      "description": "Sản phẩm iPad Pro M4 11-inch chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+      "categoryId": 3,
+      "stock": 51,
+      "id": 76
+    },
+    {
+      "name": "Samsung T7 SSD 1TB (Màu Đen)",
+      "price": 2980000,
+      "description": "Sản phẩm Samsung T7 SSD 1TB chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+      "categoryId": 10,
+      "stock": 27,
+      "id": 77
+    },
+    {
+      "name": "iPhone 15 Pro Max - 512GB",
+      "price": 37490000,
+      "description": "Sản phẩm iPhone 15 Pro Max chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800",
+      "categoryId": 2,
+      "stock": 59,
+      "id": 78
+    },
+    {
+      "name": "Logitech MX Master 3S - Bản Tiêu Chuẩn",
+      "price": 3070000,
+      "description": "Sản phẩm Logitech MX Master 3S chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800",
+      "categoryId": 5,
+      "stock": 4,
+      "discount": 5,
+      "id": 79
+    },
+    {
+      "name": "TP-Link Deco Mesh Wi-Fi - 512GB",
+      "price": 3910000,
+      "description": "Sản phẩm TP-Link Deco Mesh Wi-Fi chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+      "categoryId": 15,
+      "stock": 7,
+      "discount": 20,
+      "id": 80
+    },
+    {
+      "name": "MacBook Air M2 - Bản Tiêu Chuẩn",
+      "price": 25680000,
+      "description": "Sản phẩm MacBook Air M2 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "categoryId": 1,
+      "stock": 73,
+      "id": 81
+    },
+    {
+      "name": "DJI Mini 4 Pro (Màu Titan)",
+      "price": 25490000,
+      "description": "Sản phẩm DJI Mini 4 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+      "categoryId": 14,
+      "stock": 106,
+      "id": 82
+    },
+    {
+      "name": "iPad Air 5 - 512GB",
+      "price": 15440000,
+      "description": "Sản phẩm iPad Air 5 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+      "categoryId": 3,
+      "stock": 19,
+      "id": 83
+    },
+    {
+      "name": "Google Pixel 8 Pro (Màu Titan)",
+      "price": 27070000,
+      "description": "Sản phẩm Google Pixel 8 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+      "categoryId": 2,
+      "stock": 10,
+      "id": 84
+    },
+    {
+      "name": "Xbox Series X - 256GB",
+      "price": 16570000,
+      "description": "Sản phẩm Xbox Series X chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1622297845775-5ff3fef71d13?w=800",
+      "categoryId": 16,
+      "stock": 114,
+      "id": 85
+    },
+    {
+      "name": "Galaxy Tab S9 - 256GB",
+      "price": 18260000,
+      "description": "Sản phẩm Galaxy Tab S9 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+      "categoryId": 3,
+      "stock": 69,
+      "id": 86
+    },
+    {
+      "name": "LG UltraGear 27 inch - Bản Cao Cấp",
+      "price": 9750000,
+      "description": "Sản phẩm LG UltraGear 27 inch chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+      "categoryId": 7,
+      "stock": 18,
+      "discount": 15,
+      "id": 87
+    },
+    {
+      "name": "WD Black SN850X (Màu Titan)",
+      "price": 2870000,
+      "description": "Sản phẩm WD Black SN850X chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=800",
+      "categoryId": 10,
+      "stock": 9,
+      "id": 88
+    },
+    {
+      "name": "Pin dự phòng Baseus (Màu Đen)",
+      "price": 860000,
+      "description": "Sản phẩm Pin dự phòng Baseus chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/p/i/pin-sac-du-phong-baseus-enerfill-fc11-10000mah-22-5w_1_.png",
+      "categoryId": 11,
+      "stock": 130,
+      "id": 89
+    },
+    {
+      "name": "Samsung T7 SSD 1TB (Màu Titan)",
+      "price": 2580000,
+      "description": "Sản phẩm Samsung T7 SSD 1TB chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+      "categoryId": 10,
+      "stock": 77,
+      "discount": 10,
+      "id": 90
+    },
+    {
+      "name": "Blue Yeti USB Mic - 512GB",
+      "price": 3170000,
+      "description": "Sản phẩm Blue Yeti USB Mic chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800",
+      "categoryId": 20,
+      "stock": 86,
+      "id": 91
+    },
+    {
+      "name": "Akko 3098B - Bản Tiêu Chuẩn",
+      "price": 2200000,
+      "description": "Sản phẩm Akko 3098B chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800",
+      "categoryId": 6,
+      "stock": 5,
+      "id": 92
+    },
+    {
+      "name": "Cáp Type-C to Lightning - 256GB",
+      "price": 590000,
+      "description": "Sản phẩm Cáp Type-C to Lightning chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=800",
+      "categoryId": 9,
+      "stock": 94,
+      "id": 93
+    },
+    {
+      "name": "Keychron Q1 Pro (Màu Titan)",
+      "price": 4560000,
+      "description": "Sản phẩm Keychron Q1 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
+      "categoryId": 6,
+      "stock": 104,
+      "id": 94
+    },
+    {
+      "name": "Galaxy Watch 6 - 512GB",
+      "price": 5740000,
+      "description": "Sản phẩm Galaxy Watch 6 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800",
+      "categoryId": 8,
+      "stock": 15,
+      "id": 95
+    },
+    {
+      "name": "Apple Watch Ultra 2 - Bản Cao Cấp",
+      "price": 23330000,
+      "description": "Sản phẩm Apple Watch Ultra 2 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=800",
+      "categoryId": 8,
+      "stock": 69,
+      "id": 96
+    },
+    {
+      "name": "NVIDIA RTX 4070 Ti - 256GB",
+      "price": 26880000,
+      "description": "Sản phẩm NVIDIA RTX 4070 Ti chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+      "categoryId": 17,
+      "stock": 4,
+      "id": 97
+    },
+    {
+      "name": "Bàn phím Logitech MX Keys - Bản Cao Cấp",
+      "price": 2380000,
+      "description": "Sản phẩm Bàn phím Logitech MX Keys chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+      "categoryId": 6,
+      "stock": 3,
+      "id": 98
+    },
+    {
+      "name": "Pin dự phòng Anker 20000mAh - Bản Tiêu Chuẩn",
+      "price": 1260000,
+      "description": "Sản phẩm Pin dự phòng Anker 20000mAh chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+      "categoryId": 11,
+      "stock": 56,
+      "discount": 20,
+      "id": 99
+    },
+    {
+      "name": "NVIDIA RTX 4090 - 256GB",
+      "price": 57770000,
+      "description": "Sản phẩm NVIDIA RTX 4090 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+      "categoryId": 17,
+      "stock": 37,
+      "id": 100
+    },
+    {
+      "name": "Pin dự phòng Baseus - Bản Cao Cấp",
+      "price": 770000,
+      "description": "Sản phẩm Pin dự phòng Baseus chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/p/i/pin-sac-du-phong-baseus-enerfill-fc11-10000mah-22-5w_1_.png",
+      "categoryId": 11,
+      "stock": 5,
+      "id": 101
+    },
+    {
+      "name": "Dell UltraSharp 32 - 1TB",
+      "price": 15500000,
+      "description": "Sản phẩm Dell UltraSharp 32 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=800",
+      "categoryId": 7,
+      "stock": 19,
+      "discount": 10,
+      "id": 102
+    },
+    {
+      "name": "Samsung Galaxy S24 Ultra (Màu Trắng)",
+      "price": 36660000,
+      "description": "Sản phẩm Samsung Galaxy S24 Ultra chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
+      "categoryId": 2,
+      "stock": 83,
+      "id": 103
+    },
+    {
+      "name": "NVIDIA RTX 4070 Ti (Màu Titan)",
+      "price": 28830000,
+      "description": "Sản phẩm NVIDIA RTX 4070 Ti chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+      "categoryId": 17,
+      "stock": 123,
+      "id": 104
+    },
+    {
+      "name": "Sony FE 24-70mm GM II - 256GB",
+      "price": 41810000,
+      "description": "Sản phẩm Sony FE 24-70mm GM II chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800",
+      "categoryId": 13,
+      "stock": 90,
+      "id": 105
+    },
+    {
+      "name": "GoPro Hero 12 Black (Màu Đen)",
+      "price": 12190000,
+      "description": "Sản phẩm GoPro Hero 12 Black chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1562564055-71e051d33c19?w=800",
+      "categoryId": 12,
+      "stock": 83,
+      "id": 106
+    },
+    {
+      "name": "NVIDIA RTX 4090 - 1TB",
+      "price": 45390000,
+      "description": "Sản phẩm NVIDIA RTX 4090 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+      "categoryId": 17,
+      "stock": 13,
+      "id": 107
+    },
+    {
+      "name": "iPhone 14 Pro - 512GB",
+      "price": 25150000,
+      "description": "Sản phẩm iPhone 14 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=800",
+      "categoryId": 2,
+      "stock": 7,
+      "discount": 5,
+      "id": 108
+    },
+    {
+      "name": "Google Pixel 8 Pro - Bản Cao Cấp",
+      "price": 20060000,
+      "description": "Sản phẩm Google Pixel 8 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+      "categoryId": 2,
+      "stock": 118,
+      "id": 109
+    },
+    {
+      "name": "Samsung T7 SSD 1TB - Bản Cao Cấp",
+      "price": 2620000,
+      "description": "Sản phẩm Samsung T7 SSD 1TB chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+      "categoryId": 10,
+      "stock": 4,
+      "id": 110
+    },
+    {
+      "name": "Logitech MX Master 3S - 512GB",
+      "price": 2680000,
+      "description": "Sản phẩm Logitech MX Master 3S chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800",
+      "categoryId": 5,
+      "stock": 38,
+      "id": 111
+    },
+    {
+      "name": "Tai nghe Sennheiser Momentum 4 (Màu Đen)",
+      "price": 10610000,
+      "description": "Sản phẩm Tai nghe Sennheiser Momentum 4 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800",
+      "categoryId": 4,
+      "stock": 5,
+      "id": 112
+    },
+    {
+      "name": "Google Nest Hub (Màu Trắng)",
+      "price": 2690000,
+      "description": "Sản phẩm Google Nest Hub chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=800",
+      "categoryId": 18,
+      "stock": 9,
+      "id": 113
+    },
+    {
+      "name": "AirPods Pro Gen 2 - 512GB",
+      "price": 6400000,
+      "description": "Sản phẩm AirPods Pro Gen 2 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=800",
+      "categoryId": 4,
+      "stock": 21,
+      "id": 114
+    },
+    {
+      "name": "Asus ROG Router AX11000 (Màu Trắng)",
+      "price": 12130000,
+      "description": "Sản phẩm Asus ROG Router AX11000 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800",
+      "categoryId": 15,
+      "stock": 23,
+      "discount": 5,
+      "id": 115
+    },
+    {
+      "name": "DJI RS 3 Mini - 512GB",
+      "price": 9710000,
+      "description": "Sản phẩm DJI RS 3 Mini chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+      "categoryId": 14,
+      "stock": 52,
+      "id": 116
+    },
+    {
+      "name": "Shure SM7B Microphone - Bản Cao Cấp",
+      "price": 12230000,
+      "description": "Sản phẩm Shure SM7B Microphone chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+      "categoryId": 20,
+      "stock": 24,
+      "id": 117
+    },
+    {
+      "name": "Razer DeathAdder V3 - Bản Tiêu Chuẩn",
+      "price": 1660000,
+      "description": "Sản phẩm Razer DeathAdder V3 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1563297007-0686b7003af7?w=800",
+      "categoryId": 5,
+      "stock": 24,
+      "id": 118
+    },
+    {
+      "name": "Galaxy Tab S9 (Màu Titan)",
+      "price": 18400000,
+      "description": "Sản phẩm Galaxy Tab S9 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+      "categoryId": 3,
+      "stock": 52,
+      "id": 119
+    },
+    {
+      "name": "Pin dự phòng Baseus (Màu Trắng)",
+      "price": 930000,
+      "description": "Sản phẩm Pin dự phòng Baseus chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/p/i/pin-sac-du-phong-baseus-enerfill-fc11-10000mah-22-5w_1_.png",
+      "categoryId": 11,
+      "stock": 5,
+      "id": 120
+    },
+    {
+      "name": "Xbox Series X - Bản Cao Cấp",
+      "price": 14540000,
+      "description": "Sản phẩm Xbox Series X chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1622297845775-5ff3fef71d13?w=800",
+      "categoryId": 16,
+      "stock": 10,
+      "id": 121
+    },
+    {
+      "name": "AirPods Pro Gen 2 - Bản Tiêu Chuẩn",
+      "price": 5130000,
+      "description": "Sản phẩm AirPods Pro Gen 2 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=800",
+      "categoryId": 4,
+      "stock": 123,
+      "discount": 10,
+      "id": 122
+    },
+    {
+      "name": "Keychron Q1 Pro (Màu Trắng)",
+      "price": 5340000,
+      "description": "Sản phẩm Keychron Q1 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
+      "categoryId": 6,
+      "stock": 9,
+      "discount": 5,
+      "id": 123
+    },
+    {
+      "name": "Marshall Stanmore III - 256GB",
+      "price": 11130000,
+      "description": "Sản phẩm Marshall Stanmore III chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800",
+      "categoryId": 4,
+      "stock": 19,
+      "id": 124
+    },
+    {
+      "name": "Nintendo Switch OLED - 512GB",
+      "price": 8320000,
+      "description": "Sản phẩm Nintendo Switch OLED chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+      "categoryId": 16,
+      "stock": 10,
+      "id": 125
+    },
+    {
+      "name": "Anker Prime 100W - 1TB",
+      "price": 1690000,
+      "description": "Sản phẩm Anker Prime 100W chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800",
+      "categoryId": 9,
+      "stock": 145,
+      "id": 126
+    },
+    {
+      "name": "MacBook Air M2 - 512GB",
+      "price": 24960000,
+      "description": "Sản phẩm MacBook Air M2 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "categoryId": 1,
+      "stock": 19,
+      "id": 127
+    },
+    {
+      "name": "Dell XPS 13 Plus (Màu Trắng)",
+      "price": 39490000,
+      "description": "Sản phẩm Dell XPS 13 Plus chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800",
+      "categoryId": 1,
+      "stock": 101,
+      "id": 128
+    },
+    {
+      "name": "Keychron Q1 Pro - 1TB",
+      "price": 5120000,
+      "description": "Sản phẩm Keychron Q1 Pro chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
+      "categoryId": 6,
+      "stock": 115,
+      "discount": 10,
+      "id": 129
+    },
+    {
+      "name": "Dell UltraSharp 32 - Bản Tiêu Chuẩn",
+      "price": 14550000,
+      "description": "Sản phẩm Dell UltraSharp 32 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=800",
+      "categoryId": 7,
+      "stock": 47,
+      "id": 130
+    },
+    {
+      "name": "Cáp Type-C to Lightning - Bản Cao Cấp",
+      "price": 620000,
+      "description": "Sản phẩm Cáp Type-C to Lightning chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=800",
+      "categoryId": 9,
+      "stock": 84,
+      "id": 131
+    },
+    {
+      "name": "Bàn phím Logitech MX Keys - 1TB",
+      "price": 2880000,
+      "description": "Sản phẩm Bàn phím Logitech MX Keys chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+      "categoryId": 6,
+      "stock": 140,
+      "id": 132
+    },
+    {
+      "name": "Blue Yeti USB Mic (Màu Trắng)",
+      "price": 3700000,
+      "description": "Sản phẩm Blue Yeti USB Mic chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800",
+      "categoryId": 20,
+      "stock": 7,
+      "id": 133
+    },
+    {
+      "name": "Shure SM7B Microphone (Màu Titan)",
+      "price": 9400000,
+      "description": "Sản phẩm Shure SM7B Microphone chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+      "categoryId": 20,
+      "stock": 62,
+      "id": 134
+    },
+    {
+      "name": "Galaxy Watch 6 (Màu Titan)",
+      "price": 6230000,
+      "description": "Sản phẩm Galaxy Watch 6 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800",
+      "categoryId": 8,
+      "stock": 17,
+      "id": 135
+    },
+    {
+      "name": "NVIDIA RTX 4090 - 512GB",
+      "price": 45920000,
+      "description": "Sản phẩm NVIDIA RTX 4090 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+      "categoryId": 17,
+      "stock": 7,
+      "discount": 5,
+      "id": 136
+    },
+    {
+      "name": "Razer DeathAdder V3 (Màu Trắng)",
+      "price": 1800000,
+      "description": "Sản phẩm Razer DeathAdder V3 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1563297007-0686b7003af7?w=800",
+      "categoryId": 5,
+      "stock": 3,
+      "id": 137
+    },
+    {
+      "name": "Asus ROG Router AX11000 - 256GB",
+      "price": 9590000,
+      "description": "Sản phẩm Asus ROG Router AX11000 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800",
+      "categoryId": 15,
+      "stock": 95,
+      "id": 138
+    },
+    {
+      "name": "Sony FE 24-70mm GM II (Màu Titan)",
+      "price": 50730000,
+      "description": "Sản phẩm Sony FE 24-70mm GM II chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800",
+      "categoryId": 13,
+      "stock": 120,
+      "discount": 25,
+      "id": 139
+    },
+    {
+      "name": "AirPods Pro Gen 2 - Bản Cao Cấp",
+      "price": 6340000,
+      "description": "Sản phẩm AirPods Pro Gen 2 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=800",
+      "categoryId": 4,
+      "stock": 4,
+      "id": 140
+    },
+    {
+      "name": "MacBook Pro 14 M3 - 256GB",
+      "price": 44060000,
+      "description": "Sản phẩm MacBook Pro 14 M3 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+      "categoryId": 1,
+      "stock": 27,
+      "id": 141
+    },
+    {
+      "name": "Xbox Series X - Bản Tiêu Chuẩn",
+      "price": 17110000,
+      "description": "Sản phẩm Xbox Series X chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1622297845775-5ff3fef71d13?w=800",
+      "categoryId": 16,
+      "stock": 7,
+      "id": 142
+    },
+    {
+      "name": "Galaxy Tab S9 (Màu Trắng)",
+      "price": 21430000,
+      "description": "Sản phẩm Galaxy Tab S9 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+      "categoryId": 3,
+      "stock": 82,
+      "id": 143
+    },
+    {
+      "name": "Bàn phím Logitech MX Keys (Màu Trắng)",
+      "price": 2500000,
+      "description": "Sản phẩm Bàn phím Logitech MX Keys chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+      "categoryId": 6,
+      "stock": 8,
+      "id": 144
+    },
+    {
+      "name": "Galaxy Watch 6 - 1TB",
+      "price": 6390000,
+      "description": "Sản phẩm Galaxy Watch 6 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800",
+      "categoryId": 8,
+      "stock": 51,
+      "discount": 5,
+      "id": 145
+    },
+    {
+      "name": "Logitech MX Master 3S - 1TB",
+      "price": 3100000,
+      "description": "Sản phẩm Logitech MX Master 3S chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800",
+      "categoryId": 5,
+      "stock": 7,
+      "id": 146
+    },
+    {
+      "name": "Asus ROG Zephyrus (Màu Đen)",
+      "price": 44890000,
+      "description": "Sản phẩm Asus ROG Zephyrus chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800",
+      "categoryId": 1,
+      "stock": 16,
+      "discount": 25,
+      "id": 147
+    },
+    {
+      "name": "Sony FE 24-70mm GM II - 512GB",
+      "price": 52500000,
+      "description": "Sản phẩm Sony FE 24-70mm GM II chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800",
+      "categoryId": 13,
+      "stock": 7,
+      "discount": 20,
+      "id": 148
+    },
+    {
+      "name": "Galaxy Watch 6 - Bản Cao Cấp",
+      "price": 6000000,
+      "description": "Sản phẩm Galaxy Watch 6 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800",
+      "categoryId": 8,
+      "stock": 3,
+      "id": 149
+    },
+    {
+      "name": "Balo Tomtoc Navigator (Màu Titan)",
+      "price": 1990000,
+      "description": "Sản phẩm Balo Tomtoc Navigator chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800",
+      "categoryId": 19,
+      "stock": 63,
+      "discount": 5,
+      "id": 150
+    },
+    {
+      "name": "Sony A7 IV - 1TB",
+      "price": 57220000,
+      "description": "Sản phẩm Sony A7 IV chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+      "categoryId": 12,
+      "stock": 9,
+      "id": 151
+    },
+    {
+      "name": "Apple Watch Ultra 2 - 1TB",
+      "price": 18120000,
+      "description": "Sản phẩm Apple Watch Ultra 2 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=800",
+      "categoryId": 8,
+      "stock": 46,
+      "id": 152
+    },
+    {
+      "name": "Túi chống sốc Incase (Màu Đen)",
+      "price": 740000,
+      "description": "Sản phẩm Túi chống sốc Incase chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+      "categoryId": 19,
+      "stock": 43,
+      "id": 153
+    },
+    {
+      "name": "Blue Yeti USB Mic (Màu Đen)",
+      "price": 3830000,
+      "description": "Sản phẩm Blue Yeti USB Mic chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800",
+      "categoryId": 20,
+      "stock": 26,
+      "id": 154
+    },
+    {
+      "name": "iPad Pro M4 11-inch - 1TB",
+      "price": 32880000,
+      "description": "Sản phẩm iPad Pro M4 11-inch chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+      "categoryId": 3,
+      "stock": 64,
+      "id": 155
+    },
+    {
+      "name": "LG UltraGear 27 inch - Bản Tiêu Chuẩn",
+      "price": 9180000,
+      "description": "Sản phẩm LG UltraGear 27 inch chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+      "categoryId": 7,
+      "stock": 10,
+      "id": 156
+    },
+    {
+      "name": "WD Black SN850X - Bản Tiêu Chuẩn",
+      "price": 2790000,
+      "description": "Sản phẩm WD Black SN850X chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=800",
+      "categoryId": 10,
+      "stock": 30,
+      "discount": 10,
+      "id": 157
+    },
+    {
+      "name": "Nintendo Switch OLED (Màu Trắng)",
+      "price": 7500000,
+      "description": "Sản phẩm Nintendo Switch OLED chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+      "categoryId": 16,
+      "stock": 126,
+      "discount": 5,
+      "id": 158
+    },
+    {
+      "name": "Pin dự phòng Anker 20000mAh (Màu Đen)",
+      "price": 1480000,
+      "description": "Sản phẩm Pin dự phòng Anker 20000mAh chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+      "categoryId": 11,
+      "stock": 63,
+      "id": 159
+    },
+    {
+      "name": "Samsung Galaxy S24 Ultra - 512GB",
+      "price": 32470000,
+      "description": "Sản phẩm Samsung Galaxy S24 Ultra chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
+      "categoryId": 2,
+      "stock": 32,
+      "id": 160
+    },
+    {
+      "name": "Balo Tomtoc Navigator - 1TB",
+      "price": 1950000,
+      "description": "Sản phẩm Balo Tomtoc Navigator chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800",
+      "categoryId": 19,
+      "stock": 8,
+      "id": 161
+    },
+    {
+      "name": "Marshall Stanmore III (Màu Trắng)",
+      "price": 11530000,
+      "description": "Sản phẩm Marshall Stanmore III chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800",
+      "categoryId": 4,
+      "stock": 5,
+      "discount": 20,
+      "id": 162
+    },
+    {
+      "name": "Galaxy Tab S9 - Bản Cao Cấp",
+      "price": 22450000,
+      "description": "Sản phẩm Galaxy Tab S9 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+      "categoryId": 3,
+      "stock": 15,
+      "discount": 25,
+      "id": 163
+    },
+    {
+      "name": "Tai nghe Sennheiser Momentum 4 - 512GB",
+      "price": 9190000,
+      "description": "Sản phẩm Tai nghe Sennheiser Momentum 4 chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+      "imageUrl": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800",
+      "categoryId": 4,
+      "stock": 10,
+      "discount": 25,
+      "id": 164
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-272172",
+      "customerName": "Đặng Hải Tâm",
+      "email": "user015@gmail.com",
+      "phone": "0961108873",
+      "shippingAddress": "214 Nguyễn Trãi, Quận Gò Vấp, Đà Nẵng",
+      "note": "",
+      "date": "21/04/2026",
+      "totalAmount": 1656000,
+      "status": "processing",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 66,
+          "productId": 66,
+          "name": "Pin dự phòng Baseus - 1TB",
+          "price": 828000,
+          "imageUrl": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/p/i/pin-sac-du-phong-baseus-enerfill-fc11-10000mah-22-5w_1_.png",
+          "quantity": 2
+        }
+      ],
+      "userId": 15
+    },
+    {
+      "id": "ORD-647316",
+      "customerName": "Phạm Hải Nam",
+      "email": "user016@gmail.com",
+      "phone": "0928040294",
+      "shippingAddress": "984 Nguyễn Trãi, Quận 1, Hải Phòng",
+      "note": "",
+      "date": "20/04/2026",
+      "totalAmount": 2980000,
+      "status": "delivered",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 77,
+          "productId": 77,
+          "name": "Samsung T7 SSD 1TB (Màu Đen)",
+          "price": 2980000,
+          "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 16
+    },
+    {
+      "id": "ORD-393881",
+      "customerName": "Hoàng Đức Nam",
+      "email": "user013@gmail.com",
+      "phone": "0967511402",
+      "shippingAddress": "60 Nguyễn Trãi, Quận Gò Vấp, Hồ Chí Minh",
+      "note": "",
+      "date": "20/04/2026",
+      "totalAmount": 1965000,
+      "status": "delivered",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 72,
+          "productId": 72,
+          "name": "Pin dự phòng Anker 20000mAh - 256GB",
+          "price": 982500,
+          "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 13
+    },
+    {
+      "id": "ORD-464355",
+      "customerName": "Vũ Ngọc Tuấn",
+      "email": "user003@gmail.com",
+      "phone": "0910037533",
+      "shippingAddress": "232 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh",
+      "note": "",
+      "date": "17/04/2026",
+      "totalAmount": 94616000,
+      "status": "cancelled",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 103,
+          "productId": 103,
+          "name": "Samsung Galaxy S24 Ultra (Màu Trắng)",
+          "price": 36660000,
+          "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 129,
+          "productId": 129,
+          "name": "Keychron Q1 Pro - 1TB",
+          "price": 4608000,
+          "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 55,
+          "productId": 55,
+          "name": "iPhone 14 Pro - 256GB",
+          "price": 24370000,
+          "imageUrl": "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 3
+    },
+    {
+      "id": "ORD-358939",
+      "customerName": "Lê Minh Nam",
+      "email": "user014@gmail.com",
+      "phone": "0936229071",
+      "shippingAddress": "979 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "16/04/2026",
+      "totalAmount": 72421000,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 62,
+          "productId": 62,
+          "name": "Blue Yeti USB Mic - Bản Tiêu Chuẩn",
+          "price": 2616000,
+          "imageUrl": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 147,
+          "productId": 147,
+          "name": "Asus ROG Zephyrus (Màu Đen)",
+          "price": 33667500,
+          "imageUrl": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 58,
+          "productId": 58,
+          "name": "Bàn phím Logitech MX Keys - Bản Tiêu Chuẩn",
+          "price": 2470000,
+          "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 14
+    },
+    {
+      "id": "ORD-959418",
+      "customerName": "Vũ Ngọc Tuấn",
+      "email": "user003@gmail.com",
+      "phone": "0910037533",
+      "shippingAddress": "232 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh",
+      "note": "",
+      "date": "16/04/2026",
+      "totalAmount": 35504500,
+      "status": "delivered",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 30,
+          "productId": 30,
+          "name": "DJI RS 3 Mini - Bản Tiêu Chuẩn",
+          "price": 7964500,
+          "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 68,
+          "productId": 68,
+          "name": "PlayStation 5 (PS5) - 256GB",
+          "price": 13770000,
+          "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 3
+    },
+    {
+      "id": "ORD-477743",
+      "customerName": "Phạm Đức Hải",
+      "email": "user009@gmail.com",
+      "phone": "0939838859",
+      "shippingAddress": "433 Nguyễn Trãi, Quận Đống Đa, Hà Nội",
+      "note": "",
+      "date": "15/04/2026",
+      "totalAmount": 28403000,
+      "status": "processing",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 96,
+          "productId": 96,
+          "name": "Apple Watch Ultra 2 - Bản Cao Cấp",
+          "price": 23330000,
+          "imageUrl": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 123,
+          "productId": 123,
+          "name": "Keychron Q1 Pro (Màu Trắng)",
+          "price": 5073000,
+          "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 9
+    },
+    {
+      "id": "ORD-102314",
+      "customerName": "Phạm Đức Hải",
+      "email": "user009@gmail.com",
+      "phone": "0939838859",
+      "shippingAddress": "433 Nguyễn Trãi, Quận Đống Đa, Hà Nội",
+      "note": "",
+      "date": "15/04/2026",
+      "totalAmount": 21232000,
+      "status": "pending",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 6,
+          "productId": 6,
+          "name": "GoPro Hero 12 Black - Bản Cao Cấp",
+          "price": 8416000,
+          "imageUrl": "https://images.unsplash.com/photo-1562564055-71e051d33c19?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 92,
+          "productId": 92,
+          "name": "Akko 3098B - Bản Tiêu Chuẩn",
+          "price": 2200000,
+          "imageUrl": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 9
+    },
+    {
+      "id": "ORD-230944",
+      "customerName": "Hoàng Thanh Anh",
+      "email": "user018@gmail.com",
+      "phone": "0955990251",
+      "shippingAddress": "308 Nguyễn Trãi, Quận Gò Vấp, Hà Nội",
+      "note": "",
+      "date": "14/04/2026",
+      "totalAmount": 24770000,
+      "status": "processing",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 36,
+          "productId": 36,
+          "name": "DJI Mini 4 Pro (Màu Trắng)",
+          "price": 24770000,
+          "imageUrl": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 18
+    },
+    {
+      "id": "ORD-307580",
+      "customerName": "Hoàng Đức Nam",
+      "email": "user013@gmail.com",
+      "phone": "0967511402",
+      "shippingAddress": "60 Nguyễn Trãi, Quận Gò Vấp, Hồ Chí Minh",
+      "note": "",
+      "date": "13/04/2026",
+      "totalAmount": 132650000,
+      "status": "cancelled",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 50,
+          "productId": 50,
+          "name": "Philips Hue Starter Kit - 512GB",
+          "price": 5590000,
+          "imageUrl": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 124,
+          "productId": 124,
+          "name": "Marshall Stanmore III - 256GB",
+          "price": 11130000,
+          "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 57,
+          "productId": 57,
+          "name": "Canon RF 50mm f/1.2L (Màu Đen)",
+          "price": 55170000,
+          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 13
+    },
+    {
+      "id": "ORD-352345",
+      "customerName": "Phạm Hải Nam",
+      "email": "user016@gmail.com",
+      "phone": "0928040294",
+      "shippingAddress": "984 Nguyễn Trãi, Quận 1, Hải Phòng",
+      "note": "",
+      "date": "13/04/2026",
+      "totalAmount": 24040000,
+      "status": "pending",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 35,
+          "productId": 35,
+          "name": "Google Nest Hub - Bản Tiêu Chuẩn",
+          "price": 2800000,
+          "imageUrl": "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 23,
+          "productId": 23,
+          "name": "Marshall Stanmore III - 1TB",
+          "price": 10620000,
+          "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 16
+    },
+    {
+      "id": "ORD-342959",
+      "customerName": "Hoàng Đức Nam",
+      "email": "user013@gmail.com",
+      "phone": "0967511402",
+      "shippingAddress": "60 Nguyễn Trãi, Quận Gò Vấp, Hồ Chí Minh",
+      "note": "",
+      "date": "12/04/2026",
+      "totalAmount": 67335000,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 147,
+          "productId": 147,
+          "name": "Asus ROG Zephyrus (Màu Đen)",
+          "price": 33667500,
+          "imageUrl": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 13
+    },
+    {
+      "id": "ORD-883576",
+      "customerName": "Đặng Hải Tâm",
+      "email": "user015@gmail.com",
+      "phone": "0961108873",
+      "shippingAddress": "214 Nguyễn Trãi, Quận Gò Vấp, Đà Nẵng",
+      "note": "",
+      "date": "12/04/2026",
+      "totalAmount": 46846000,
+      "status": "delivered",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 36,
+          "productId": 36,
+          "name": "DJI Mini 4 Pro (Màu Trắng)",
+          "price": 24770000,
+          "imageUrl": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 99,
+          "productId": 99,
+          "name": "Pin dự phòng Anker 20000mAh - Bản Tiêu Chuẩn",
+          "price": 1008000,
+          "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 109,
+          "productId": 109,
+          "name": "Google Pixel 8 Pro - Bản Cao Cấp",
+          "price": 20060000,
+          "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 15
+    },
+    {
+      "id": "ORD-142382",
+      "customerName": "Đặng Thanh Hùng",
+      "email": "user007@gmail.com",
+      "phone": "0938657046",
+      "shippingAddress": "263 Nguyễn Trãi, Quận 3, Hồ Chí Minh",
+      "note": "",
+      "date": "12/04/2026",
+      "totalAmount": 47785000,
+      "status": "pending",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 108,
+          "productId": 108,
+          "name": "iPhone 14 Pro - 512GB",
+          "price": 23892500,
+          "imageUrl": "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 7
+    },
+    {
+      "id": "ORD-136477",
+      "customerName": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "phone": "0910133446",
+      "shippingAddress": "967 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "11/04/2026",
+      "totalAmount": 9800500,
+      "status": "cancelled",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 67,
+          "productId": 67,
+          "name": "Shure SM7B Microphone (Màu Trắng)",
+          "price": 9800500,
+          "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 10
+    },
+    {
+      "id": "ORD-187524",
+      "customerName": "Đặng Hải Tâm",
+      "email": "user015@gmail.com",
+      "phone": "0961108873",
+      "shippingAddress": "214 Nguyễn Trãi, Quận Gò Vấp, Đà Nẵng",
+      "note": "",
+      "date": "10/04/2026",
+      "totalAmount": 31042500,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 54,
+          "productId": 54,
+          "name": "Túi chống sốc Incase (Màu Titan)",
+          "price": 820000,
+          "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 96,
+          "productId": 96,
+          "name": "Apple Watch Ultra 2 - Bản Cao Cấp",
+          "price": 23330000,
+          "imageUrl": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 164,
+          "productId": 164,
+          "name": "Tai nghe Sennheiser Momentum 4 - 512GB",
+          "price": 6892500,
+          "imageUrl": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 15
+    },
+    {
+      "id": "ORD-560985",
+      "customerName": "Lê Minh Hùng",
+      "email": "user006@gmail.com",
+      "phone": "0932136990",
+      "shippingAddress": "835 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "06/04/2026",
+      "totalAmount": 5022000,
+      "status": "cancelled",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 157,
+          "productId": 157,
+          "name": "WD Black SN850X - Bản Tiêu Chuẩn",
+          "price": 2511000,
+          "imageUrl": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 6
+    },
+    {
+      "id": "ORD-583042",
+      "customerName": "Nguyễn Trần Phi Hoàng",
+      "email": "ntphoang205@gmail.com",
+      "phone": "0896368408",
+      "shippingAddress": "12 Nguyễn Văn Bảo, Gò Vấp, Hồ Chí Minh",
+      "note": "",
+      "date": "06/04/2026",
+      "totalAmount": 56800000,
+      "status": "cancelled",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 45,
+          "productId": 45,
+          "name": "iPhone 14 Pro (Màu Titan)",
+          "price": 28400000,
+          "imageUrl": "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 1
+    },
+    {
+      "id": "ORD-609544",
+      "customerName": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "phone": "0910133446",
+      "shippingAddress": "967 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "05/04/2026",
+      "totalAmount": 78278000,
+      "status": "cancelled",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 162,
+          "productId": 162,
+          "name": "Marshall Stanmore III (Màu Trắng)",
+          "price": 9224000,
+          "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 13,
+          "productId": 13,
+          "name": "Canon RF 50mm f/1.2L - Bản Cao Cấp",
+          "price": 59830000,
+          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 10
+    },
+    {
+      "id": "ORD-713599",
+      "customerName": "Vũ Ngọc Tuấn",
+      "email": "user003@gmail.com",
+      "phone": "0910037533",
+      "shippingAddress": "232 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh",
+      "note": "",
+      "date": "04/04/2026",
+      "totalAmount": 88250000,
+      "status": "processing",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 148,
+          "productId": 148,
+          "name": "Sony FE 24-70mm GM II - 512GB",
+          "price": 42000000,
+          "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 37,
+          "productId": 37,
+          "name": "Philips Hue Starter Kit - 256GB",
+          "price": 4250000,
+          "imageUrl": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 3
+    },
+    {
+      "id": "ORD-816295",
+      "customerName": "Vũ Bảo Anh",
+      "email": "user008@gmail.com",
+      "phone": "0969540675",
+      "shippingAddress": "210 Nguyễn Trãi, Quận Cầu Giấy, Hà Nội",
+      "note": "",
+      "date": "02/04/2026",
+      "totalAmount": 32043000,
+      "status": "processing",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 96,
+          "productId": 96,
+          "name": "Apple Watch Ultra 2 - Bản Cao Cấp",
+          "price": 23330000,
+          "imageUrl": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 79,
+          "productId": 79,
+          "name": "Logitech MX Master 3S - Bản Tiêu Chuẩn",
+          "price": 2916500,
+          "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 132,
+          "productId": 132,
+          "name": "Bàn phím Logitech MX Keys - 1TB",
+          "price": 2880000,
+          "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 8
+    },
+    {
+      "id": "ORD-572679",
+      "customerName": "Vũ Bảo Anh",
+      "email": "user008@gmail.com",
+      "phone": "0969540675",
+      "shippingAddress": "210 Nguyễn Trãi, Quận Cầu Giấy, Hà Nội",
+      "note": "",
+      "date": "01/04/2026",
+      "totalAmount": 121068000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 136,
+          "productId": 136,
+          "name": "NVIDIA RTX 4090 - 512GB",
+          "price": 43624000,
+          "imageUrl": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 21,
+          "productId": 21,
+          "name": "Dell XPS 13 Plus - 256GB",
+          "price": 33820000,
+          "imageUrl": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 8
+    },
+    {
+      "id": "ORD-180800",
+      "customerName": "Lê Minh Hùng",
+      "email": "user006@gmail.com",
+      "phone": "0932136990",
+      "shippingAddress": "835 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "31/03/2026",
+      "totalAmount": 18260000,
+      "status": "processing",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 86,
+          "productId": 86,
+          "name": "Galaxy Tab S9 - 256GB",
+          "price": 18260000,
+          "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 6
+    },
+    {
+      "id": "ORD-174432",
+      "customerName": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "phone": "0910133446",
+      "shippingAddress": "967 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "30/03/2026",
+      "totalAmount": 7078500,
+      "status": "delivered",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 145,
+          "productId": 145,
+          "name": "Galaxy Watch 6 - 1TB",
+          "price": 6070500,
+          "imageUrl": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 99,
+          "productId": 99,
+          "name": "Pin dự phòng Anker 20000mAh - Bản Tiêu Chuẩn",
+          "price": 1008000,
+          "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 10
+    },
+    {
+      "id": "ORD-495338",
+      "customerName": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "phone": "0910133446",
+      "shippingAddress": "967 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "30/03/2026",
+      "totalAmount": 101960000,
+      "status": "delivered",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 24,
+          "productId": 24,
+          "name": "DJI RS 3 Mini - Bản Cao Cấp",
+          "price": 8980000,
+          "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 148,
+          "productId": 148,
+          "name": "Sony FE 24-70mm GM II - 512GB",
+          "price": 42000000,
+          "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 10
+    },
+    {
+      "id": "ORD-193047",
+      "customerName": "Trần Gia Hương",
+      "email": "user002@gmail.com",
+      "phone": "0980310878",
+      "shippingAddress": "262 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh",
+      "note": "",
+      "date": "27/03/2026",
+      "totalAmount": 42540000,
+      "status": "delivered",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 24,
+          "productId": 24,
+          "name": "DJI RS 3 Mini - Bản Cao Cấp",
+          "price": 8980000,
+          "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 106,
+          "productId": 106,
+          "name": "GoPro Hero 12 Black (Màu Đen)",
+          "price": 12190000,
+          "imageUrl": "https://images.unsplash.com/photo-1562564055-71e051d33c19?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 156,
+          "productId": 156,
+          "name": "LG UltraGear 27 inch - Bản Tiêu Chuẩn",
+          "price": 9180000,
+          "imageUrl": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 2
+    },
+    {
+      "id": "ORD-522092",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "27/03/2026",
+      "totalAmount": 58080000,
+      "status": "processing",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 124,
+          "productId": 124,
+          "name": "Marshall Stanmore III - 256GB",
+          "price": 11130000,
+          "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 125,
+          "productId": 125,
+          "name": "Nintendo Switch OLED - 512GB",
+          "price": 8320000,
+          "imageUrl": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 138,
+          "productId": 138,
+          "name": "Asus ROG Router AX11000 - 256GB",
+          "price": 9590000,
+          "imageUrl": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-242085",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "27/03/2026",
+      "totalAmount": 13220000,
+      "status": "delivered",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 58,
+          "productId": 58,
+          "name": "Bàn phím Logitech MX Keys - Bản Tiêu Chuẩn",
+          "price": 2470000,
+          "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 50,
+          "productId": 50,
+          "name": "Philips Hue Starter Kit - 512GB",
+          "price": 5590000,
+          "imageUrl": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 113,
+          "productId": 113,
+          "name": "Google Nest Hub (Màu Trắng)",
+          "price": 2690000,
+          "imageUrl": "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-330140",
+      "customerName": "Lê Minh Nam",
+      "email": "user014@gmail.com",
+      "phone": "0936229071",
+      "shippingAddress": "979 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "26/03/2026",
+      "totalAmount": 233170000,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 7,
+          "productId": 7,
+          "name": "Dell UltraSharp 32 (Màu Đen)",
+          "price": 15950000,
+          "imageUrl": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 65,
+          "productId": 65,
+          "name": "WD Black SN850X (Màu Trắng)",
+          "price": 3700000,
+          "imageUrl": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 69,
+          "productId": 69,
+          "name": "Canon EOS R5 - Bản Cao Cấp",
+          "price": 106760000,
+          "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 14
+    },
+    {
+      "id": "ORD-581682",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "25/03/2026",
+      "totalAmount": 16900000,
+      "status": "delivered",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 25,
+          "productId": 25,
+          "name": "Sony WH-1000XM5 (Màu Titan)",
+          "price": 8450000,
+          "imageUrl": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-690314",
+      "customerName": "Đỗ Hải Tuấn",
+      "email": "user011@gmail.com",
+      "phone": "0977607600",
+      "shippingAddress": "550 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh",
+      "note": "",
+      "date": "23/03/2026",
+      "totalAmount": 4216000,
+      "status": "cancelled",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 99,
+          "productId": 99,
+          "name": "Pin dự phòng Anker 20000mAh - Bản Tiêu Chuẩn",
+          "price": 1008000,
+          "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 92,
+          "productId": 92,
+          "name": "Akko 3098B - Bản Tiêu Chuẩn",
+          "price": 2200000,
+          "imageUrl": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 11
+    },
+    {
+      "id": "ORD-863881",
+      "customerName": "Hồ Gia Hoàng",
+      "email": "user005@gmail.com",
+      "phone": "0993789526",
+      "shippingAddress": "283 Nguyễn Trãi, Quận Hải Châu, Hải Phòng",
+      "note": "",
+      "date": "23/03/2026",
+      "totalAmount": 45068000,
+      "status": "cancelled",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 155,
+          "productId": 155,
+          "name": "iPad Pro M4 11-inch - 1TB",
+          "price": 32880000,
+          "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 50,
+          "productId": 50,
+          "name": "Philips Hue Starter Kit - 512GB",
+          "price": 5590000,
+          "imageUrl": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 99,
+          "productId": 99,
+          "name": "Pin dự phòng Anker 20000mAh - Bản Tiêu Chuẩn",
+          "price": 1008000,
+          "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 5
+    },
+    {
+      "id": "ORD-815500",
+      "customerName": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "phone": "0910133446",
+      "shippingAddress": "967 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "23/03/2026",
+      "totalAmount": 6340000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 140,
+          "productId": 140,
+          "name": "AirPods Pro Gen 2 - Bản Cao Cấp",
+          "price": 6340000,
+          "imageUrl": "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 10
+    },
+    {
+      "id": "ORD-669178",
+      "customerName": "Hoàng Thanh Anh",
+      "email": "user018@gmail.com",
+      "phone": "0955990251",
+      "shippingAddress": "308 Nguyễn Trãi, Quận Gò Vấp, Hà Nội",
+      "note": "",
+      "date": "22/03/2026",
+      "totalAmount": 111395000,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 89,
+          "productId": 89,
+          "name": "Pin dự phòng Baseus (Màu Đen)",
+          "price": 860000,
+          "imageUrl": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/p/i/pin-sac-du-phong-baseus-enerfill-fc11-10000mah-22-5w_1_.png",
+          "quantity": 1
+        },
+        {
+          "id": 59,
+          "productId": 59,
+          "name": "Sony A7 IV (Màu Titan)",
+          "price": 55267500,
+          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 18
+    },
+    {
+      "id": "ORD-556900",
+      "customerName": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "phone": "0910133446",
+      "shippingAddress": "967 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "22/03/2026",
+      "totalAmount": 28470000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 109,
+          "productId": 109,
+          "name": "Google Pixel 8 Pro - Bản Cao Cấp",
+          "price": 20060000,
+          "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 27,
+          "productId": 27,
+          "name": "TP-Link Deco Mesh Wi-Fi (Màu Titan)",
+          "price": 4710000,
+          "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 65,
+          "productId": 65,
+          "name": "WD Black SN850X (Màu Trắng)",
+          "price": 3700000,
+          "imageUrl": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 10
+    },
+    {
+      "id": "ORD-560970",
+      "customerName": "Nguyễn Trần Phi Hoàng",
+      "email": "ntphoang205@gmail.com",
+      "phone": "0896368408",
+      "shippingAddress": "12 Nguyễn Văn Bảo, Gò Vấp, Hồ Chí Minh",
+      "note": "",
+      "date": "20/03/2026",
+      "totalAmount": 29165000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 18,
+          "productId": 18,
+          "name": "iPad Air 5 (Màu Titan)",
+          "price": 10882500,
+          "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 65,
+          "productId": 65,
+          "name": "WD Black SN850X (Màu Trắng)",
+          "price": 3700000,
+          "imageUrl": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 1
+    },
+    {
+      "id": "ORD-524310",
+      "customerName": "Lê Ngọc Tuấn",
+      "email": "user012@gmail.com",
+      "phone": "0967581092",
+      "shippingAddress": "26 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "18/03/2026",
+      "totalAmount": 12326000,
+      "status": "delivered",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 47,
+          "productId": 47,
+          "name": "Balo Tomtoc Navigator - Bản Tiêu Chuẩn",
+          "price": 1448000,
+          "imageUrl": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 35,
+          "productId": 35,
+          "name": "Google Nest Hub - Bản Tiêu Chuẩn",
+          "price": 2800000,
+          "imageUrl": "https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 154,
+          "productId": 154,
+          "name": "Blue Yeti USB Mic (Màu Đen)",
+          "price": 3830000,
+          "imageUrl": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 12
+    },
+    {
+      "id": "ORD-831733",
+      "customerName": "Đỗ Văn Hương",
+      "email": "user017@gmail.com",
+      "phone": "0921568231",
+      "shippingAddress": "849 Nguyễn Trãi, Quận Gò Vấp, Hà Nội",
+      "note": "",
+      "date": "18/03/2026",
+      "totalAmount": 71430000,
+      "status": "pending",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 121,
+          "productId": 121,
+          "name": "Xbox Series X - Bản Cao Cấp",
+          "price": 14540000,
+          "imageUrl": "https://images.unsplash.com/photo-1622297845775-5ff3fef71d13?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 15,
+          "productId": 15,
+          "name": "TP-Link Deco Mesh Wi-Fi - Bản Cao Cấp",
+          "price": 4940000,
+          "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 160,
+          "productId": 160,
+          "name": "Samsung Galaxy S24 Ultra - 512GB",
+          "price": 32470000,
+          "imageUrl": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 17
+    },
+    {
+      "id": "ORD-628726",
+      "customerName": "Đỗ Văn Hương",
+      "email": "user017@gmail.com",
+      "phone": "0921568231",
+      "shippingAddress": "849 Nguyễn Trãi, Quận Gò Vấp, Hà Nội",
+      "note": "",
+      "date": "17/03/2026",
+      "totalAmount": 82360000,
+      "status": "delivered",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 128,
+          "productId": 128,
+          "name": "Dell XPS 13 Plus (Màu Trắng)",
+          "price": 39490000,
+          "imageUrl": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 126,
+          "productId": 126,
+          "name": "Anker Prime 100W - 1TB",
+          "price": 1690000,
+          "imageUrl": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 17
+    },
+    {
+      "id": "ORD-858221",
+      "customerName": "Hoàng Đức Nam",
+      "email": "user013@gmail.com",
+      "phone": "0967511402",
+      "shippingAddress": "60 Nguyễn Trãi, Quận Gò Vấp, Hồ Chí Minh",
+      "note": "",
+      "date": "15/03/2026",
+      "totalAmount": 2016000,
+      "status": "delivered",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 99,
+          "productId": 99,
+          "name": "Pin dự phòng Anker 20000mAh - Bản Tiêu Chuẩn",
+          "price": 1008000,
+          "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 13
+    },
+    {
+      "id": "ORD-905726",
+      "customerName": "Đỗ Hải Tuấn",
+      "email": "user011@gmail.com",
+      "phone": "0977607600",
+      "shippingAddress": "550 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh",
+      "note": "",
+      "date": "13/03/2026",
+      "totalAmount": 75680000,
+      "status": "processing",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 21,
+          "productId": 21,
+          "name": "Dell XPS 13 Plus - 256GB",
+          "price": 33820000,
+          "imageUrl": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 155,
+          "productId": 155,
+          "name": "iPad Pro M4 11-inch - 1TB",
+          "price": 32880000,
+          "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 24,
+          "productId": 24,
+          "name": "DJI RS 3 Mini - Bản Cao Cấp",
+          "price": 8980000,
+          "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 11
+    },
+    {
+      "id": "ORD-959680",
+      "customerName": "Lê Minh Nam",
+      "email": "user014@gmail.com",
+      "phone": "0936229071",
+      "shippingAddress": "979 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "13/03/2026",
+      "totalAmount": 54240000,
+      "status": "processing",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 102,
+          "productId": 102,
+          "name": "Dell UltraSharp 32 - 1TB",
+          "price": 13950000,
+          "imageUrl": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 119,
+          "productId": 119,
+          "name": "Galaxy Tab S9 (Màu Titan)",
+          "price": 18400000,
+          "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 73,
+          "productId": 73,
+          "name": "TP-Link Deco Mesh Wi-Fi - Bản Tiêu Chuẩn",
+          "price": 3970000,
+          "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 14
+    },
+    {
+      "id": "ORD-502453",
+      "customerName": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "phone": "0910133446",
+      "shippingAddress": "967 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "12/03/2026",
+      "totalAmount": 35666000,
+      "status": "cancelled",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 134,
+          "productId": 134,
+          "name": "Shure SM7B Microphone (Màu Titan)",
+          "price": 9400000,
+          "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 62,
+          "productId": 62,
+          "name": "Blue Yeti USB Mic - Bản Tiêu Chuẩn",
+          "price": 2616000,
+          "imageUrl": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 158,
+          "productId": 158,
+          "name": "Nintendo Switch OLED (Màu Trắng)",
+          "price": 7125000,
+          "imageUrl": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 10
+    },
+    {
+      "id": "ORD-418703",
+      "customerName": "Đặng Hải Tâm",
+      "email": "user015@gmail.com",
+      "phone": "0961108873",
+      "shippingAddress": "214 Nguyễn Trãi, Quận Gò Vấp, Đà Nẵng",
+      "note": "",
+      "date": "12/03/2026",
+      "totalAmount": 8942000,
+      "status": "processing",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 62,
+          "productId": 62,
+          "name": "Blue Yeti USB Mic - Bản Tiêu Chuẩn",
+          "price": 2616000,
+          "imageUrl": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 46,
+          "productId": 46,
+          "name": "WD Black SN850X - 1TB",
+          "price": 3710000,
+          "imageUrl": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 15
+    },
+    {
+      "id": "ORD-971054",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "11/03/2026",
+      "totalAmount": 27070000,
+      "status": "processing",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 84,
+          "productId": 84,
+          "name": "Google Pixel 8 Pro (Màu Titan)",
+          "price": 27070000,
+          "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-896503",
+      "customerName": "Hồ Gia Hoàng",
+      "email": "user005@gmail.com",
+      "phone": "0993789526",
+      "shippingAddress": "283 Nguyễn Trãi, Quận Hải Châu, Hải Phòng",
+      "note": "",
+      "date": "11/03/2026",
+      "totalAmount": 2896000,
+      "status": "processing",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 47,
+          "productId": 47,
+          "name": "Balo Tomtoc Navigator - Bản Tiêu Chuẩn",
+          "price": 1448000,
+          "imageUrl": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 5
+    },
+    {
+      "id": "ORD-518552",
+      "customerName": "Lê Minh Nam",
+      "email": "user014@gmail.com",
+      "phone": "0936229071",
+      "shippingAddress": "979 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "10/03/2026",
+      "totalAmount": 34151000,
+      "status": "processing",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 67,
+          "productId": 67,
+          "name": "Shure SM7B Microphone (Màu Trắng)",
+          "price": 9800500,
+          "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 130,
+          "productId": 130,
+          "name": "Dell UltraSharp 32 - Bản Tiêu Chuẩn",
+          "price": 14550000,
+          "imageUrl": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 14
+    },
+    {
+      "id": "ORD-781731",
+      "customerName": "Lê Ngọc Tuấn",
+      "email": "user012@gmail.com",
+      "phone": "0967581092",
+      "shippingAddress": "26 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "10/03/2026",
+      "totalAmount": 118851000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 43,
+          "productId": 43,
+          "name": "Sony FE 24-70mm GM II - 1TB",
+          "price": 42588000,
+          "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 163,
+          "productId": 163,
+          "name": "Galaxy Tab S9 - Bản Cao Cấp",
+          "price": 16837500,
+          "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 12
+    },
+    {
+      "id": "ORD-938680",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "08/03/2026",
+      "totalAmount": 27710000,
+      "status": "cancelled",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 77,
+          "productId": 77,
+          "name": "Samsung T7 SSD 1TB (Màu Đen)",
+          "price": 2980000,
+          "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 4,
+          "productId": 4,
+          "name": "GoPro Hero 12 Black - 1TB",
+          "price": 10480000,
+          "imageUrl": "https://images.unsplash.com/photo-1562564055-71e051d33c19?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 158,
+          "productId": 158,
+          "name": "Nintendo Switch OLED (Màu Trắng)",
+          "price": 7125000,
+          "imageUrl": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-993447",
+      "customerName": "Trần Gia Hương",
+      "email": "user002@gmail.com",
+      "phone": "0980310878",
+      "shippingAddress": "262 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh",
+      "note": "",
+      "date": "08/03/2026",
+      "totalAmount": 4560000,
+      "status": "cancelled",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 94,
+          "productId": 94,
+          "name": "Keychron Q1 Pro (Màu Titan)",
+          "price": 4560000,
+          "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 2
+    },
+    {
+      "id": "ORD-473477",
+      "customerName": "Lê Hải Hùng",
+      "email": "user004@gmail.com",
+      "phone": "0930754877",
+      "shippingAddress": "624 Nguyễn Trãi, Quận 1, Hà Nội",
+      "note": "",
+      "date": "08/03/2026",
+      "totalAmount": 63980000,
+      "status": "delivered",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 104,
+          "productId": 104,
+          "name": "NVIDIA RTX 4070 Ti (Màu Titan)",
+          "price": 28830000,
+          "imageUrl": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 65,
+          "productId": 65,
+          "name": "WD Black SN850X (Màu Trắng)",
+          "price": 3700000,
+          "imageUrl": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 110,
+          "productId": 110,
+          "name": "Samsung T7 SSD 1TB - Bản Cao Cấp",
+          "price": 2620000,
+          "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 4
+    },
+    {
+      "id": "ORD-241617",
+      "customerName": "Lê Ngọc Tuấn",
+      "email": "user012@gmail.com",
+      "phone": "0967581092",
+      "shippingAddress": "26 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "02/03/2026",
+      "totalAmount": 56023000,
+      "status": "processing",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 150,
+          "productId": 150,
+          "name": "Balo Tomtoc Navigator (Màu Titan)",
+          "price": 1890500,
+          "imageUrl": "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 127,
+          "productId": 127,
+          "name": "MacBook Air M2 - 512GB",
+          "price": 24960000,
+          "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 90,
+          "productId": 90,
+          "name": "Samsung T7 SSD 1TB (Màu Titan)",
+          "price": 2322000,
+          "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 12
+    },
+    {
+      "id": "ORD-181511",
+      "customerName": "Lê Ngọc Tuấn",
+      "email": "user012@gmail.com",
+      "phone": "0967581092",
+      "shippingAddress": "26 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "02/03/2026",
+      "totalAmount": 38044000,
+      "status": "processing",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 80,
+          "productId": 80,
+          "name": "TP-Link Deco Mesh Wi-Fi - 512GB",
+          "price": 3128000,
+          "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 36,
+          "productId": 36,
+          "name": "DJI Mini 4 Pro (Màu Trắng)",
+          "price": 24770000,
+          "imageUrl": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 123,
+          "productId": 123,
+          "name": "Keychron Q1 Pro (Màu Trắng)",
+          "price": 5073000,
+          "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 12
+    },
+    {
+      "id": "ORD-521190",
+      "customerName": "Trần Gia Hương",
+      "email": "user002@gmail.com",
+      "phone": "0980310878",
+      "shippingAddress": "262 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh",
+      "note": "",
+      "date": "02/03/2026",
+      "totalAmount": 25090000,
+      "status": "delivered",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 37,
+          "productId": 37,
+          "name": "Philips Hue Starter Kit - 256GB",
+          "price": 4250000,
+          "imageUrl": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 117,
+          "productId": 117,
+          "name": "Shure SM7B Microphone - Bản Cao Cấp",
+          "price": 12230000,
+          "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 51,
+          "productId": 51,
+          "name": "Akko 3098B - 256GB",
+          "price": 2180000,
+          "imageUrl": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 2
+    },
+    {
+      "id": "ORD-387716",
+      "customerName": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "phone": "0910133446",
+      "shippingAddress": "967 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "01/03/2026",
+      "totalAmount": 87248000,
+      "status": "delivered",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 136,
+          "productId": 136,
+          "name": "NVIDIA RTX 4090 - 512GB",
+          "price": 43624000,
+          "imageUrl": "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 10
+    },
+    {
+      "id": "ORD-524620",
+      "customerName": "Hoàng Thanh Anh",
+      "email": "user018@gmail.com",
+      "phone": "0955990251",
+      "shippingAddress": "308 Nguyễn Trãi, Quận Gò Vấp, Hà Nội",
+      "note": "",
+      "date": "01/03/2026",
+      "totalAmount": 24064000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 116,
+          "productId": 116,
+          "name": "DJI RS 3 Mini - 512GB",
+          "price": 9710000,
+          "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 90,
+          "productId": 90,
+          "name": "Samsung T7 SSD 1TB (Màu Titan)",
+          "price": 2322000,
+          "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 18
+    },
+    {
+      "id": "ORD-996915",
+      "customerName": "Hồ Gia Hoàng",
+      "email": "user005@gmail.com",
+      "phone": "0993789526",
+      "shippingAddress": "283 Nguyễn Trãi, Quận Hải Châu, Hải Phòng",
+      "note": "",
+      "date": "28/02/2026",
+      "totalAmount": 4760000,
+      "status": "delivered",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 98,
+          "productId": 98,
+          "name": "Bàn phím Logitech MX Keys - Bản Cao Cấp",
+          "price": 2380000,
+          "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 5
+    },
+    {
+      "id": "ORD-916295",
+      "customerName": "Phạm Đức Hải",
+      "email": "user009@gmail.com",
+      "phone": "0939838859",
+      "shippingAddress": "433 Nguyễn Trãi, Quận Đống Đa, Hà Nội",
+      "note": "",
+      "date": "27/02/2026",
+      "totalAmount": 21930000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 64,
+          "productId": 64,
+          "name": "iPad Air 5 - Bản Cao Cấp",
+          "price": 10965000,
+          "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 9
+    },
+    {
+      "id": "ORD-472722",
+      "customerName": "Phạm Hải Nam",
+      "email": "user016@gmail.com",
+      "phone": "0928040294",
+      "shippingAddress": "984 Nguyễn Trãi, Quận 1, Hải Phòng",
+      "note": "",
+      "date": "27/02/2026",
+      "totalAmount": 105440500,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 145,
+          "productId": 145,
+          "name": "Galaxy Watch 6 - 1TB",
+          "price": 6070500,
+          "imageUrl": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 78,
+          "productId": 78,
+          "name": "iPhone 15 Pro Max - 512GB",
+          "price": 37490000,
+          "imageUrl": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 1,
+          "productId": 1,
+          "name": "Google Pixel 8 Pro (Màu Trắng)",
+          "price": 24390000,
+          "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 16
+    },
+    {
+      "id": "ORD-829218",
+      "customerName": "Nguyễn Gia Tuấn",
+      "email": "user020@gmail.com",
+      "phone": "0975147381",
+      "shippingAddress": "500 Nguyễn Trãi, Quận Đống Đa, Cần Thơ",
+      "note": "",
+      "date": "26/02/2026",
+      "totalAmount": 5073000,
+      "status": "delivered",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 123,
+          "productId": 123,
+          "name": "Keychron Q1 Pro (Màu Trắng)",
+          "price": 5073000,
+          "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 20
+    },
+    {
+      "id": "ORD-524425",
+      "customerName": "Lê Ngọc Tuấn",
+      "email": "user012@gmail.com",
+      "phone": "0967581092",
+      "shippingAddress": "26 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "24/02/2026",
+      "totalAmount": 8416000,
+      "status": "processing",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 6,
+          "productId": 6,
+          "name": "GoPro Hero 12 Black - Bản Cao Cấp",
+          "price": 8416000,
+          "imageUrl": "https://images.unsplash.com/photo-1562564055-71e051d33c19?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 12
+    },
+    {
+      "id": "ORD-179260",
+      "customerName": "Nguyễn Gia Tuấn",
+      "email": "user020@gmail.com",
+      "phone": "0975147381",
+      "shippingAddress": "500 Nguyễn Trãi, Quận Đống Đa, Cần Thơ",
+      "note": "",
+      "date": "22/02/2026",
+      "totalAmount": 60540000,
+      "status": "pending",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 14,
+          "productId": 14,
+          "name": "PlayStation 5 (PS5) (Màu Titan)",
+          "price": 18140000,
+          "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 10,
+          "productId": 10,
+          "name": "Shure SM7B Microphone - Bản Tiêu Chuẩn",
+          "price": 12130000,
+          "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 20
+    },
+    {
+      "id": "ORD-639806",
+      "customerName": "Đặng Thanh Hùng",
+      "email": "user007@gmail.com",
+      "phone": "0938657046",
+      "shippingAddress": "263 Nguyễn Trãi, Quận 3, Hồ Chí Minh",
+      "note": "",
+      "date": "22/02/2026",
+      "totalAmount": 4190000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 26,
+          "productId": 26,
+          "name": "TP-Link Deco Mesh Wi-Fi (Màu Đen)",
+          "price": 4190000,
+          "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 7
+    },
+    {
+      "id": "ORD-332715",
+      "customerName": "Nguyễn Trần Phi Hoàng",
+      "email": "ntphoang205@gmail.com",
+      "phone": "0896368408",
+      "shippingAddress": "12 Nguyễn Văn Bảo, Gò Vấp, Hồ Chí Minh",
+      "note": "",
+      "date": "22/02/2026",
+      "totalAmount": 85940000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 70,
+          "productId": 70,
+          "name": "Pin dự phòng Anker 20000mAh - Bản Cao Cấp",
+          "price": 1160000,
+          "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 105,
+          "productId": 105,
+          "name": "Sony FE 24-70mm GM II - 256GB",
+          "price": 41810000,
+          "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 1
+    },
+    {
+      "id": "ORD-206969",
+      "customerName": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "phone": "0910133446",
+      "shippingAddress": "967 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "22/02/2026",
+      "totalAmount": 5960000,
+      "status": "processing",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 77,
+          "productId": 77,
+          "name": "Samsung T7 SSD 1TB (Màu Đen)",
+          "price": 2980000,
+          "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 10
+    },
+    {
+      "id": "ORD-553950",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "22/02/2026",
+      "totalAmount": 38795000,
+      "status": "delivered",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 92,
+          "productId": 92,
+          "name": "Akko 3098B - Bản Tiêu Chuẩn",
+          "price": 2200000,
+          "imageUrl": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 46,
+          "productId": 46,
+          "name": "WD Black SN850X - 1TB",
+          "price": 3710000,
+          "imageUrl": "https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 12,
+          "productId": 12,
+          "name": "MacBook Pro 14 M3 (Màu Đen)",
+          "price": 29175000,
+          "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-418423",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "21/02/2026",
+      "totalAmount": 4644000,
+      "status": "delivered",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 90,
+          "productId": 90,
+          "name": "Samsung T7 SSD 1TB (Màu Titan)",
+          "price": 2322000,
+          "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-846424",
+      "customerName": "Hoàng Thanh Anh",
+      "email": "user018@gmail.com",
+      "phone": "0955990251",
+      "shippingAddress": "308 Nguyễn Trãi, Quận Gò Vấp, Hà Nội",
+      "note": "",
+      "date": "20/02/2026",
+      "totalAmount": 21240000,
+      "status": "processing",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 23,
+          "productId": 23,
+          "name": "Marshall Stanmore III - 1TB",
+          "price": 10620000,
+          "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 18
+    },
+    {
+      "id": "ORD-966440",
+      "customerName": "Phạm Đức Hải",
+      "email": "user009@gmail.com",
+      "phone": "0939838859",
+      "shippingAddress": "433 Nguyễn Trãi, Quận Đống Đa, Hà Nội",
+      "note": "",
+      "date": "20/02/2026",
+      "totalAmount": 41980000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 133,
+          "productId": 133,
+          "name": "Blue Yeti USB Mic (Màu Trắng)",
+          "price": 3700000,
+          "imageUrl": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 45,
+          "productId": 45,
+          "name": "iPhone 14 Pro (Màu Titan)",
+          "price": 28400000,
+          "imageUrl": "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 15,
+          "productId": 15,
+          "name": "TP-Link Deco Mesh Wi-Fi - Bản Cao Cấp",
+          "price": 4940000,
+          "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 9
+    },
+    {
+      "id": "ORD-646149",
+      "customerName": "Nguyễn Gia Tuấn",
+      "email": "user020@gmail.com",
+      "phone": "0975147381",
+      "shippingAddress": "500 Nguyễn Trãi, Quận Đống Đa, Cần Thơ",
+      "note": "",
+      "date": "19/02/2026",
+      "totalAmount": 13130000,
+      "status": "processing",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 94,
+          "productId": 94,
+          "name": "Keychron Q1 Pro (Màu Titan)",
+          "price": 4560000,
+          "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 40,
+          "productId": 40,
+          "name": "DJI RS 3 Mini (Màu Đen)",
+          "price": 8570000,
+          "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 20
+    },
+    {
+      "id": "ORD-424974",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "19/02/2026",
+      "totalAmount": 12870000,
+      "status": "pending",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 19,
+          "productId": 19,
+          "name": "Túi chống sốc Incase - 512GB",
+          "price": 740000,
+          "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 10,
+          "productId": 10,
+          "name": "Shure SM7B Microphone - Bản Tiêu Chuẩn",
+          "price": 12130000,
+          "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-287700",
+      "customerName": "Lê Minh Nam",
+      "email": "user014@gmail.com",
+      "phone": "0936229071",
+      "shippingAddress": "979 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "19/02/2026",
+      "totalAmount": 6300000,
+      "status": "pending",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 71,
+          "productId": 71,
+          "name": "Galaxy Watch 6 - Bản Tiêu Chuẩn",
+          "price": 6300000,
+          "imageUrl": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 14
+    },
+    {
+      "id": "ORD-703347",
+      "customerName": "Vũ Ngọc Tuấn",
+      "email": "user003@gmail.com",
+      "phone": "0910037533",
+      "shippingAddress": "232 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh",
+      "note": "",
+      "date": "18/02/2026",
+      "totalAmount": 2320000,
+      "status": "processing",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 70,
+          "productId": 70,
+          "name": "Pin dự phòng Anker 20000mAh - Bản Cao Cấp",
+          "price": 1160000,
+          "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 3
+    },
+    {
+      "id": "ORD-755343",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "17/02/2026",
+      "totalAmount": 47785000,
+      "status": "delivered",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 108,
+          "productId": 108,
+          "name": "iPhone 14 Pro - 512GB",
+          "price": 23892500,
+          "imageUrl": "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-324796",
+      "customerName": "Lê Minh Nam",
+      "email": "user014@gmail.com",
+      "phone": "0936229071",
+      "shippingAddress": "979 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "15/02/2026",
+      "totalAmount": 63552500,
+      "status": "delivered",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 143,
+          "productId": 143,
+          "name": "Galaxy Tab S9 (Màu Trắng)",
+          "price": 21430000,
+          "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 61,
+          "productId": 61,
+          "name": "Bàn phím Logitech MX Keys - 256GB",
+          "price": 2002500,
+          "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 109,
+          "productId": 109,
+          "name": "Google Pixel 8 Pro - Bản Cao Cấp",
+          "price": 20060000,
+          "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 14
+    },
+    {
+      "id": "ORD-214710",
+      "customerName": "Vũ Bảo Anh",
+      "email": "user008@gmail.com",
+      "phone": "0969540675",
+      "shippingAddress": "210 Nguyễn Trãi, Quận Cầu Giấy, Hà Nội",
+      "note": "",
+      "date": "14/02/2026",
+      "totalAmount": 90491000,
+      "status": "delivered",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 25,
+          "productId": 25,
+          "name": "Sony WH-1000XM5 (Màu Titan)",
+          "price": 8450000,
+          "imageUrl": "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 80,
+          "productId": 80,
+          "name": "TP-Link Deco Mesh Wi-Fi - 512GB",
+          "price": 3128000,
+          "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 147,
+          "productId": 147,
+          "name": "Asus ROG Zephyrus (Màu Đen)",
+          "price": 33667500,
+          "imageUrl": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 8
+    },
+    {
+      "id": "ORD-215249",
+      "customerName": "Nguyễn Gia Tuấn",
+      "email": "user020@gmail.com",
+      "phone": "0975147381",
+      "shippingAddress": "500 Nguyễn Trãi, Quận Đống Đa, Cần Thơ",
+      "note": "",
+      "date": "12/02/2026",
+      "totalAmount": 31670000,
+      "status": "cancelled",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 120,
+          "productId": 120,
+          "name": "Pin dự phòng Baseus (Màu Trắng)",
+          "price": 930000,
+          "imageUrl": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/p/i/pin-sac-du-phong-baseus-enerfill-fc11-10000mah-22-5w_1_.png",
+          "quantity": 1
+        },
+        {
+          "id": 83,
+          "productId": 83,
+          "name": "iPad Air 5 - 512GB",
+          "price": 15440000,
+          "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "productId": 2,
+          "name": "DJI RS 3 Mini - 1TB",
+          "price": 7650000,
+          "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 20
+    },
+    {
+      "id": "ORD-676622",
+      "customerName": "Hoàng Đức Nam",
+      "email": "user013@gmail.com",
+      "phone": "0967511402",
+      "shippingAddress": "60 Nguyễn Trãi, Quận Gò Vấp, Hồ Chí Minh",
+      "note": "",
+      "date": "12/02/2026",
+      "totalAmount": 141052500,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 108,
+          "productId": 108,
+          "name": "iPhone 14 Pro - 512GB",
+          "price": 23892500,
+          "imageUrl": "https://images.unsplash.com/photo-1678652197831-2d180705cd2c?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 33,
+          "productId": 33,
+          "name": "NVIDIA RTX 4070 Ti - Bản Cao Cấp",
+          "price": 31230000,
+          "imageUrl": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 5,
+          "productId": 5,
+          "name": "Canon EOS R5 - 1TB",
+          "price": 85930000,
+          "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 13
+    },
+    {
+      "id": "ORD-164919",
+      "customerName": "Phạm Đức Hải",
+      "email": "user009@gmail.com",
+      "phone": "0939838859",
+      "shippingAddress": "433 Nguyễn Trãi, Quận Đống Đa, Hà Nội",
+      "note": "",
+      "date": "11/02/2026",
+      "totalAmount": 47437000,
+      "status": "pending",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 50,
+          "productId": 50,
+          "name": "Philips Hue Starter Kit - 512GB",
+          "price": 5590000,
+          "imageUrl": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 115,
+          "productId": 115,
+          "name": "Asus ROG Router AX11000 (Màu Trắng)",
+          "price": 11523500,
+          "imageUrl": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 134,
+          "productId": 134,
+          "name": "Shure SM7B Microphone (Màu Titan)",
+          "price": 9400000,
+          "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 9
+    },
+    {
+      "id": "ORD-865068",
+      "customerName": "Lê Minh Nam",
+      "email": "user014@gmail.com",
+      "phone": "0936229071",
+      "shippingAddress": "979 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "10/02/2026",
+      "totalAmount": 2916500,
+      "status": "cancelled",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 79,
+          "productId": 79,
+          "name": "Logitech MX Master 3S - Bản Tiêu Chuẩn",
+          "price": 2916500,
+          "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 14
+    },
+    {
+      "id": "ORD-553901",
+      "customerName": "Lê Minh Hùng",
+      "email": "user006@gmail.com",
+      "phone": "0932136990",
+      "shippingAddress": "835 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "09/02/2026",
+      "totalAmount": 52780000,
+      "status": "delivered",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 106,
+          "productId": 106,
+          "name": "GoPro Hero 12 Black (Màu Đen)",
+          "price": 12190000,
+          "imageUrl": "https://images.unsplash.com/photo-1562564055-71e051d33c19?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 83,
+          "productId": 83,
+          "name": "iPad Air 5 - 512GB",
+          "price": 15440000,
+          "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 116,
+          "productId": 116,
+          "name": "DJI RS 3 Mini - 512GB",
+          "price": 9710000,
+          "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 6
+    },
+    {
+      "id": "ORD-831390",
+      "customerName": "Đỗ Văn Hương",
+      "email": "user017@gmail.com",
+      "phone": "0921568231",
+      "shippingAddress": "849 Nguyễn Trãi, Quận Gò Vấp, Hà Nội",
+      "note": "",
+      "date": "08/02/2026",
+      "totalAmount": 63540000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 1,
+          "productId": 1,
+          "name": "Google Pixel 8 Pro (Màu Trắng)",
+          "price": 24390000,
+          "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 16,
+          "productId": 16,
+          "name": "iPad Air 5 (Màu Trắng)",
+          "price": 14760000,
+          "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 17
+    },
+    {
+      "id": "ORD-503902",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "08/02/2026",
+      "totalAmount": 147120000,
+      "status": "cancelled",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 9,
+          "productId": 9,
+          "name": "Sony A7 IV (Màu Trắng)",
+          "price": 71900000,
+          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 118,
+          "productId": 118,
+          "name": "Razer DeathAdder V3 - Bản Tiêu Chuẩn",
+          "price": 1660000,
+          "imageUrl": "https://images.unsplash.com/photo-1563297007-0686b7003af7?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-351267",
+      "customerName": "Phạm Đức Hải",
+      "email": "user009@gmail.com",
+      "phone": "0939838859",
+      "shippingAddress": "433 Nguyễn Trãi, Quận Đống Đa, Hà Nội",
+      "note": "",
+      "date": "06/02/2026",
+      "totalAmount": 77740000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 148,
+          "productId": 148,
+          "name": "Sony FE 24-70mm GM II - 512GB",
+          "price": 42000000,
+          "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 49,
+          "productId": 49,
+          "name": "Logitech MX Master 3S - Bản Cao Cấp",
+          "price": 2430000,
+          "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 83,
+          "productId": 83,
+          "name": "iPad Air 5 - 512GB",
+          "price": 15440000,
+          "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 9
+    },
+    {
+      "id": "ORD-980365",
+      "customerName": "Đỗ Văn Hương",
+      "email": "user017@gmail.com",
+      "phone": "0921568231",
+      "shippingAddress": "849 Nguyễn Trãi, Quận Gò Vấp, Hà Nội",
+      "note": "",
+      "date": "06/02/2026",
+      "totalAmount": 9600000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 118,
+          "productId": 118,
+          "name": "Razer DeathAdder V3 - Bản Tiêu Chuẩn",
+          "price": 1660000,
+          "imageUrl": "https://images.unsplash.com/photo-1563297007-0686b7003af7?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 73,
+          "productId": 73,
+          "name": "TP-Link Deco Mesh Wi-Fi - Bản Tiêu Chuẩn",
+          "price": 3970000,
+          "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 17
+    },
+    {
+      "id": "ORD-421973",
+      "customerName": "Vũ Bảo Anh",
+      "email": "user008@gmail.com",
+      "phone": "0969540675",
+      "shippingAddress": "210 Nguyễn Trãi, Quận Cầu Giấy, Hà Nội",
+      "note": "",
+      "date": "05/02/2026",
+      "totalAmount": 75327500,
+      "status": "delivered",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 59,
+          "productId": 59,
+          "name": "Sony A7 IV (Màu Titan)",
+          "price": 55267500,
+          "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 109,
+          "productId": 109,
+          "name": "Google Pixel 8 Pro - Bản Cao Cấp",
+          "price": 20060000,
+          "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 8
+    },
+    {
+      "id": "ORD-352472",
+      "customerName": "Vũ Ngọc Tuấn",
+      "email": "user003@gmail.com",
+      "phone": "0910037533",
+      "shippingAddress": "232 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh",
+      "note": "",
+      "date": "03/02/2026",
+      "totalAmount": 828000,
+      "status": "pending",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 66,
+          "productId": 66,
+          "name": "Pin dự phòng Baseus - 1TB",
+          "price": 828000,
+          "imageUrl": "https://cdn2.cellphones.com.vn/insecure/rs:fill:0:358/q:90/plain/https://cellphones.com.vn/media/catalog/product/p/i/pin-sac-du-phong-baseus-enerfill-fc11-10000mah-22-5w_1_.png",
+          "quantity": 1
+        }
+      ],
+      "userId": 3
+    },
+    {
+      "id": "ORD-779738",
+      "customerName": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "phone": "0910133446",
+      "shippingAddress": "967 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "03/02/2026",
+      "totalAmount": 2180000,
+      "status": "delivered",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 51,
+          "productId": 51,
+          "name": "Akko 3098B - 256GB",
+          "price": 2180000,
+          "imageUrl": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 10
+    },
+    {
+      "id": "ORD-479287",
+      "customerName": "Phạm Hải Nam",
+      "email": "user016@gmail.com",
+      "phone": "0928040294",
+      "shippingAddress": "984 Nguyễn Trãi, Quận 1, Hải Phòng",
+      "note": "",
+      "date": "02/02/2026",
+      "totalAmount": 7125000,
+      "status": "processing",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 158,
+          "productId": 158,
+          "name": "Nintendo Switch OLED (Màu Trắng)",
+          "price": 7125000,
+          "imageUrl": "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 16
+    },
+    {
+      "id": "ORD-602992",
+      "customerName": "Đặng Thanh Hùng",
+      "email": "user007@gmail.com",
+      "phone": "0938657046",
+      "shippingAddress": "263 Nguyễn Trãi, Quận 3, Hồ Chí Minh",
+      "note": "",
+      "date": "02/02/2026",
+      "totalAmount": 90850000,
+      "status": "cancelled",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 83,
+          "productId": 83,
+          "name": "iPad Air 5 - 512GB",
+          "price": 15440000,
+          "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 143,
+          "productId": 143,
+          "name": "Galaxy Tab S9 (Màu Trắng)",
+          "price": 21430000,
+          "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 142,
+          "productId": 142,
+          "name": "Xbox Series X - Bản Tiêu Chuẩn",
+          "price": 17110000,
+          "imageUrl": "https://images.unsplash.com/photo-1622297845775-5ff3fef71d13?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 7
+    },
+    {
+      "id": "ORD-264575",
+      "customerName": "Hồ Gia Hoàng",
+      "email": "user005@gmail.com",
+      "phone": "0993789526",
+      "shippingAddress": "283 Nguyễn Trãi, Quận Hải Châu, Hải Phòng",
+      "note": "",
+      "date": "31/01/2026",
+      "totalAmount": 6940000,
+      "status": "pending",
+      "paymentMethod": "VNPay",
+      "items": [
+        {
+          "id": 51,
+          "productId": 51,
+          "name": "Akko 3098B - 256GB",
+          "price": 2180000,
+          "imageUrl": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 98,
+          "productId": 98,
+          "name": "Bàn phím Logitech MX Keys - Bản Cao Cấp",
+          "price": 2380000,
+          "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 5
+    },
+    {
+      "id": "ORD-617571",
+      "customerName": "Lê Ngọc Tuấn",
+      "email": "user012@gmail.com",
+      "phone": "0967581092",
+      "shippingAddress": "26 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "31/01/2026",
+      "totalAmount": 15950000,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 7,
+          "productId": 7,
+          "name": "Dell UltraSharp 32 (Màu Đen)",
+          "price": 15950000,
+          "imageUrl": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 12
+    },
+    {
+      "id": "ORD-709824",
+      "customerName": "Lê Minh Nam",
+      "email": "user014@gmail.com",
+      "phone": "0936229071",
+      "shippingAddress": "979 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "29/01/2026",
+      "totalAmount": 20672000,
+      "status": "cancelled",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 62,
+          "productId": 62,
+          "name": "Blue Yeti USB Mic - Bản Tiêu Chuẩn",
+          "price": 2616000,
+          "imageUrl": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 83,
+          "productId": 83,
+          "name": "iPad Air 5 - 512GB",
+          "price": 15440000,
+          "imageUrl": "https://images.unsplash.com/photo-1558882224-dda166733046?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 14
+    },
+    {
+      "id": "ORD-909613",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "29/01/2026",
+      "totalAmount": 80510000,
+      "status": "processing",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 137,
+          "productId": 137,
+          "name": "Razer DeathAdder V3 (Màu Trắng)",
+          "price": 1800000,
+          "imageUrl": "https://images.unsplash.com/photo-1563297007-0686b7003af7?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 105,
+          "productId": 105,
+          "name": "Sony FE 24-70mm GM II - 256GB",
+          "price": 41810000,
+          "imageUrl": "https://images.unsplash.com/photo-1516961642265-531546e84af2?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 75,
+          "productId": 75,
+          "name": "Galaxy Tab S9 - 1TB",
+          "price": 18450000,
+          "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-769076",
+      "customerName": "Vũ Ngọc Tuấn",
+      "email": "user003@gmail.com",
+      "phone": "0910037533",
+      "shippingAddress": "232 Nguyễn Trãi, Quận Đống Đa, Hồ Chí Minh",
+      "note": "",
+      "date": "28/01/2026",
+      "totalAmount": 22448500,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 129,
+          "productId": 129,
+          "name": "Keychron Q1 Pro - 1TB",
+          "price": 4608000,
+          "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 164,
+          "productId": 164,
+          "name": "Tai nghe Sennheiser Momentum 4 - 512GB",
+          "price": 6892500,
+          "imageUrl": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 91,
+          "productId": 91,
+          "name": "Blue Yeti USB Mic - 512GB",
+          "price": 3170000,
+          "imageUrl": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 3
+    },
+    {
+      "id": "ORD-775758",
+      "customerName": "Lê Ngọc Tuấn",
+      "email": "user012@gmail.com",
+      "phone": "0967581092",
+      "shippingAddress": "26 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "27/01/2026",
+      "totalAmount": 16540000,
+      "status": "cancelled",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 2,
+          "productId": 2,
+          "name": "DJI RS 3 Mini - 1TB",
+          "price": 7650000,
+          "imageUrl": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?w=800",
+          "quantity": 2
+        },
+        {
+          "id": 131,
+          "productId": 131,
+          "name": "Cáp Type-C to Lightning - Bản Cao Cấp",
+          "price": 620000,
+          "imageUrl": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 12
+    },
+    {
+      "id": "ORD-386117",
+      "customerName": "Đặng Hải Tâm",
+      "email": "user015@gmail.com",
+      "phone": "0961108873",
+      "shippingAddress": "214 Nguyễn Trãi, Quận Gò Vấp, Đà Nẵng",
+      "note": "",
+      "date": "27/01/2026",
+      "totalAmount": 99440000,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 39,
+          "productId": 39,
+          "name": "Asus ROG Zephyrus - 1TB",
+          "price": 45680000,
+          "imageUrl": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 97,
+          "productId": 97,
+          "name": "NVIDIA RTX 4070 Ti - 256GB",
+          "price": 26880000,
+          "imageUrl": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=800",
+          "quantity": 2
+        }
+      ],
+      "userId": 15
+    },
+    {
+      "id": "ORD-209779",
+      "customerName": "Phạm Gia Linh",
+      "email": "user019@gmail.com",
+      "phone": "0941923419",
+      "shippingAddress": "242 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "25/01/2026",
+      "totalAmount": 25870000,
+      "status": "pending",
+      "paymentMethod": "Banking",
+      "items": [
+        {
+          "id": 159,
+          "productId": 159,
+          "name": "Pin dự phòng Anker 20000mAh (Màu Đen)",
+          "price": 1480000,
+          "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 1,
+          "productId": 1,
+          "name": "Google Pixel 8 Pro (Màu Trắng)",
+          "price": 24390000,
+          "imageUrl": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 19
+    },
+    {
+      "id": "ORD-595865",
+      "customerName": "Lê Minh Nam",
+      "email": "user014@gmail.com",
+      "phone": "0936229071",
+      "shippingAddress": "979 Nguyễn Trãi, Quận Cầu Giấy, Cần Thơ",
+      "note": "",
+      "date": "25/01/2026",
+      "totalAmount": 2620000,
+      "status": "cancelled",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 110,
+          "productId": 110,
+          "name": "Samsung T7 SSD 1TB - Bản Cao Cấp",
+          "price": 2620000,
+          "imageUrl": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 14
+    },
+    {
+      "id": "ORD-520945",
+      "customerName": "Đặng Bảo Nam",
+      "email": "user010@gmail.com",
+      "phone": "0910133446",
+      "shippingAddress": "967 Nguyễn Trãi, Quận 3, Cần Thơ",
+      "note": "",
+      "date": "23/01/2026",
+      "totalAmount": 45770000,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "id": 14,
+          "productId": 14,
+          "name": "PlayStation 5 (PS5) (Màu Titan)",
+          "price": 18140000,
+          "imageUrl": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 156,
+          "productId": 156,
+          "name": "LG UltraGear 27 inch - Bản Tiêu Chuẩn",
+          "price": 9180000,
+          "imageUrl": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800",
+          "quantity": 1
+        },
+        {
+          "id": 75,
+          "productId": 75,
+          "name": "Galaxy Tab S9 - 1TB",
+          "price": 18450000,
+          "imageUrl": "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=800",
+          "quantity": 1
+        }
+      ],
+      "userId": 10
+    },
+    {
+      "id": "ORD-060163",
+      "customerName": "Hoàng",
+      "email": "admin1@gmail.com",
+      "phone": "0983459876",
+      "shippingAddress": "Ho Chi Minh",
+      "note": "",
+      "date": "23/4/2026",
+      "totalAmount": 21040000,
+      "status": "pending",
+      "paymentMethod": "COD",
+      "items": [
+        {
+          "name": "GoPro Hero 12 Black - Bản Cao Cấp",
+          "price": 10520000,
+          "description": "Sản phẩm GoPro Hero 12 Black chính hãng. Công nghệ mới nhất, bảo hành 12 tháng toàn quốc.",
+          "imageUrl": "https://images.unsplash.com/photo-1562564055-71e051d33c19?w=800",
+          "categoryId": 12,
+          "stock": 39,
+          "discount": 20,
+          "id": 6,
+          "productId": 6,
+          "quantity": 2
+        }
+      ],
+      "userId": 21
     }
   ],
   "carts": []

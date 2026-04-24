@@ -1,64 +1,66 @@
-// Đây là nơi vẽ ra toàn bộ bản đồ (điều hướng) của trang web
-
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import AuthPage from '../pages/AuthPage';
 import ProtectedRoute from '../components/ProtectedRoute';
 import AdminLayout from '../layouts/AdminLayout';
+import MainLayout from '../layouts/MainLayout';
 import Home from '../pages/Home';
+import ProductsPage from '../pages/ProductsPage';
+import ProductDetail from '../pages/ProductDetail';
+import Checkout from '../pages/Checkout';
+import MyOrders from '../pages/MyOrders';
 import ProductList from '../pages/admin/products/ProductList';
 import ProductForm from '../pages/admin/products/ProductForm';
+import Dashboard from '../pages/admin/Dashboard';
+import OrderList from '../pages/admin/OrderList';
+import UserList from '../pages/admin/UserList';
 
 const router = createBrowserRouter([
-  // 1. Các phòng mở cửa tự do (ai vào cũng được)
   {
     path: '/login',
     element: <AuthPage />,
   },
-
-  // 2. Các phòng vip chỉ có admin mới được vào
   {
     path: '/admin',
     element: <ProtectedRoute allowedRoles={['admin']} />,
     children: [
       {
-        // Layout chung bọc bên ngoài
         element: <AdminLayout />,
         children: [
-          {
-            path: 'dashboard',
-            element: <div>Trang Dashboard chính thức</div>,
-          },
+          { path: 'dashboard', element: <Dashboard /> },
           {
             path: 'products',
-            // Nhóm các trang liên quan đến Product lại với nhau
             children: [
-              { index: true, element: <ProductList /> }, // Khớp với: /admin/products
-              { path: 'add', element: <ProductForm /> }, // Khớp với: /admin/products/add
-              { path: 'edit/:id', element: <ProductForm /> }, // Khớp với: /admin/products/edit/1
+              { index: true, element: <ProductList /> },
+              { path: 'add', element: <ProductForm /> },
+              { path: 'edit/:id', element: <ProductForm /> },
             ],
           },
+          { path: 'orders', element: <OrderList /> },
+          { path: 'users', element: <UserList /> },
         ],
       },
     ],
   },
-
-  // 3. Các phòng chung cho admin và user
   {
     path: '/',
-    element: <ProtectedRoute allowedRoles={['admin', 'user']} />,
+    element: <MainLayout />,
     children: [
+      { index: true, element: <Home /> },
+      { path: 'home', element: <Home /> },
+      { path: 'products', element: <ProductsPage /> },
+      { path: 'products/:id', element: <ProductDetail /> },
       {
-        index: true,
-        element: <Home />,
+        path: 'checkout',
+        element: <ProtectedRoute allowedRoles={['admin', 'user']} />,
+        children: [{ index: true, element: <Checkout /> }],
       },
       {
-        path: 'home',
-        element: <Home />,
+        path: 'my-orders',
+        element: <ProtectedRoute allowedRoles={['admin', 'user']} />,
+        children: [{ index: true, element: <MyOrders /> }],
       },
     ],
   },
-
-  // 4. Nếu vào đường dẫn không hợp lệ thì chuyển về đăng nhập
   {
     path: '*',
     element: <Navigate to="/login" replace />,

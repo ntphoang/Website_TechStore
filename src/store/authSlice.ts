@@ -1,48 +1,34 @@
-import { createSlice } from '@reduxjs/toolkit';
-import type { PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
+import { type  User } from '../types';
 
-export interface User {
-  id: number;
-  email: string;
-  password: string;
-  name: string;
-  role: 'admin' | 'user';
-  phone: string;
-  address: string;
-}
-
-export interface AuthState {
+interface AuthState {
   isAuthenticated: boolean;
   user: User | null;
   token: string | null;
 }
 
-// Vẫn giữ lại hàm lấy data từ kho để chống F5
-const getInitialAuthState = (): AuthState => {
+const getInitialState = (): AuthState => {
   try {
     const token = localStorage.getItem('token');
-    const userString = localStorage.getItem('user');
-    if (token && userString) {
-      return { isAuthenticated: true, user: JSON.parse(userString), token };
+    const user = localStorage.getItem('user');
+    if (token && user) {
+      return { isAuthenticated: true, user: JSON.parse(user), token };
     }
   } catch (error) {
-    console.error('Lỗi parse data:', error);
+    console.error('Auth sync error:', error);
   }
   return { isAuthenticated: false, user: null, token: null };
 };
 
-// TẠO SLICE (Quầy giao dịch Auth)
 const authSlice = createSlice({
   name: 'auth',
-  initialState: getInitialAuthState(),
+  initialState: getInitialState(),  
   reducers: {
-    // Hành động 1: Đăng nhập thành công (Gửi kèm Payload là user và token)
     loginSuccess: (state, action: PayloadAction<{ user: User; token: string }>) => {
       state.isAuthenticated = true;
       state.user = action.payload.user;
       state.token = action.payload.token;
     },
-    // Hành động 2: Đăng xuất (Không cần gửi kèm data gì cả)
     logoutAction: (state) => {
       state.isAuthenticated = false;
       state.user = null;
@@ -51,8 +37,5 @@ const authSlice = createSlice({
   },
 });
 
-// Xuất các "Phiếu yêu cầu" để các file khác gọi
 export const { loginSuccess, logoutAction } = authSlice.actions;
-
-// Xuất Quầy giao dịch này cho Ngân hàng trung ương
 export default authSlice.reducer;

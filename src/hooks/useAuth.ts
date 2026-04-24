@@ -1,102 +1,77 @@
-// Đây là custom hook dùng để xử lý đăng nhập, đăng xuất,
-// lưu thông tin user vào Redux Toolkit và điều hướng
-
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useDispatch } from 'react-redux';
-
+import toast from 'react-hot-toast';
 import axiosClient from '../lib/axiosClient';
-import { loginSuccess, logoutAction, type User } from '../store/authSlice';
+import { loginSuccess, logoutAction } from '../store/authSlice';
+import { clearCart } from '../store/cartSlice';
+import type { User } from '../types';
 
-// ==========================
-// Kiểu dữ liệu gửi lên server
-// ==========================
-interface LoginCredentials {
-  email: string;
-  password: string; // ❗ sửa String -> string (chuẩn TS)
-}
-
-// ==========================
-// Kiểu dữ liệu server trả về
-// ==========================
-interface LoginResponse {
+interface AuthResponse {
   accessToken: string;
   user: User;
 }
 
 export const useAuth = () => {
-  // ==========================
-  // Lấy các công cụ cần thiết
-  // ==========================
-  const dispatch = useDispatch(); // dùng để cập nhật Redux
-  const navigate = useNavigate(); // chuyển trang
-  const location = useLocation(); // biết user muốn vào trang nào trước đó
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const queryClient = useQueryClient();
 
-  // ==========================
-  // Xử lý login bằng React Query
-  // ==========================
   const loginMutation = useMutation({
-    // Hàm gọi API login
-    mutationFn: async (credential: LoginCredentials): Promise<LoginResponse> => {
-      const response = await axiosClient.post('/login', credential);
-      return response as unknown as LoginResponse;
+    mutationFn: async (credentials: any): Promise<AuthResponse> => {
+      return await axiosClient.post('/login', credentials);
     },
-
-    // ==========================
-    // Khi login thành công
-    // ==========================
     onSuccess: (data) => {
-      console.log("LOGIN SUCCESS", data);
-      // 1. Lưu vào localStorage (để reload không mất login)
       localStorage.setItem('token', data.accessToken);
       localStorage.setItem('user', JSON.stringify(data.user));
+      dispatch(loginSuccess({ user: data.user, token: data.accessToken }));
 
-      // 2. Cập nhật Redux store
-      dispatch(
-        loginSuccess({
-          user: data.user,
-          token: data.accessToken,
-        })
-      );
-
-      // 3. Điều hướng về trang ban đầu hoặc theo role
-      const originPage = location.state?.from?.pathname;
-
-      const targetPage = originPage || (data.user.role === 'admin' ? '/admin/dashboard' : '/home');
-
-      navigate(targetPage, { replace: true });
+      const from =
+        location.state?.from?.pathname || (data.user.role === 'admin' ? '/admin/dashboard' : '/');
+      navigate(from, { replace: true });
+      toast.success('Đăng nhập thành công!');
     },
-
-    // ==========================
-    // Khi login thất bại
-    // ==========================
-    onError: (error) => {
-      console.error('Đăng nhập thất bại', error);
-    },
+    onError: () => toast.error('Email hoặc mật khẩu không chính xác!'),
   });
 
-  // ==========================
-  // Logout (đăng xuất)
-  // ==========================
+  const registerMutation = useMutation({
+    mutationFn: async (userData: any): Promise<AuthResponse> => {
+      const newUser = {
+        ...userData,
+        role: 'user',
+        status: 'active',
+        joinDate: new Date().toLocaleDateString('vi-VN'),
+      };
+
+      return await axiosClient.post('/register', newUser);
+    },
+    onSuccess: (data) => {
+      localStorage.setItem('token', data.accessToken);
+      localStorage.setItem('user', JSON.stringify(data.user));
+      dispatch(loginSuccess({ user: data.user, token: data.accessToken }));
+
+      toast.success('Đăng ký tài khoản thành công!');
+      navigate('/');
+    },
+    onError: () => toast.error('Đăng ký thất bại, email có thể đã tồn tại!'),
+  });
+
   const logout = () => {
-    // Xóa localStorage
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-
-    // Reset Redux store
     dispatch(logoutAction());
-
-    // Chuyển về login
+    dispatch(clearCart());
+    queryClient.clear();
     navigate('/login', { replace: true });
+    toast.success('Đã đăng xuất!');
   };
 
-  // ==========================
-  // Trả ra cho component dùng
-  // ==========================
   return {
-    login: loginMutation.mutate, // gọi login(data)
-    isLoading: loginMutation.isPending,
-    error: loginMutation.error,
+    login: loginMutation.mutate,
+    isLoginLoading: loginMutation.isPending,
+    register: registerMutation.mutate,
+    isRegisterLoading: registerMutation.isPending,
     logout,
   };
 };

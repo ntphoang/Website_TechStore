@@ -1,106 +1,127 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
+import {
+  HiOutlineShoppingCart,
+  HiOutlineLogout,
+  HiOutlineUserCircle,
+  HiOutlineMenu,
+  HiOutlineClipboardList,
+} from 'react-icons/hi';
 import { useSelector } from 'react-redux';
-import { HiOutlineShoppingCart } from 'react-icons/hi';
-import { RootState } from '../store/store';
 import { useAuth } from '../hooks/useAuth';
+import type { RootState } from '../store/store';
 
-// Định nghĩa Interface cho Props
 interface HeaderProps {
-  onOpenCart?: () => void; // Dấu ? giúp trang Admin vẫn dùng được Header mà không bắt buộc mở giỏ hàng
+  onOpenCart: () => void;
+  onOpenMenu?: () => void;
 }
 
-export default function Header({ onOpenCart }: HeaderProps) {
-  // 1. Lấy trạng thái Auth từ Redux
-  const { isAuthenticated, user } = useSelector((state: typeof RootState) => state.auth);
-
-  // 2. Lấy dữ liệu giỏ hàng để tính toán CartCount
-  const cartItems = useSelector((state: typeof RootState) => state.cart.items);
-  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
-
-  // 3. Lấy hàm logout
+export default function Header({ onOpenCart, onOpenMenu }: HeaderProps) {
+  const navigate = useNavigate();
   const { logout } = useAuth();
+  const { isAuthenticated, user } = useSelector((state: RootState) => state.auth);
+  const cartItems = useSelector((state: RootState) => state.cart.items);
+  const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
-    <header className="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        {/* Logo Section */}
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600 text-lg font-bold text-white shadow-sm transition-transform group-hover:scale-105">
-            T
-          </div>
-          <div>
-            <p className="text-lg font-bold text-slate-900 leading-tight">TechStore</p>
-            <p className="text-xs text-slate-500 font-medium uppercase tracking-wider">
-              Gadget & accessories
-            </p>
-          </div>
-        </Link>
-
-        {/* Navigation Section */}
-        <nav className="hidden items-center gap-8 text-sm font-medium text-slate-600 md:flex">
-          <Link to="/" className="transition hover:text-blue-600">
-            Trang chủ
-          </Link>
-          <Link to="/products" className="transition hover:text-blue-600">
-            Sản phẩm
-          </Link>
-          {/* Chỉ Admin mới thấy link Quản trị */}
-          {isAuthenticated && user?.role === 'admin' && (
-            <Link
-              to="/admin/dashboard"
-              className="px-3 py-1 rounded-lg bg-blue-50 text-blue-600 transition hover:bg-blue-100"
-            >
-              Quản trị
-            </Link>
-          )}
-        </nav>
-
-        {/* Action Section */}
-        <div className="flex items-center gap-2 sm:gap-4">
-          {/* Nút Giỏ hàng - Luôn hiển thị nếu muốn, hoặc chỉ hiện khi login tùy bạn */}
+    <header className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <div className="flex items-center gap-4">
           <button
-            onClick={() => {
-              onOpenCart?.();
-            }}
-            className="relative p-2.5 text-slate-600 hover:bg-slate-100 rounded-full transition-all group"
+            onClick={onOpenMenu}
+            className="lg:hidden p-2 text-slate-500 hover:text-pastel-teal transition-colors"
           >
-            <HiOutlineShoppingCart className="w-6 h-6 group-hover:text-blue-600" />
-            {cartCount > 0 && (
-              <span className="absolute top-1 right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[10px] font-bold text-white ring-2 ring-white animate-in zoom-in">
-                {cartCount}
+            <HiOutlineMenu className="w-6 h-6" />
+          </button>
+          <Link to="/" className="flex items-center gap-2 group">
+            <div className="w-10 h-10 bg-pastel-teal rounded-xl flex items-center justify-center text-white font-black text-xl group-hover:scale-105 transition-transform">
+              T
+            </div>
+            <div>
+              <h1 className="text-xl font-black text-slate-800 tracking-tight leading-none">
+                TechStore
+              </h1>
+              <p className="text-[10px] font-bold text-slate-400 tracking-widest uppercase">
+                Digital Life
+              </p>
+            </div>
+          </Link>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <button
+            onClick={onOpenCart}
+            className="relative p-2 text-slate-500 hover:text-pastel-teal transition-colors"
+          >
+            <HiOutlineShoppingCart className="w-6 h-6" />
+            {totalItems > 0 && (
+              <span className="absolute top-0 right-0 w-5 h-5 bg-red-500 text-white text-[10px] font-bold flex items-center justify-center rounded-full border-2 border-white">
+                {totalItems}
               </span>
             )}
           </button>
 
-          <div className="h-8 w-[1px] bg-slate-200 mx-1 hidden sm:block"></div>
+          <div className="w-px h-6 bg-slate-200 mx-2 hidden sm:block"></div>
 
-          {isAuthenticated ? (
-            <div className="flex items-center gap-3">
-              <span className="hidden lg:block text-sm font-semibold text-slate-700">
-                Chào, {user?.name || 'Bạn'}
-              </span>
+          {isAuthenticated && user ? (
+            <div className="relative" ref={dropdownRef}>
               <button
-                onClick={logout}
-                className="rounded-xl border border-red-100 bg-red-50 px-4 py-2 text-sm font-bold text-red-600 transition hover:bg-red-100"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex items-center gap-2 text-sm font-bold text-slate-700 hover:text-pastel-teal transition-colors p-2"
               >
-                Đăng xuất
+                <span className="hidden sm:block">
+                  Chào, {user?.name?.split(' ').pop() || 'Bạn'}
+                </span>
+                <HiOutlineUserCircle className="w-6 h-6" />
               </button>
+
+              {isDropdownOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-slate-100 py-1 z-50 animate-in fade-in slide-in-from-top-2">
+                  <button
+                    onClick={() => {
+                      setIsDropdownOpen(false);
+                      navigate('/my-orders');
+                    }}
+                    className="w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-50 hover:text-pastel-teal transition-colors"
+                  >
+                    <HiOutlineClipboardList className="w-5 h-5" />
+                    Đơn hàng của tôi
+                  </button>
+                  <div className="h-px bg-slate-100 my-1"></div>
+                  <button
+                    onClick={() => {
+                      setIsDropdownOpen(false);
+                      logout();
+                    }}
+                    className="w-full flex items-center gap-3 px-4 py-3 text-sm font-semibold text-red-500 hover:bg-red-50 transition-colors"
+                  >
+                    <HiOutlineLogout className="w-5 h-5" />
+                    Đăng xuất
+                  </button>
+                </div>
+              )}
             </div>
           ) : (
-            <div className="flex items-center gap-2">
-              <Link
-                to="/login"
-                className="hidden sm:inline-flex rounded-xl px-4 py-2 text-sm font-bold text-slate-600 transition hover:bg-slate-100"
-              >
-                Đăng nhập
-              </Link>
-              <Link
-                to="/register"
-                className="inline-flex items-center rounded-xl bg-blue-600 px-5 py-2 text-sm font-bold text-white shadow-md shadow-blue-100 transition hover:bg-blue-700 hover:shadow-blue-200"
-              >
-                Đăng ký
-              </Link>
-            </div>
+            <button
+              onClick={() => navigate('/login')}
+              className="flex items-center gap-2 text-sm font-bold text-pastel-teal hover:text-[#326e6e] transition-colors p-2"
+            >
+              <HiOutlineUserCircle className="w-6 h-6" />
+              <span className="hidden sm:block">Đăng nhập</span>
+            </button>
           )}
         </div>
       </div>

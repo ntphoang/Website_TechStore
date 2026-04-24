@@ -2,50 +2,70 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-300">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-3">
-          <div>
-            <p className="text-xl font-semibold text-white">TechStore</p>
-            <p className="mt-3 max-w-xs text-sm leading-6 text-slate-400">
-              Cửa hàng công nghệ cho sinh viên và người dùng phổ thông. Mua sắm tiện lợi, giao hàng
-              nhanh và hỗ trợ tận tình.
+    <footer className="bg-pastel-teal text-white/80">
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-3">
+          <div className="space-y-4">
+            <p className="text-2xl font-black text-white">TechStore</p>
+            <p className="text-sm leading-relaxed text-pastel-ice/80 font-medium">
+              Kiến tạo phong cách sống số tối giản và hiện đại. Chúng tôi cung cấp những trải nghiệm
+              công nghệ tinh tế nhất.
             </p>
           </div>
 
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-slate-400">Khám phá</p>
-            <ul className="mt-4 space-y-3 text-sm text-slate-300">
-              <li>
-                <Link to="/" className="transition hover:text-white">
-                  Trang chủ
-                </Link>
-              </li>
-              <li>
-                <Link to="/products" className="transition hover:text-white">
-                  Sản phẩm
-                </Link>
-              </li>
-              <li>
-                <Link to="/login" className="transition hover:text-white">
-                  Đăng nhập
-                </Link>
-              </li>
-            </ul>
+          <div className="grid grid-cols-2 gap-8">
+            <div className="space-y-4">
+              <p className="text-xs font-black uppercase tracking-widest text-pastel-yellow">
+                Khám phá
+              </p>
+              <ul className="space-y-2 text-sm font-bold">
+                <li>
+                  <Link to="/" className="hover:text-white transition-colors">
+                    Trang chủ
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/products" className="hover:text-white transition-colors">
+                    Sản phẩm
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="space-y-4">
+              <p className="text-xs font-black uppercase tracking-widest text-pastel-yellow">
+                Hỗ trợ
+              </p>
+              <ul className="space-y-2 text-sm font-bold">
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Liên hệ
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white transition-colors">
+                    Bảo hành
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-slate-400">Liên hệ</p>
-            <ul className="mt-4 space-y-3 text-sm text-slate-300">
-              <li>Email: support@techstore.com</li>
-              <li>Hotline: 1900 1234</li>
-              <li>Địa chỉ: Hà Nội, Việt Nam</li>
-            </ul>
+          <div className="space-y-4">
+            <p className="text-xs font-black uppercase tracking-widest text-pastel-yellow">
+              Liên hệ
+            </p>
+            <div className="text-sm font-bold space-y-1">
+              <p>ntphoang205@gmail.com</p>
+              <p>Hotline: 0896368408</p>
+              <p className="text-pastel-ice/60 font-medium mt-4">
+                12 Nguyễn Văn Bảo, Gò vấp, Hồ Chí Minh
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="mt-10 border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
-          © 2026 TechStore. Bảo lưu mọi quyền.
+        <div className="mt-12 pt-8 border-t border-white/10 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-pastel-ice/40">
+          © 2026 TechStore Project.
         </div>
       </div>
     </footer>
