@@ -6,7 +6,8 @@ import { Provider } from 'react-redux';
 import { store } from './store/store';
 import router from './routes';
 import './index.css';
-
+import "./features/products/api/testAPI";
+// Khởi tạo React Query(quản lý API)
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
