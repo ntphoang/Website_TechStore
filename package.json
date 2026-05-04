@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "npx json-server db.json --port 10000"
+    "server": "npx json-server db.json --port $PORT"
   },
   "overrides": {
     "path-to-regexp": "0.1.12"
