@@ -13,7 +13,7 @@ import { addToCart } from '../store/cartSlice';
 import toast from 'react-hot-toast';
 import Button from '../components/Button';
 import LoadingSpinner from '../components/LoadingSpinner';
-import type { Product } from '../components/ProductCard';
+import type { Product } from '../types';
 
 export default function ProductDetail() {
   const { id } = useParams();

@@ -2,8 +2,6 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { userApi } from '../api/userApi';
 import toast from 'react-hot-toast';
 
-import type { User } from '../types';
-
 export const useUsers = () => {
   const queryClient = useQueryClient();
 
@@ -13,7 +11,7 @@ export const useUsers = () => {
   });
 
   const updateStatusMutation = useMutation({
-    mutationFn: ({ id, status }: { id: string | number; status: 'active' | 'banned' }) => 
+    mutationFn: ({ id, status }: { id: string | number; status: 'active' | 'banned' }) =>
       userApi.updateStatus(id, status),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['users'] });
@@ -21,7 +19,7 @@ export const useUsers = () => {
     },
     onError: () => {
       toast.error('Lỗi khi cập nhật tài khoản.');
-    }
+    },
   });
 
   return {
