@@ -151,9 +151,9 @@
 
 ## 👥 Team Members
 
-- **Nguyễn Trần Phi Hoàng** - Frontend UI & Components Lead
-- **Hoàng Ngọc Hải** - Backend API & State Management
-- **Nguyễn Văn Sỹ** - Pages & Admin Panel Developer
+- **Nguyễn Trần Phi Hoàng** - Quy trình đặt hàng, thanh toán, giỏ hàng
+- **Hoàng Ngọc Hải** - Quản lý sản phẩm, đăng nhập, đăng ký
+- **Nguyễn Văn Sỹ** - Trang thống kê báo cáo, quản lý đơn hàng
 
 ---
 
