@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
-import axiosClient from '../lib/axiosClient';
+import { api } from '../lib/api';
 import { loginSuccess, logoutAction } from '../store/authSlice';
 import { clearCart } from '../store/cartSlice';
 import type { User } from '../types';
@@ -20,7 +20,7 @@ export const useAuth = () => {
 
   const loginMutation = useMutation({
     mutationFn: async (credentials: any): Promise<AuthResponse> => {
-      return await axiosClient.post('/login', credentials);
+      return await api.post('/login', credentials);
     },
     onSuccess: (data) => {
       localStorage.setItem('token', data.accessToken);
@@ -44,7 +44,7 @@ export const useAuth = () => {
         joinDate: new Date().toLocaleDateString('vi-VN'),
       };
 
-      return await axiosClient.post('/register', newUser);
+      return await api.post('/register', newUser);
     },
     onSuccess: (data) => {
       localStorage.setItem('token', data.accessToken);

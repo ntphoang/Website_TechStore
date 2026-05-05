@@ -1,24 +1,24 @@
-import axiosClient from "../../../lib/axiosClient";
+import { api } from '../../../lib/api';
 const productApi = {
   getAll: () => {
-    return axiosClient.get("/products");
+    return api.get('/products');
   },
 
   getById: (id: number) => {
-    return axiosClient.get(`/products/${id}`);
+    return api.get(`/products/${id}`);
   },
 
   create: (data: any) => {
-    return axiosClient.post("/products", data);
+    return api.post('/products', data);
   },
 
   update: (id: number, data: any) => {
-    return axiosClient.put(`/products/${id}`, data);
+    return api.put(`/products/${id}`, data);
   },
 
   delete: (id: number) => {
-    return axiosClient.delete(`/products/${id}`);
-  }
+    return api.delete(`/products/${id}`);
+  },
 };
 
 export default productApi;

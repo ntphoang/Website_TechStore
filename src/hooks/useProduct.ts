@@ -1,6 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { productApi } from '../api/productApi';
-import axiosClient from '../lib/axiosClient';
+import { api } from '../lib/api';
 import toast from 'react-hot-toast';
 
 // TUÂN THỦ QUY TẮC MỚI: Dùng import type
@@ -13,7 +13,7 @@ export const useStoreData = () => {
     queryFn: async () => {
       const [products, categories] = await Promise.all([
         productApi.getAll(),
-        axiosClient.get<any, Category[]>('/categories'),
+        api.get<any, Category[]>('/categories'),
       ]);
       return { products, categories };
     },

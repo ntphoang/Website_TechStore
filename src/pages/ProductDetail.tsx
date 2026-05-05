@@ -8,7 +8,7 @@ import {
   HiOutlineShieldCheck,
   HiOutlineTruck,
 } from 'react-icons/hi';
-import axiosClient from '../lib/axiosClient';
+import { api } from '../lib/api';
 import { addToCart } from '../store/cartSlice';
 import toast from 'react-hot-toast';
 import Button from '../components/Button';
@@ -27,7 +27,7 @@ export default function ProductDetail() {
     const fetchProduct = async () => {
       try {
         setLoading(true);
-        const data = await axiosClient.get(`/products/${id}`);
+        const data = await api.get(`/products/${id}`);
         setProduct(data as unknown as Product);
       } catch (error) {
         toast.error('Không tìm thấy sản phẩm!');

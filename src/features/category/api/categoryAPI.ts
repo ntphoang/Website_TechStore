@@ -1,24 +1,24 @@
-import axiosClient from "../../../lib/axiosClient";
+import { api } from '../../../lib/api';
 const categoryApi = {
   getAll: () => {
-    return axiosClient.get("/categories");
+    return api.get('/categories');
   },
 
   getById: (id: number) => {
-    return axiosClient.get(`/categories/${id}`);
+    return api.get(`/categories/${id}`);
   },
 
   create: (data: any) => {
-    return axiosClient.post("/categories", data);
+    return api.post('/categories', data);
   },
 
   update: (id: number, data: any) => {
-    return axiosClient.put(`/categories/${id}`, data);
+    return api.put(`/categories/${id}`, data);
   },
 
   delete: (id: number) => {
-    return axiosClient.delete(`/categories/${id}`);
-  }
+    return api.delete(`/categories/${id}`);
+  },
 };
 
 export default categoryApi;

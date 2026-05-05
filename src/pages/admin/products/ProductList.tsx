@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
-import axiosClient from '../../../lib/axiosClient';
+import { api } from '../../../lib/api';
 import type { Product } from '../../../types/product.type';
 import type { Category } from '../../../types/category.type';
 
@@ -26,8 +26,8 @@ export default function ProductList() {
       try {
         setIsLoading(true);
         const [productsData, categoriesData] = await Promise.all([
-          axiosClient.get('/products'),
-          axiosClient.get('/categories'),
+          api.get('/products'),
+          api.get('/categories'),
         ]);
         setProducts(productsData as unknown as Product[]);
         setCategories(categoriesData as unknown as Category[]);
@@ -58,7 +58,7 @@ export default function ProductList() {
     if (!selectedProductId) return;
     try {
       setIsDeleting(true);
-      await axiosClient.delete(`/products/${selectedProductId}`);
+      await api.delete(`/products/${selectedProductId}`);
       setProducts(products.filter((p) => p.id !== selectedProductId));
       toast.success('Đã xóa sản phẩm thành công!');
     } catch (error) {

@@ -7,7 +7,7 @@ import { HiOutlineUpload, HiX } from 'react-icons/hi';
 
 import { productSchema, type ProductFormValues } from '../../../schemas/product.schema';
 import { type Category } from '../../../types';
-import axiosClient from '../../../lib/axiosClient';
+import { api } from '../../../lib/api';
 import { useProductMutation } from '../../../hooks/useProduct';
 import Button from '../../../components/Button';
 import Input from '../../../components/Input';
@@ -40,10 +40,10 @@ export default function ProductForm() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const cats = await axiosClient.get<any, Category[]>('/categories');
+        const cats = await api.get<any, Category[]>('/categories');
         setCategories(cats);
         if (isEditMode) {
-          const prod = await axiosClient.get(`/products/${id}`);
+          const prod = await api.get(`/products/${id}`);
           reset(prod as any);
           if ((prod as any).imageUrl) {
             setPreviewImage((prod as any).imageUrl);

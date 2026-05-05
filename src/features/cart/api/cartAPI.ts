@@ -1,21 +1,21 @@
-import axiosClient from "../../../lib/axiosClient";
+import { api } from '../../../lib/api';
 
 const cartApi = {
   getCart: () => {
-    return axiosClient.get("/carts");
+    return api.get('/carts');
   },
 
   addToCart: (data: any) => {
-    return axiosClient.post("/carts", data);
+    return api.post('/carts', data);
   },
 
   updateCart: (id: number, data: any) => {
-    return axiosClient.put(`/carts/${id}`, data);
+    return api.put(`/carts/${id}`, data);
   },
 
   removeFromCart: (id: number) => {
-    return axiosClient.delete(`/carts/${id}`);
-  }
+    return api.delete(`/carts/${id}`);
+  },
 };
 
 export default cartApi;
