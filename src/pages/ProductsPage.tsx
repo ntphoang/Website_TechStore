@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import toast from 'react-hot-toast';
@@ -26,8 +26,26 @@ export default function ProductsPage() {
   const [sortOption, setSortOption] = useState<'newest' | 'priceAsc' | 'priceDesc'>('newest');
   const [currentPage, setCurrentPage] = useState(1);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [gridColumns, setGridColumns] = useState(4);
 
-  const productsPerPage = 9;
+  const getColumnsFromWidth = (width: number) => {
+    if (width >= 1280) return 4;
+    if (width >= 768) return 3;
+    if (width >= 640) return 2;
+    return 1;
+  };
+
+  useEffect(() => {
+    const updateColumns = () => {
+      setGridColumns(getColumnsFromWidth(window.innerWidth));
+    };
+
+    updateColumns();
+    window.addEventListener('resize', updateColumns);
+    return () => window.removeEventListener('resize', updateColumns);
+  }, []);
+
+  const productsPerPage = gridColumns * 3;
 
   const processedProducts = useMemo(() => {
     if (!data) return [];
@@ -88,7 +106,13 @@ export default function ProductsPage() {
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = processedProducts.slice(indexOfFirstProduct, indexOfLastProduct);
-  const totalPages = Math.ceil(processedProducts.length / productsPerPage);
+  const totalPages = Math.max(1, Math.ceil(processedProducts.length / productsPerPage));
+
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(1);
+    }
+  }, [currentPage, totalPages]);
 
   const currentCategoryName =
     selectedCategory === 'all'
