@@ -189,6 +189,16 @@
       "status": "active",
       "joinDate": "23/4/2026",
       "id": 21
+    },
+    {
+      "email": "user1@gmail.com",
+      "password": "$2a$10$LIjc6QThb5WFZRvNDMVX/.bXTj6PZzOPLnDMEJeS41POKmkd/isLq",
+      "name": "HaiDz",
+      "phone": "0333157720",
+      "role": "user",
+      "status": "active",
+      "joinDate": "24/4/2026",
+      "id": 22
     }
   ],
   "categories": [

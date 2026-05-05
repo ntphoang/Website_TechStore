@@ -6,11 +6,16 @@ type TextAreaProps = React.TextareaHTMLAttributes<HTMLTextAreaElement> & {
 };
 
 const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
-  ({ label, error, ...props }, ref) => {
+  ({ label, error, id, ...props }, ref) => {
+    const textareaId = id ?? props.name ?? label.toLowerCase().replace(/\s+/g, '-');
+
     return (
       <div className="mb-4">
-        <label className="block mb-1.5 text-sm font-semibold text-slate-700">{label}</label>
+        <label htmlFor={textareaId} className="block mb-1.5 text-sm font-semibold text-slate-700">
+          {label}
+        </label>
         <textarea
+          id={textareaId}
           ref={ref}
           className={`w-full border px-4 py-3 rounded-xl bg-slate-50 text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-4 transition-all duration-300 min-h-[120px] resize-y ${
             error
