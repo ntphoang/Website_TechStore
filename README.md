@@ -1,73 +1,161 @@
-# React + TypeScript + Vite
+# 🛍️ TechStore - E-commerce Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Ứng dụng web thương mại điện tử tích hợp đầy đủ: khách hàng mua sắm, thanh toán, quản lý đơn hàng + admin dashboard quản lý kho, sản phẩm, người dùng.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 1. Project Overview 📋
 
-## React Compiler
+**TechStore** là một nền tảng thương mại điện tử hiện đại cho các sản phẩm công nghệ, xây dựng bằng **React + Vite + TypeScript** với backend nhẹ (**JSON Server**).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Mục tiêu
 
-## Expanding the ESLint configuration
+- ✅ Xây dựng MVP đầy đủ chức năng (auth, CRUD, search, dashboard)
+- ✅ Áp dụng best practices React: component tách lớp, state management, custom hooks
+- ✅ Ensure code quality: TypeScript, ESLint, Prettier, Zod validation
+- ✅ Deploy production-ready: Vercel (frontend) + Render (backend)
+- ✅ Tạo tài liệu toàn diện & sprint tracking
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 2. Demo 🎬
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Phần            | URL                                       | Ghi chú                 |
+| --------------- | ----------------------------------------- | ----------------------- |
+| **Frontend**    | `https://website-tech-store.vercel.app`   | Demo trên Vercel        |
+| **Backend API** | `https://website-tech-store.onrender.com` | JSON Server trên Render |
+| **API Docs**    | `/docs/api-spec.md`                       | Danh sách endpoints     |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 🔐 Demo Account
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+| Email              | Password | Role  |
+| ------------------ | -------- | ----- |
+| `admin1@gmail.com` | `123456` | Admin |
+| `user1@gmail.com`  | `123456` | User  |
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 3. Tech Stack 🛠️
+
+### Frontend
+
+- **React 19** + **TypeScript 5.9** - UI library & type safety
+- **Vite 8** - Lightning-fast bundler & dev server
+- **React Router DOM 7** - Client-side routing with nested routes
+- **TailwindCSS 3.4** - Utility-first CSS framework
+
+### State Management & Data Fetching
+
+- **Redux Toolkit 2.11** - Global state (auth, cart)
+- **React Query 5.96** - Server state & caching
+- **Redux DevTools** - Debug store in dev
+
+### Form & Validation
+
+- **React Hook Form 7.72** - Lightweight form management
+- **Zod 4.3** - TypeScript-first schema validation
+- **@hookform/resolvers** - Zod integration
+
+### UI & UX
+
+- **Recharts 3.8** - Analytics charts (dashboard)
+- **Lucide React 1.8** - Icon library
+- **React Icons 5.6** - Additional icons
+- **React Hot Toast 2.6** - Notifications
+
+### Backend & Auth
+
+- **JSON Server 0.17** - Mock REST API
+- **json-server-auth 2.1** - JWT authentication
+- **Axios 1.14** - HTTP client
+
+### Code Quality
+
+- **ESLint 9.39** - Linting & code style
+- **Prettier 3.8** - Code formatter
+- **TypeScript ESLint** - Type-aware linting
+
+### Dev Tools
+
+- **Vite** - Build tooling
+- **TypeScript Compiler** - Type checking
+- **PostCSS & Autoprefixer** - CSS processing
+
+### Deployment
+
+- **Vercel** - Frontend hosting
+- **Render** - Backend hosting (JSON Server)
+
+---
+
+## 4. Features (MVP) ✨
+
+### 🔐 Authentication & Authorization
+
+- ✅ Đăng ký tài khoản (Signup)
+- ✅ Đăng nhập (Login) với JWT token
+- ✅ Đăng xuất (Logout)
+- ✅ Refresh token + re-login flow
+- ✅ Phân quyền: Admin / Customer
+
+### 🛒 Shopping Features
+
+- ✅ Duyệt sản phẩm (Browse products)
+- ✅ Chi tiết sản phẩm (Product detail page)
+- ✅ Tìm kiếm sản phẩm (Search by name)
+- ✅ Lọc theo danh mục (Filter by category)
+- ✅ Sắp xếp (Sort by price, newest)
+- ✅ Phân trang (Pagination: 9 items/page)
+- ✅ Thêm vào giỏ hàng (Add to cart)
+- ✅ Quản lý giỏ hàng (View, update, remove items)
+- ✅ Thanh toán (Checkout form with validation)
+- ✅ Lịch sử đơn hàng (Order history)
+
+### 📊 Admin Dashboard
+
+- ✅ Thống kê doanh thu (Revenue analytics)
+- ✅ Thống kê đơn hàng (Order distribution chart)
+- ✅ Top sản phẩm bán chạy (Top products chart)
+- ✅ Thẻ KPI (Key metrics)
+
+### 📦 Product Management (Admin)
+
+- ✅ Danh sách sản phẩm (Product list with table)
+- ✅ Thêm sản phẩm (Create product)
+- ✅ Sửa sản phẩm (Edit product)
+- ✅ Xóa sản phẩm (Delete product)
+- ✅ Upload ảnh (Image upload with preview)
+- ✅ Validate kích thước & định dạng ảnh
+
+### 📋 Order Management (Admin)
+
+- ✅ Danh sách đơn hàng (Order list)
+- ✅ Cập nhật trạng thái đơn hàng (Update status)
+- ✅ Xóa đơn hàng (Delete order)
+
+### 👥 User Management (Admin)
+
+- ✅ Danh sách người dùng (User list)
+- ✅ Khóa/mở tài khoản người dùng (Ban/unban users)
+
+### 🎨 UI/UX
+
+- ✅ Responsive design (Mobile, tablet, desktop)
+- ✅ Loading states & error handling
+- ✅ Empty states (No products, no orders)
+- ✅ Toast notifications (Success, error)
+- ✅ Form validation with error messages
+- ✅ Modal dialogs (Confirm delete)
+
+---
+
+## 👥 Team Members
+
+- **Nguyễn Trần Phi Hoàng** - Frontend UI & Components Lead
+- **Hoàng Ngọc Hải** - Backend API & State Management
+- **Nguyễn Văn Sỹ** - Pages & Admin Panel Developer
+
+---
+
+**Last Updated:** 05/05/2026  
+**Version:** 1.0.0 (MVP)
