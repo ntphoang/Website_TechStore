@@ -99,7 +99,7 @@ export default function Checkout() {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button
             onClick={() => navigate('/products')}
-            className="bg-slate-100 text-slate-600 hover:bg-slate-200"
+            className="bg-white text-black border border-slate-300 hover:bg-slate-100 hover:border-slate-400"
           >
             Tiếp tục mua sắm
           </Button>
