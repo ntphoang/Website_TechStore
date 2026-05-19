@@ -23,7 +23,7 @@
 | Phần            | URL                                       | Ghi chú                 |
 | --------------- | ----------------------------------------- | ----------------------- |
 | **Frontend**    | `https://website-tech-store.vercel.app`   | Demo trên Vercel        |
-| **Backend API** | `https://website-tech-store.onrender.com` | JSON Server trên Render |
+| **Backend API** | `https://website-techstore.onrender.com` | JSON Server trên Render |
 | **API Docs**    | `/docs/api-spec.md`                       | Danh sách endpoints     |
 
 ### 🔐 Demo Account
